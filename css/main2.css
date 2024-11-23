@@ -6,3 +6,117 @@
 .cardhight{
     height: 300px;
 }
+.setpperlabel{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ECF1FF;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.stepper-buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button[disabled] {
+    background-color: #cccccc;
+}
+
+/* Progress Bar Styling */
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+
+.date-item {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.date-item.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.date-item:hover {
+    background-color: #e9ecef;
+}
+
+.time-item {
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.time-item.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.time-item:hover {
+    background-color: #e9ecef;
+}
+
+.side-bg {
+    background-color: #F6F6F6;
+
+}
+
+.topside {
+    background-color: #ECF1FF;
+    padding: 15px;
+}
+
+.bottomitem {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: dashed 1px #000;
+}
+
+.bottomitem img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+}
+.hght{
+    height: calc(100dvh - 215px);
+}
