@@ -55,12 +55,12 @@
                                     <i class="fas fa-chevron-down chevron-icon" data-target="#scheduleMenu"></i>
                                 </a>
                                 <ul id="scheduleMenu" class="collapse mydropdown">
-                                    <li><a class="sidelink" href="appliance.html">Jobs</a></li>
+                                    <li><a class="sidelink" href="jobs.html">Jobs</a></li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="oppurtunities.html"
+                                <a href="#"
                                     class="sidelink d-flex align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
                                         <img src="../img/oppurtunities.png" alt="" class="sideicon">
@@ -109,7 +109,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="oppurtunities.html"
+                                <a href="#"
                                     class="sidelink d-flex align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
                                         <img src="../img/marketing.png" alt="" class="sideicon">
@@ -124,7 +124,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="oppurtunities.html"
+                                <a href="#"
                                     class="sidelink d-flex align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
                                         <img src="../img/resources.png" alt="" class="sideicon">
@@ -277,6 +277,52 @@
             </div>
         </div>
     </section>
+    <div class="modal modal-lg fade" id="callpop" tabindex="-1" aria-labelledby="callpopLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-5">
+                <div class="modal-header">
+                    <div class="text-center w-100" id="callpopLabel">
+                        <h3>Add New Call</h3>
+                    </div>
+                    <button type="button" class="border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-circle-xmark text-danger"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="p-5">
+                        <label for="Customer Name" class="font-semi">Customer Name</label>
+                        <input type="text" id="Customer Name" placeholder="Lucas Hood" class="form-control focus-none mb-2">
+                        <label for="Phone" class="font-semi">Phone</label>
+                        <input type="number" id="Phone" placeholder="1234567" required class="form-control focus-none mb-2">
+                        <label for="email" class="font-semi">Email (Optional)</label>
+                        <input type="email" id="email" placeholder="awesomaa1@domain.com" class="form-control focus-none mb-2">
+                        <label for="address" class="font-semi">Address (Optional)</label>
+                        <input type="text" id="address" placeholder="123 Eve, Rookers Block Las Vegas" class="form-control focus-none mb-2">
+                        <label  class="font-semi">What You Are Looking For?</label>
+                        <div class="check-box d-sm-flex flex-wrap">
+                            <div>
+                                <input type="checkbox" id="Quote"> <label for="Quote">Quote</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" class="ms-0 ms-sm-2" id="Schedule an Estimate"> <label for="Schedule an Estimate">Schedule an Estimate</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" class="ms-0 ms-sm-2" id="Other"> <label for="Other">Other</label>
+                            </div>
+                        </div>
+                        <label for="Notes" class="font-semi">Notes</label>
+                        <div class="call-textarea">
+                            <textarea id="Notes" placeholder="57000" class="w-100 bg-white border rounded-3 p-3"></textarea>
+                        </div>
+                        <div class="call-pop-btns d-sm-flex flex-wrap justify-content-between align-items-center mt-3">
+                            <button type="button" class="mbl-100 btn-sv rounded-2 px-sm-4 px-2 text-nowrap py-2 bg-red text-white border-0 mb-2 mb-sm-0">Cancel</button>
+                            <button type="button" class="mbl-100 btn-sv rounded-2 px-sm-4 px-2 text-nowrap py-2 bg-sky text-white border-0">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -286,17 +332,35 @@
     <script src="../js/main.js"></script>
     <script>
         $(document).ready(function () {
+            console.log("Initializing FullCalendar...");
+    
             $('#calendar').fullCalendar({
                 header: {
                     left: 'prev,next today',
                     center: 'title',
-                    right: '' // This enables the week view control on the right side
+                    right: ''
                 },
-                defaultView: 'agendaWeek', // Sets the default view to week
+                defaultView: 'agendaWeek',
                 editable: true,
                 events: [
-                    // Add your events here
-                ]
+                    {
+                        title: 'Meeting with Team',
+                        start: moment().startOf('week').add(2, 'days').add(10, 'hours').toISOString(),
+                        end: moment().startOf('week').add(2, 'days').add(12, 'hours').toISOString(),
+                        description: 'Discuss project updates.'
+                    },
+                    {
+                        title: 'Client Call',
+                        start: moment().startOf('week').add(3, 'days').add(15, 'hours').toISOString(),
+                        end: moment().startOf('week').add(3, 'days').add(16, 'hours').toISOString(),
+                        description: 'Call with the client to review requirements.'
+                    }
+                ],
+                eventClick: function (event) {
+                    console.log("Event clicked:", event);
+    
+                    $('#callpop').modal('show');
+                }
             });
         });
     </script>
