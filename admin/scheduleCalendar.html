@@ -33,11 +33,9 @@
                         <ul class="first-ul">
                             <li>
                                 <a href="dashboard.html"
-
-                                    class="sidelink d-flex align-items-center justify-content-between">
-
+                                    class="sidelink  d-flex align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
-                                        <img src="../img/dashboard.svg" alt="" class="sideicon">
+                                        <img src="../img/dashboard.png" alt="" class="sideicon">
                                         <p class="mb-0">Dashboard</p>
                                     </div>
                                     <i class="fas fa-chevron-down chevron-icon" data-target="#dashboardMenu"></i>
@@ -48,21 +46,21 @@
                             </li>
 
                             <li>
-                                <a href="scheduleCalendar.html"
-                                    class="sidelink active d-flex align-items-center justify-content-between">
+                                <a href="schedule.html"
+                                    class="sidelink d-flex active align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
-                                        <img src="../img/schedule-active.svg" alt="" class="sideicon">
+                                        <img src="../img/schedule-active.png" alt="" class="sideicon">
                                         <p class="mb-0">Schedule</p>
                                     </div>
                                     <i class="fas fa-chevron-down chevron-icon" data-target="#scheduleMenu"></i>
                                 </a>
                                 <ul id="scheduleMenu" class="collapse mydropdown">
-                                    <li><a class="sidelink" href="appliance.html">Jobs</a></li>
+                                    <li><a class="sidelink" href="jobs.html">Jobs</a></li>
                                 </ul>
                             </li>
 
                             <li>
-                                <a href="oppurtunities.html"
+                                <a href="#"
                                     class="sidelink d-flex align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
                                         <img src="../img/oppurtunities.png" alt="" class="sideicon">
@@ -111,7 +109,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="oppurtunities.html"
+                                <a href="#"
                                     class="sidelink d-flex align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
                                         <img src="../img/marketing.png" alt="" class="sideicon">
@@ -126,7 +124,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a href="oppurtunities.html"
+                                <a href="#"
                                     class="sidelink d-flex align-items-center justify-content-between">
                                     <div class="d-flex align-items-center">
                                         <img src="../img/resources.png" alt="" class="sideicon">
@@ -229,32 +227,30 @@
                                         </h1>
                                         <p class="mb-0">Here's how The Repair Guy Services is doing today.</p>
                                     </div>
-                                    <div class="d-lg-flex justify-content-end align-items-center mt-xl-0 mt-3 ">
-                                        <div class="d-flex align-items-center w-100">
+                                    <div class="d-xl-flex justify-content-end align-items-center mt-xl-0 mt-3 ">
+                                        <div class="d-sm-flex align-items-center w-100">
                                             <div class="d-flex ps-2 mt-3 mt-lg-0 me-lg-3 align-items-center border me-2 bg-white border-1 rounded-2 w-100">
                                                 <label for="filter"> <i class="bi bi-geo-alt-fill trash-b p-1 rounded-2"></i></label>
-                                                 <select name="" id="filter" class="border-white tab-100 pe-3 w-100 py-2 grey  focus-none font-md bg-transparent" >
+                                                 <select name="" id="filter" class="border-white form-select shadow-none tab-100 pe-3 w-100 py-2 grey  focus-none font-md bg-transparent" >
                                                      <option value="" selected disabled hidden>All territories</option>
                                                      <option value="">Today</option>
                                                  </select>
                                              </div>
-                                            <div class="d-flex ps-2 mt-3 mt-lg-0 me-lg-3 align-items-center border bg-white me-2 border-1 rounded-2 w-100">
+                                            <div class="d-flex ps-2 mt-3 mt-lg-0 me-xl-3 align-items-center border bg-white border-1 rounded-2 w-100">
                                                 <label for="filter"> <i class="bi bi-person-fill-up trash-b p-1 rounded-2"></i></label>
-                                                 <select name="" id="filter" class="border-white tab-100 pe-3 py-2 grey w-100  focus-none font-md bg-transparent" >
+                                                 <select name="" id="filter" class="border-white form-select shadow-none tab-100 pe-3 py-2 grey w-100  focus-none font-md bg-transparent" >
                                                      <option value="" selected disabled hidden>All Jobs</option>
                                                      <option value="">Today</option>
                                                  </select>
                                              </div>
                                         </div>
-                                        <div class="d-flex align-items-center justify-content-end">
-                                            <div class="d-flex justify-content-end me-2">
-                                                <a href="addNewJob.html">
-                                                    <button type="button" class="mbl-100 mt-3 mt-lg-0 rounded-2 px-4 text-nowrap py-2 bg-sky text-white border-0 shadow">New Job</button>
-                                                </a>
+                                        <div class="d-sm-flex align-items-center justify-content-end  mt-3 mt-xl-0">
+                                            <div class="d-flex justify-content-end me-sm-2">
+                                                <a href="addNewJob.html" class="mbl-100 rounded-2 px-4 text-nowrap text-decoration-none py-2 bg-sky text-white border-0 shadow">New Job</a>
                                                 </div>
-                                            <div class="d-flex ps-3 mt-3 mt-lg-0 me-lg-3 align-items-center border bg-white border-1 rounded-2">
+                                            <div class="d-flex ps-3 me-lg-3 align-items-center border bg-white border-1 rounded-2 mt-sm-0 mt-3">
                                                <label for="filter"> <i class="fas fa-filter grey"></i></label>
-                                                <select name="" id="filter" class="border-white tab-100 pe-3 py-2 grey  focus-none font-md bg-transparent" >
+                                                <select name="" id="filter" class="border-white form-select shadow-none tab-100 pe-3 py-2 grey  focus-none font-md bg-transparent" >
                                                     <option value="" selected disabled hidden>Filter</option>
                                                     <option value="">Today</option>
                                                     <option value="">Last Week</option>
@@ -281,6 +277,52 @@
             </div>
         </div>
     </section>
+    <div class="modal modal-lg fade" id="callpop" tabindex="-1" aria-labelledby="callpopLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-5">
+                <div class="modal-header">
+                    <div class="text-center w-100" id="callpopLabel">
+                        <h3>Add New Call</h3>
+                    </div>
+                    <button type="button" class="border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close">
+                        <i class="fa-solid fa-circle-xmark text-danger"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="p-5">
+                        <label for="Customer Name" class="font-semi">Customer Name</label>
+                        <input type="text" id="Customer Name" placeholder="Lucas Hood" class="form-control focus-none mb-2">
+                        <label for="Phone" class="font-semi">Phone</label>
+                        <input type="number" id="Phone" placeholder="1234567" required class="form-control focus-none mb-2">
+                        <label for="email" class="font-semi">Email (Optional)</label>
+                        <input type="email" id="email" placeholder="awesomaa1@domain.com" class="form-control focus-none mb-2">
+                        <label for="address" class="font-semi">Address (Optional)</label>
+                        <input type="text" id="address" placeholder="123 Eve, Rookers Block Las Vegas" class="form-control focus-none mb-2">
+                        <label  class="font-semi">What You Are Looking For?</label>
+                        <div class="check-box d-sm-flex flex-wrap">
+                            <div>
+                                <input type="checkbox" id="Quote"> <label for="Quote">Quote</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" class="ms-0 ms-sm-2" id="Schedule an Estimate"> <label for="Schedule an Estimate">Schedule an Estimate</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" class="ms-0 ms-sm-2" id="Other"> <label for="Other">Other</label>
+                            </div>
+                        </div>
+                        <label for="Notes" class="font-semi">Notes</label>
+                        <div class="call-textarea">
+                            <textarea id="Notes" placeholder="57000" class="w-100 bg-white border rounded-3 p-3"></textarea>
+                        </div>
+                        <div class="call-pop-btns d-sm-flex flex-wrap justify-content-between align-items-center mt-3">
+                            <button type="button" class="mbl-100 btn-sv rounded-2 px-sm-4 px-2 text-nowrap py-2 bg-red text-white border-0 mb-2 mb-sm-0">Cancel</button>
+                            <button type="button" class="mbl-100 btn-sv rounded-2 px-sm-4 px-2 text-nowrap py-2 bg-sky text-white border-0">Save</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -290,17 +332,35 @@
     <script src="../js/main.js"></script>
     <script>
         $(document).ready(function () {
+            console.log("Initializing FullCalendar...");
+    
             $('#calendar').fullCalendar({
                 header: {
                     left: 'prev,next today',
                     center: 'title',
-                    right: '' // This enables the week view control on the right side
+                    right: ''
                 },
-                defaultView: 'agendaWeek', // Sets the default view to week
+                defaultView: 'agendaWeek',
                 editable: true,
                 events: [
-                    // Add your events here
-                ]
+                    {
+                        title: 'Meeting with Team',
+                        start: moment().startOf('week').add(2, 'days').add(10, 'hours').toISOString(),
+                        end: moment().startOf('week').add(2, 'days').add(12, 'hours').toISOString(),
+                        description: 'Discuss project updates.'
+                    },
+                    {
+                        title: 'Client Call',
+                        start: moment().startOf('week').add(3, 'days').add(15, 'hours').toISOString(),
+                        end: moment().startOf('week').add(3, 'days').add(16, 'hours').toISOString(),
+                        description: 'Call with the client to review requirements.'
+                    }
+                ],
+                eventClick: function (event) {
+                    console.log("Event clicked:", event);
+    
+                    $('#callpop').modal('show');
+                }
             });
         });
     </script>
