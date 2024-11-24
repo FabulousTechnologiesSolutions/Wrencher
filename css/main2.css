@@ -1,4 +1,3 @@
-/* ------shakaib------- */
 .midbrdr{
     border-left: solid 1px #DDDDDD;
     border-right: solid 1px #DDDDDD;
@@ -6,6 +5,7 @@
 .cardhight{
     height: 300px;
 }
+
 .setpperlabel{
     cursor: pointer;
     width: 100%;
@@ -205,3 +205,4 @@ button[disabled] {
   stroke-dashoffset: 101;
   transition: all 250ms cubic-bezier(1,0,.37,.91);
 }
+
