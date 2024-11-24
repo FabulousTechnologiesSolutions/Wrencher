@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../../css/main3.css">
     <link rel="stylesheet" href="../../css/main4.css">
     <link rel="stylesheet" href="../../css/main5.css">
-    <title>Team Requirements & Assignment Options</title>
+    <title>Payment</title>
 </head>
 
 <body>
@@ -227,72 +227,68 @@
                             <div class="container-fluid">
                                 <div class="d-flex flex-column flex-xl-row justify-content-between align-items-xl-end">
                                     <div class="me-2">
-                                        <h4 class="mb-0 fw-semibold">Team Requirements & Assignment Options</h4>
-                                        <p class="gre font-12 mb-0">Add required skill tags to make sure jobs booked for this service are assigned to the right team members.</p>
+                                        <h4 class="mb-0 fw-semibold">Payment</h4>
+                                        <p class="font-12 mb-0">Price adjustment rules allow you toi dynamiclly increase or decrease the service price for certain booking conditions, like by appointment time or service location</p>
                                     </div>
                                 </div>
-                                <div class="bg-white rounded-4 px-3 px-sm-4 py-4 h-100 white-min mt-4">
-                                    <div class="border-bottom border-1 pb-3">
-                                        <div class="d-flex align-items-center my-2">
-                                            <input type="checkbox" class="me-2" id="type1">
-                                            <label for="type1">Appliance Repair</label>
+                                <div class="bg-white rounded-4 px-3 px-sm-4 py-2 h-100 white-min mt-4">
+                                    <div class="col-xl-10">
+                                        <div class="border-bottom border-1 py-3">
+                                            <div class="d-flex align-items-center">
+                                                <h3 class="fs-5 fw-semibold me-2 mt-1">Require payment method</h3>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input focus-none bg-success border-success" type="checkbox" id="mySwitch" name="darkmode" value="yes" checked>
+                                                  </div>
+                                            </div>
+                                            <p class="mb-0">Require customers provide a valid payment method when booking this service online?</p>
                                         </div>
-                                        <div class="d-flex align-items-center my-2">
-                                            <input type="checkbox" class="me-2" id="type2">
-                                            <label for="type2">Assembly</label>
-                                        </div>
-                                        <div class="d-flex align-items-center my-2">
-                                            <input type="checkbox" class="me-2" id="type3">
-                                            <label for="type3">Drywall Repair</label>
-                                        </div>
-                                        <div class="d-flex align-items-center my-2">
-                                            <input type="checkbox" class="me-2" id="type4">
-                                            <label for="type4">Electrical</label>
-                                        </div>
-                                        <div class="d-flex align-items-center my-2">
-                                            <input type="checkbox" class="me-2" id="type5">
-                                            <label for="type5">Estimate</label>
-                                        </div>
-                                        <div class="d-flex align-items-center my-2">
-                                            <input type="checkbox" class="me-2" id="type6">
-                                            <label for="type6">Gutter Cleaner</label>
-                                        </div>
-                                        <div class="d-flex align-items-center my-2">
-                                            <input type="checkbox" class="me-2" id="type7">
-                                            <label for="type7">Handyman</label>
-                                        </div>
-                                    </div>
-                                    <div class="d-flex align-items-center border-bottom border-1">
-                                       <h3 class="fs-5 my-3 sky-c fw-semibold text-capitalize"> + Create new skill tag</h3>
-                                    </div>
-                                    <div class="border-bottom border-1 pb-3">
                                         <div class="py-3">
-                                            <h3 class="fs-4 fw-semibold">Minimum Crew Size</h3>
-                                            <p class="mb-0">Select the number of service providers needed to complete this type of service</p>
+                                            <div class="d-flex align-items-center">
+                                                <h3 class="fs-5 fw-semibold me-2 mt-1">Payment method</h3>
+                                            </div>
+                                            <p class="mb-0">Select which types of payment method(s) customers can select from when booking</p>
                                         </div>
-                                        <div class="d-flex col-sm-9 col-md-8 col-lg-6 col-xl-5 flex-column flex-sm-row">
-                                            <input type="number" class="bg-nblue border border-1 rounded-2 py-2 my-1 my-sm-0 w-100 px-2 focus-none me-2" placeholder="2">
-                                            <input type="text" class="bg-nblue border border-1 rounded-2 py-2 my-1 my-sm-0 w-100 px-2 focus-none" placeholder="Service Provider">
+                                        <div class="border border-1 rounded-3 px-3 py-3">
+                                            <div class="d-flex align-items-start my-2">
+                                                <input type="checkbox" class="me-2 mt-2" id="type1">
+                                                <div class=" border-1 border-bottom pb-2">
+                                                    <label for="type1" class="fw-semibold">Credit and Debit card</label>
+                                                    <p class="mb-0">This will require customers provide a vaild credit/debit card during booking. Create a
+                                                        customer in your connected stripe account with the customer’s
+                                                        provided payment method. You will then be able to create a charge when you see fit.</p>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start my-2">
+                                                <input type="checkbox" class="me-2 mt-2" id="type2">
+                                                <div class=" border-1 border-bottom pb-2 w-100">
+                                                    <label for="type2" class="fw-semibold">Cash</label>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start my-2">
+                                                <input type="checkbox" class="me-2 mt-2" id="type3">
+                                                <div class=" border-1 border-bottom pb-2 w-100">
+                                                    <label for="type3" class="fw-semibold">Check</label>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex align-items-start my-2">
+                                                <input type="checkbox" class="me-2 mt-2" id="type4">
+                                                <div class=" border-1 border-bottom pb-2 w-100">
+                                                    <label for="type4" class="fw-semibold">Zelle</label>
+                                                </div>
+                                            </div>
+                                            <div class="my-3 fw-semibold">
+                                                <a href="#" class="sky-c text-decoration-none">Add a custom payment method</a>
+                                            </div>
                                         </div>
+                                        <div class="py-3 border-bottom border-1">
+                                            <div class="d-flex align-items-center">
+                                                <h3 class="fs-5 fw-semibold me-2 mt-1">Payment terms</h3>
+                                            </div>
+                                            <p class="mb-0">Our cancellation policy requires a minimum 48 hours notice. Cancellations made within this timeframe will
+                                                incur a $50 charge.</p>
+                                        </div>
+                                        <p class="my-3">ProTip! To include links in your payment terms, use this formatting:</p>
                                     </div>
-                                    <div class="">
-                                        <h3 class="fs-4 fw-semibold my-3 text-capitalize">Assignment & Job Offers</h3>
-                                        <p>Control how providers are assigned when this service is booked</p>
-                                        <div class="d-flex align-items-start my-2">
-                                            <input type="radio" class="me-2 mt-2" id="type1">
-                                            <div>
-                                                <label for="type1" class="fw-medium">Manual</label>
-                                                <p>Use default time slots based on your business hours and availability settings</p>
-                                            </div>
-                                        </div>
-                                        <div class="d-flex align-items-start my-2">
-                                            <input type="radio" class="me-2 mt-2" id="type2">
-                                            <div>
-                                                <label for="type2"  class="fw-medium">Automatically offer</label>
-                                                <p>Offer jobs for this service to all available providers who process the necessary skill tags to jobs for this service.</p>
-                                            </div>
-                                        </div>
-                                     </div>
                                 </div>
                                
                             </div>
