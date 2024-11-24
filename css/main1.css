@@ -629,6 +629,11 @@
 .bg-lgrey2 {
     background-color: #B3E3FC;
 }
+
+.font-j {
+    display: flex;
+    align-items: center;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
