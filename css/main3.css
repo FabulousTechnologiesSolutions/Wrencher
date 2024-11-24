@@ -727,6 +727,13 @@ select:focus {
     line-height: 3;
 }
 
+.edit-icon{
+    width: 100%;
+    height: 100%;
+    max-width: 20px;
+    object-fit: cover;
+}
+
 /* ----------chat end ------------- */
 @media screen and (min-width: 1441px) {
     .right-c {
