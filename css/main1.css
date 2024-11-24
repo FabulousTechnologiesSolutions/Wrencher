@@ -622,6 +622,7 @@
 .white-min {
     min-height: calc(100dvh - 230px);
 }
+
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;

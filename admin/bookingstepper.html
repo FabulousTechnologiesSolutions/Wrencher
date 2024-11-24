@@ -19,7 +19,7 @@
 
 <body>
 
-    <div class="container">
+    <div class="mycontainer">
         <form id="stepperForm" action="/submit-form" method="POST">
             <div class="d-flex align-items-center justify-content-center mt-4">
                 <img class="stepperlogow" src="../img/stepperlogo.png" alt="">
@@ -31,9 +31,9 @@
     
             <!-- Step 1 -->
             <div class="step active">
-                <div class="container">
+                <div class="mycontainer">
                     <div class="row justify-content-center mt-5">
-                        <div class="col-10">
+                        <div class="col-12 col-sm-10 mb-3">
                             <h2 class="fw-bold">What type of service do you need?</h2>
                             <div class="mt-2">
                                 <label for="Default" class="w-100" onclick="changeStep(1)">
@@ -96,30 +96,25 @@
     
             <!-- Step 2 -->
             <div class="step">
-                <div class="container">
                     <div>
                         <h2 class="fw-bold">Date & Time</h2>
                         <p class="text-muted">Pick a date and time for your appointment, and we'll be there.</p>
                     </div>
                     <div class="row justify-content-between align-items-start">
-                        <div class="col-8">
+                        <div class="col-lg-8">
                             <!-- Date Selector -->
-                            <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center mt-2">
                                 <button class="arrowbutton" id="prevDateBtn" type="button"> <img src="../img/leftangle.png" alt=""> </button>
                                 <div class="d-flex flex-grow-1 justify-content-evenly" id="dateContainer"></div>
                                 <button class="arrowbutton" id="nextDateBtn" type="button"> <img src="../img/stepperangle.png" alt=""> </button>
                             </div>
     
                             <!-- Time Slot Grid -->
-                            <div class="row mt-2 gx-2" id="timeContainer"></div>
+                            <div class="row mt-2 gx-2 me-2" id="timeContainer"></div>
     
-                            <!-- Continue Button -->
-                            <div class="text-start mt-2">
-                                <button class="nextbtn" id="continueBtn" type="button"
-                                    onclick="changeStep(1)">Continue</button>
-                            </div>
+                           
                         </div>
-                        <div class="col-4">
+                        <div class="col-lg-4 mt-2 mt-lg-0">
                             <div class="side-bg mt-2">
                                 <p class="mb-0 font-bold topside">
                                     Christmas Light Installation QUOTE REQUEST
@@ -127,26 +122,30 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                     <!-- Continue Button -->
+                     <div class="text-start mt-2">
+                        <button class="nextbtn" id="continueBtn" type="button"
+                            onclick="changeStep(1)">Continue</button>
+                    </div>
             </div>
     
             <!-- Step 3 -->
             <div class="step">
-                <div class="container">
+                <div class="mycontainer">
                     <div class="row justify-content-between align-items-start">
                         <div>
                             <h2 class="fw-bold">Service Address </h2>
     
                         </div>
-                        <div class="col-8">
+                        <div class="col-md-8">
                             <div class="row">
-                                <div class="col-6">
+                                <div class="col-sm-6">
                                     <label for="Address" class="ms-2">Address</label>
-                                    <input type="text" id="Address" placeholder="Street Address" class="custominput">
+                                    <input type="text" id="Address" placeholder="Street Address" class="w-100 custominput max-100">
                                 </div>
-                                <div class="col-6" >
+                                <div class="col-sm-6" >
                                     <label for="Apt" class="ms-2">Apt, Unit, Floor</label>
-                                    <input type="text" id="Apt" placeholder="Optional" class="custominput">
+                                    <input type="text" id="Apt" placeholder="Optional" class="w-100 custominput max-100">
                                 </div>
                             </div>
                             <div class="text-start mt-4">
@@ -154,7 +153,7 @@
                                     onclick="changeStep(1)">Continue</button>
                             </div>
                         </div>
-                        <div class="col-4 mt-3">
+                        <div class="col-md-4 mt-3">
                             <div class="side-bg">
                                 <p class="mb-0 font-bold topside">
                                     Christmas Light Installation QUOTE REQUEST
@@ -191,25 +190,25 @@
     
             <!-- Step 4 -->
             <div class="step">
-                <div class="container">
+                <div class="mycontainer">
                     <div class="row justify-content-between align-items-start">
                         <div>
                             <h2 class="fw-bold">Almost Done!</h2>
                             <p class="text-muted">Enter your contact info to finalize your appointment.</p>
                         </div>
-                        <div class="col-8">
+                        <div class="col-md-8">
                             <div class="row">
                                 <div class="col-12 mt-3">
-                                    <label for="Name">Full Name</label>
-                                    <input type="text" id="Name" placeholder="Enter name" class="custominput">
+                                    <label for="Name" class="fw-medium">Full Name</label>
+                                    <input type="text" id="Name" placeholder="Enter name" class="max-100 custominput">
                                 </div>
-                                <div class="col-6 mt-3">
-                                    <label for="Phone">Phone</label>
-                                    <input type="tel" id="Phone" placeholder="Enter phone" class="custominput">
+                                <div class="col-sm-6 mt-3">
+                                    <label for="Phone" class="fw-medium">Phone</label>
+                                    <input type="tel" id="Phone" placeholder="Enter phone" class="custominput max-100">
                                 </div>
-                                <div class="col-6 mt-3">
-                                    <label for="Email">Email</label>
-                                    <input type="email" id="Email" placeholder="Enter email" class="custominput">
+                                <div class="col-sm-6 mt-3">
+                                    <label for="Email" class="fw-medium">Email</label>
+                                    <input type="email" id="Email" placeholder="Enter email" class="custominput max-100">
                                 </div>
                                 <div class="col-12 d-flex align-items-center mt-3">
                                     <div class="checkbox-wrapper-23">
@@ -222,13 +221,14 @@
                                     </div>
                                     <label for="check-23" class="small ms-2 text-muted">Send me notifications about this appointment via text message</label>
                                 </div>
+                                <a href="#" class="text-blue d-inline-block mt-3 fw-bold text-decoration-none">Apply Coupen</a>
                             </div>
                             <div class="text-start mt-4">
                                 <button class="nextbtn" id="continueBtn" type="button" onclick="changeStep(1)">Book
                                     Now</button>
                             </div>
                         </div>
-                        <div class="col-4 mt-3">
+                        <div class="col-md-4 mt-3">
                             <div class="side-bg">
                                 <p class="mb-0 font-bold topside">
                                     Christmas Light Installation QUOTE REQUEST
@@ -270,7 +270,7 @@
                         <div class="text-center">
                             <img src="../img/stepperthank.png" alt="">
                             <div>
-                                <p class="mb-0 fw-bold mt-3">Thank You!</p>
+                                <p class="mb-0 fw-bold fs-4 mt-3">Thank You!</p>
                                 <p class="mb-0 text-muted mt-2">
                                     Thank you for choosing The Repair Guy Services. We have sent a confirmation
                                     email to xyzcompany@gmail.com
