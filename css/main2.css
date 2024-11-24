@@ -5,3 +5,204 @@
 .cardhight{
     height: 300px;
 }
+
+.setpperlabel{
+    cursor: pointer;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #ECF1FF;
+}
+.stepperlogow{
+    width: 100%;
+    max-width: 200px;
+}
+.step {
+    display: none;
+}
+
+.step.active {
+    display: block;
+}
+
+.stepper-buttons {
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+button[disabled] {
+    background-color: #cccccc;
+}
+
+/* Progress Bar Styling */
+.progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    height: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: #007bff;
+    transition: width 0.3s ease;
+}
+#prevDateBtn{
+    background-color: #ECF1FF;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 8px;
+}
+#nextDateBtn{
+    background-color: #ECF1FF;
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 8px;
+}
+#dateContainer{
+    background-color: #ECF1FF;
+    border-radius: 8px;
+}
+.date-item {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.date-item.active {
+    color: #007bff;
+}
+
+.time-item {
+    border-radius: 8px;
+    background-color: #fff;
+    color: #000;
+    border: solid 1px #0000004D;
+    padding: 15px;
+    font-weight: 600;
+}
+.time-item.active {
+    background-color: #fff;
+    color: #007bff;
+    border: solid 1px #007bff;
+
+}
+
+
+.side-bg {
+    background-color: #F6F6F6;
+    border-radius: 5px;
+}
+
+.topside {
+    background-color: #ECF1FF;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.bottomitem {
+    display: flex;
+    align-items: center;
+    padding:20px 15px;
+    border-bottom: dashed 1px #0000004D;
+}
+
+.bottomitem img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+
+}
+.hght{
+    height: calc(100dvh - 215px);
+}
+.dvh-100{
+    height: 100dvh;
+}
+.custominput{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: solid 1px #D4D7E3;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #F7FBFF;
+    width: 100%;
+    max-width: 600px;
+}
+.custominput input{
+    width: 520px !important;
+}
+.nextbtn{
+    width:100%;
+    font-weight: 600;
+    max-width: 350px;
+    border-radius: 100px;
+    background-color:#003FDB ;
+}
+
+.checkbox-wrapper-23 *,
+.checkbox-wrapper-23 *:after,
+.checkbox-wrapper-23 *:before {
+  box-sizing: border-box;
+}
+
+.checkbox-wrapper-23 input {
+  position: absolute;
+  opacity: 0;
+}
+  
+.checkbox-wrapper-23 input:checked + label svg path {
+  stroke-dashoffset: 0;
+}
+  
+.checkbox-wrapper-23 input:focus + label {
+  transform: scale(1.03);
+}
+
+.checkbox-wrapper-23 input + label {
+  display: block;
+  border: 2px solid #333;
+  width: var(--size);
+  height: var(--size);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+  
+.checkbox-wrapper-23 input + label:active {
+  transform: scale(1.05);
+  border-radius: 12px;
+}
+  
+.checkbox-wrapper-23 input + label svg {
+  pointer-events: none;
+  padding: 5%;
+}
+
+.checkbox-wrapper-23 input + label svg path {      
+  fill: none;     
+  stroke: #333;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-dasharray: 100;
+  stroke-dashoffset: 101;
+  transition: all 250ms cubic-bezier(1,0,.37,.91);
+}
+
