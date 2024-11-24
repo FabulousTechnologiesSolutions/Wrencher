@@ -622,7 +622,13 @@
 .white-min {
     min-height: calc(100dvh - 230px);
 }
+.filter-width {
+    max-width: 150px;
+}
 
+.bg-lgrey2 {
+    background-color: #B3E3FC;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
@@ -651,6 +657,10 @@
 
     .fix-height {
         height: 100%;
+    }
+
+    .filter-width {
+        max-width: 100%;
     }
 }
 @media screen and (max-width:577px){
