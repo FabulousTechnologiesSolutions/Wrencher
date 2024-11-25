@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/main1.css">
+    <link rel="stylesheet" href="../css/main2.css">
+    <link rel="stylesheet" href="../css/main3.css">
+    <title>Add Promotion</title>
+</head>
+
+<body class="bg-white">
+    <section class="my-3 mx-sm-3 mx-2 nav-bg rounded-4">
+        <div class="p-3 border-bottom">
+            <div class="d-flex align-items-center justify-content-between w-100">
+                <div class="">
+                    <div class="d-flex align-items-center justify-content-start">
+                        <a href="dashboard.html" class="text-dark me-2"><i class="fa-solid fa-arrow-left bg-white shadow p-2 rounded-circle"></i></a>
+                        <h5 class="mb-0 blu font-j">Promotion</h5>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="d-flex align-items-center justify-content-end">
+                        <a href="notifications.html" class="border border-1 rounded-circle bell-circle position-relative">
+                                    <i class="fa-solid fa-bell text-secondary"></i>
+                                    <div class="notifi-dot"></div>
+                                </a>
+                        <div bis_skin_checked="1">
+                            <div class="dropdown d-flex justify-content-between w-100 align-items-center"
+                                bis_skin_checked="1">
+                                <a class="mb-0 text-decoration-none d-flex align-items-end">
+                                    <div class="ms-2 d-none d-sm-block me-2 me-sm-0" bis_skin_checked="1">
+                                        <h6 class="text-center mb-0 l-h font-md text-dark">Jake Zophres</h6>
+                                        <p class=" mb-0 mt-1 font-12 fw-semibold mb-0 text-secondary ">Super
+                                            Admin</p>
+                                    </div>
+                                    <div class="position-relative" bis_skin_checked="1">
+                                                <img src="../img/user.png" alt="user" class="userimg me-0">
+                                                <div class="dot-profile">
+
+                                                </div>
+                                            </div>
+                                </a>
+                                <button id="dropdownIcon" class="border-0 bg-transparent ms-2 px-0 px-0" type="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-caret-down fs-6 text-secondary"></i>
+                                </button>
+                                <ul class="dropdown-menu w-100">
+                                    <li>
+                                        <a class="dropdown-item" href="profile.html">
+                                            <i class="fa-solid fa-user me-2"></i>View
+                                            Profile</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="login.html">
+                                            <i class="fa-solid fa-right-from-bracket me-2"></i>Logout
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="px-2">
+            <div class="right-bottom1">
+                <div class="container-fluid h-100">
+                    <form action="#" class="">
+                        <h4 class="mb-0 blu2 mt-2">Add Promotion</h4>
+                        <div class="row mt-3">
+                            <div class="col-xxl-8 col-lg-9">
+                                <div class="row">
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="select-service" class="fw-medium ps-2">Admin Name</label>
+                                        <input type="text" id="promotion-title" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="promotion-title" class="ps-2 fw-medium">Phone Number</label>
+                                        <input type="text" id="promotion-title" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="promotion-type" class="fw-medium ps-2">Email</label>
+                                        <input type="text" id="promotion-title" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="discount-value" class="fw-medium ps-2">Address</label>
+                                        <input type="text" id="discount-value" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="start-date" class="fw-medium ps-2">Street Address</label>
+                                        <input type="text" id="start-date" class="w-100 bg-nblue border rounded-3 p-2">
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="end-date" class="fw-medium ps-2">City Address</label>
+                                        <input type="date" id="end-date" class="w-100 bg-nblue border rounded-3 p-2">
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="eligibility-criteria" class="fw-medium ps-2">Eligibility Criteria (Optional)</label>
+                                        <input type="text" id="eligibility-criteria" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="maximum-discount" class="fw-medium ps-2">Maximum Discount</label>
+                                        <input type="text" id="maximum-discount" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="usage-limit" class="fw-medium ps-2">Usage Limit</label>
+                                        <input type="text" id="usage-limit" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="promotion-code" class="fw-medium ps-2">Promotion Code</label>
+                                        <input type="text" id="promotion-code" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
+                                    </div>
+                                    <div class="col-sm-6 mb-3">
+                                        <label for="status" class="fw-medium ps-2">Status</label>
+                                        <select name="status" id="status" class="w-100 bg-nblue border rounded-3 p-2">
+                                            <option value="" selected disabled hidden>Select here</option>
+                                            <option value="Active">Active</option>
+                                            <option value="Inactive">Inactive</option>
+                                            <option value="Draft">Draft</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-sm-12 mb-3">
+                                        <label for="description" class="fw-medium ps-2">Description</label>
+                                        <textarea id="description" class="w-100 bg-nblue border rounded-3 p-2" rows="6" placeholder="Type here"></textarea>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                            <div class="my-3">
+                                <button class="border py-2 px-5 bg-sky text-white rounded-3">Save</button>
+                            </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
