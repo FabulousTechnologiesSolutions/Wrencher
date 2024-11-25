@@ -634,6 +634,30 @@
     display: flex;
     align-items: center;
 }
+.emoji-bg {
+    background-color: #E0E6FA;
+    padding: 6px 8px;
+    color: var(--blue);
+    border-radius: 50%;
+    color: #6366F1;
+}
+.profile-edit {
+    padding: 8px 8px;
+    background: #F5F5F5;
+    border: 4px solid #fff;
+    border-radius: 10px;
+}
+.profile-edit img {
+    width: 70px;
+}
+
+.rev-main {
+    overflow: auto;
+}
+.rev-inner {
+    min-width: 700px;
+    overflow-x: auto;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
