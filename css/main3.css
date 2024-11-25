@@ -812,6 +812,10 @@ select:focus {
     font-size: 16px
 }
 
+.fc-view-container{
+    min-width: 1600px;
+}
+
 /* ----------chat end ------------- */
 @media screen and (min-width: 1441px) {
     .right-c {
