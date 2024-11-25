@@ -658,6 +658,7 @@
     min-width: 700px;
     overflow-x: auto;
 }
+
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
