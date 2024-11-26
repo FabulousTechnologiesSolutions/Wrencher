@@ -32,7 +32,7 @@
     margin-top: 20px;
 }
 
-button {
+.booking-btn button {
     padding: 10px 20px;
     margin: 5px;
     border: none;
@@ -41,7 +41,7 @@ button {
     cursor: pointer;
 }
 
-button[disabled] {
+.booking-btn button[disabled] {
     background-color: #cccccc;
 }
 
@@ -161,26 +161,26 @@ button[disabled] {
     background-color:#003FDB ;
 }
 
-.checkbox-wrapper-23 *,
-.checkbox-wrapper-23 *:after,
-.checkbox-wrapper-23 *:before {
+.booking-btn .checkbox-wrapper-23 *,
+.booking-btn .checkbox-wrapper-23 *:after,
+.booking-btn .checkbox-wrapper-23 *:before {
   box-sizing: border-box;
 }
 
-.checkbox-wrapper-23 input {
+.booking-btn .checkbox-wrapper-23 input {
   position: absolute;
   opacity: 0;
 }
   
-.checkbox-wrapper-23 input:checked + label svg path {
+.booking-btn .checkbox-wrapper-23 input:checked + label svg path {
   stroke-dashoffset: 0;
 }
   
-.checkbox-wrapper-23 input:focus + label {
+.booking-btn .checkbox-wrapper-23 input:focus + label {
   transform: scale(1.03);
 }
 
-.checkbox-wrapper-23 input + label {
+.booking-btn .checkbox-wrapper-23 input + label {
   display: block;
   border: 2px solid #D4D7E3;
   width: var(--size);
@@ -190,17 +190,17 @@ button[disabled] {
   transition: all .2s ease;
 }
   
-.checkbox-wrapper-23 input + label:active {
+.booking-btn .checkbox-wrapper-23 input + label:active {
   transform: scale(1.05);
   border-radius: 12px;
 }
   
-.checkbox-wrapper-23 input + label svg {
+.booking-btn .checkbox-wrapper-23 input + label svg {
   pointer-events: none;
   padding: 5%;
 }
 
-.checkbox-wrapper-23 input + label svg path {      
+.booking-btn .checkbox-wrapper-23 input + label svg path {      
   fill: none;     
   stroke: #333;
   stroke-width: 4px;
