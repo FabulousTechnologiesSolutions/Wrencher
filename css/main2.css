@@ -218,7 +218,27 @@
 .max-100 {
     max-width: 100% !important;
 }
+#picture-c::-webkit-file-upload-button {
+    color: #ffffff; /* Text color */
+    background-color: #003FDB; /* Button background color */
+    border: none; /* Remove border */
+    padding: 8px 12px; /* Add padding for button */
+    border-radius: 20px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 12px;
+    margin-right: 15px;
+    padding: 3px 15px;
+    transition: background-color 0.3s ease;
+}
 
+#picture-c::-webkit-file-upload-button:hover {
+    background-color: #003FDB; /* Darker color on hover */
+}
+
+/* Fallback for non-WebKit browsers */
+#picture-c:hover {
+    background-color: #003FDB; /* Darker color for hover */
+}
 @media screen and (max-width: 400px) {
     .date-item {
         font-size: 12px;
