@@ -161,8 +161,8 @@ select:focus {
 .dropdown-toggle1,
 .dropdown-trigger {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 8px;
+    border: 1px solid #dee2e6;
     border-radius: 5px;
     background-color: #f9f9f9;
     cursor: pointer;
