@@ -259,6 +259,9 @@
     border: none;
     background: #fff;
 }
+.accordion{
+    --bs-accordion-btn-icon-width:13px !important;
+}
 @media screen and (max-width: 400px) {
     .date-item {
         font-size: 12px;
