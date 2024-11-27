@@ -218,26 +218,46 @@
 .max-100 {
     max-width: 100% !important;
 }
-#picture-c::-webkit-file-upload-button {
-    color: #ffffff; /* Text color */
-    background-color: #003FDB; /* Button background color */
-    border: none; /* Remove border */
-    padding: 8px 12px; /* Add padding for button */
-    border-radius: 20px; /* Rounded corners */
+
+.uploadbtn2{
+    display: flex;
+    align-items: center;
+}
+.uploadbtn2a{
+    background-color: #003FDB;
+    color:#fff;
+    text-decoration: none;
+    padding: 3px 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.tag-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.tag {
+    background-color: #003FDB;
+    color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    margin: 5px;
+}
+.tag .remove-tag {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 16px;
     cursor: pointer;
-    font-size: 12px;
-    margin-right: 15px;
-    padding: 3px 15px;
-    transition: background-color 0.3s ease;
+    margin-left: 10px;
 }
-
-#picture-c::-webkit-file-upload-button:hover {
-    background-color: #003FDB; /* Darker color on hover */
-}
-
-/* Fallback for non-WebKit browsers */
-#picture-c:hover {
-    background-color: #003FDB; /* Darker color for hover */
+#tag:focus {
+    outline: none;
+    border: none;
+    background: #fff;
 }
 @media screen and (max-width: 400px) {
     .date-item {
