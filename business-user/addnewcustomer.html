@@ -81,7 +81,13 @@
                                 <div class="row">
                                     <div class="col-sm-6 mb-3">
                                         <label for="picture-c" class="fw-semibold ps-2">Customer Picture</label>
-                                        <input type="file" name="" id="picture-c" class="w-100 bg-white border rounded-3 p-2">
+                                        <div class="w-100 bg-white border rounded-3 p-1">
+                                            <input type="file" name="" id="picture-c" class="d-none">
+                                            <label for="picture-c" class="uploadbtn2">
+                                                <a class="uploadbtn2a">Upload Image</a>
+                                                <p class="mb-0 text-muted filename overflow-hidden">No file chosen</p>
+                                            </label>
+                                        </div>
                                     </div>
                                     <div class="col-sm-6 mb-3">
                                         <label for="fullname" class="ps-2 fw-semibold">Full Name</label>
@@ -275,6 +281,25 @@
           });
         }
       </script>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const fileInput = document.getElementById('picture-c');
+            const fileNameElement = document.querySelector('.filename');
+        
+            fileInput.addEventListener('change', function () {
+                if (fileInput.files.length > 0) {
+                    let fileName = fileInput.files[0].name;
+                        if (fileName.length > 40) {
+                        fileName = fileName.substring(0, 37) + '...'; 
+                    }
+                    
+                    fileNameElement.textContent = fileName; 
+                } else {
+                    fileNameElement.textContent = 'No file chosen'; 
+                }
+            });
+        });
+    </script>
       <script async defer
              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAu1gwHCSzLG9ACacQqLk-LG8oJMkarNF0&libraries=places&callback=initAutocomplete">
     </script>
