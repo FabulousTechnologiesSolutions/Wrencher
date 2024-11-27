@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/main3.css">
     <link rel="stylesheet" href="../css/main4.css">
     <link rel="stylesheet" href="../css/main5.css">
-    <title>Invoice</title>
+    <title>Sales quotes</title>
 </head>
 
 <body>
@@ -172,7 +172,7 @@
                     <div class="d-flex align-items-center justify-content-between w-100">
                         <div class="col-6">
                             <div class="d-flex align-items-center justify-content-start">
-                                <h3 class="hding mb-0 blu font-j">Sales <span class="font-14 dgrey">> Invoice</span></h3>
+                                <h3 class="hding mb-0 blu font-j">Sales <span class="font-14 dgrey">> Quotes</span></h3>
                             </div>
                         </div>
                         <div class="col-6">
@@ -220,320 +220,301 @@
                     </div>
                 </div>
                 <div class="right-bottom">
-                    <div class="content ">
-                        <div class="container-fluid">
-                            <div class="d-lg-flex align-items-center justify-content-between">
-                                <div>
-                                    <h3>Invoice</h3>
-                                    <p class="mb-0">Here's how The Repair Guy Services is doing today.</p>
-                                </div>
-                                <div class="d-lg-flex align-items-center">
-                                    <div class="d-flex justify-content-lg-end">
-                                        <a href="addnewinvoice.html">
-                                            <button type="button"
-                                            class="mbl-100 mt-3 mt-lg-0 rounded-2 px-4 text-nowrap py-2 bg-sky text-white border-0">Create
-                                            New Invoice</button>
-                                        </a>
+                    <div class="bottom-main">
+                        <div class="content ">
+                            <div class="container-fluid">
+                                <div class="d-xxl-flex align-items-center justify-content-between">
+                                    <div>
+                                        <h1 class="fs-4 fw-semibold">
+                                            Invoices
+                                        </h1>
+                                        <p class="mb-0">Keep tabs on every part of your business with over 8 built-in reports to choose from.</p>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="bg-white p-3 rounded-4 mt-4">
-                                <form action="">
-                                    <div class="row">
-                                        <div class="col-xl-8">
-                                            <div class="border px-3 rounded-4">
-                                                <div class="row">
-                                                    <div class="col-lg-6 p-2">
-                                                        <div class="d-sm-flex align-items-center">
-                                                            <h6 class="fw-semibold mb-0">Company Name:</h6>
-                                                            <p class="mb-0 ms-sm-2 gre">Repair Guy Service</p>
-                                                        </div>
-                                                        <div class="d-sm-flex align-items-center mt-2">
-                                                            <h6 class="fw-semibold mb-0">Contact Number:</h6>
-                                                            <p class="mb-0 ms-sm-2 gre">+9876543223455</p>
-                                                        </div>
-                                                        <div class="d-sm-flex align-items-center mt-2">
-                                                            <h6 class="fw-semibold mb-0">Address:</h6>
-                                                            <p class="mb-0 ms-sm-2 gre">city model@12floor,green town</p>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-lg-6 p-lg-2 px-2">
-                                                        <div class="d-sm-flex align-items-center">
-                                                            <h6 class="fw-semibold mb-0">Gmail:</h6>
-                                                            <p class="mb-0 ms-sm-2 gre">Repair Guy service@12gmail.com</p>
-                                                        </div>
-                                                    </div>
-                                                </div>
+                                    <div class="d-lg-flex justify-content-end align-items-center mt-xxl-0 mt-2">
+                                        <div class="d-sm-flex align-items-center">
+                                            <div class="d-flex justify-content-between border border-1 rounded-2 bg-white">
+                                                <input type="search" class="border-0 tab-100 px-3 py-2 bg-transparent focus-none" placeholder="Search Invoice">
+                                                <span class="d-flex align-items-center bg-grey text-white">
+                                                    <i class="fas fa-search px-3 py-2 rounded-2"></i>
+                                                </span>
                                             </div>
-                                            <div class="p-3">
-                                                <div class="row light-s p-2 rounded-3">
-                                                    <div class="col-sm-6 mb-3">
-                                                        <label for="" class="form-label fw-semibold mb-0">Add Customer</label>
-                                                        <select name="" id="" class="form-select shadow-none">
-                                                            <option value="">Add Here</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6 mb-3">
-                                                        <label for="" class="form-label fw-semibold mb-0">Invoice No.</label>
-                                                        <select name="" id="" class="form-select shadow-none">
-                                                            <option value="">1678</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6 mb-3">
-                                                        <label for="" class="form-label fw-semibold mb-0">Invoice Date</label>
-                                                        <input type="date" class="form-control shadow-none">
-                                                    </div>
-                                                    <div class="col-sm-6 mb-3">
-                                                        <label for="" class="form-label fw-semibold mb-0">Terms</label>
-                                                        <select name="" id="" class="form-select shadow-none">
-                                                            <option value="">Due to receipt</option>
-                                                        </select>
-                                                    </div>
-                                                    <div class="col-sm-6 mb-3">
-                                                        <label for="" class="form-label fw-semibold mb-0">Due Date</label>
-                                                        <input type="date" class="form-control shadow-none">
-                                                    </div>
-                                                </div>
-                                                <div class="mt-3">
-                                                    <label for="tag" class="form-label mb-0">Tags (hidden):</label>
-                                                    <input type="date" id="tag" class="form-control shadow-none light-s">
-                                                </div>
-                                                <div class="mt-4">
-                                                    <h5>Product a service</h5>
-                                                    <div class="main-table table-responsive">
-                                                        <table class="table">
-                                                            <thead>
-                                                                <tr>
-                                                                    <th>#</th>
-                                                                    <th>Service Date</th>
-                                                                    <th>Product/ Service</th>
-                                                                    <th>Description</th>
-                                                                    <th>Quantity</th>
-                                                                    <th>Rate</th>
-                                                                    <th>Amount</th>
-                                                                    <th>Tax</th>
-                                                                    <th>Action</th>
-                                                                </tr>
-                                                            </thead>
-                                                            <tbody>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="d-flex align-items-center">
-                                                                            <i class="fa-solid fa-circle-plus sky-c"></i>
-                                                                            <p class="mb-0 ms-3">1</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td>Service: Handyman</td>
-                                                                    <td>Description</td>
-                                                                    <td>1</td>
-                                                                    <td>0.00</td>
-                                                                    <td>0.00</td>
-                                                                    <td>0.00</td>
-                                                                    <td class="text-center"><a href="#" class="text-center inline-block trash-b p-2 rounded-3"><i class="fa-solid fa-trash text-dark"></i></a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="d-flex align-items-center">
-                                                                            <i class="fa-solid fa-circle-plus sky-c"></i>
-                                                                            <p class="mb-0 ms-3">1</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td>Service: Handyman</td>
-                                                                    <td>Description</td>
-                                                                    <td>1</td>
-                                                                    <td>0.00</td>
-                                                                    <td>0.00</td>
-                                                                    <td>0.00</td>
-                                                                    <td class="text-center"><a href="#" class="text-center inline-block trash-b p-2 rounded-3"><i class="fa-solid fa-trash text-dark"></i></a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="d-flex align-items-center">
-                                                                            <i class="fa-solid fa-circle-plus sky-c"></i>
-                                                                            <p class="mb-0 ms-3">1</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td>Service: Handyman</td>
-                                                                    <td>Description</td>
-                                                                    <td>1</td>
-                                                                    <td>0.00</td>
-                                                                    <td>0.00</td>
-                                                                    <td>0.00</td>
-                                                                    <td class="text-center"><a href="#" class="text-center inline-block trash-b p-2 rounded-3"><i class="fa-solid fa-trash text-dark"></i></a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="d-flex align-items-center">
-                                                                            <i class="fa-solid fa-circle-plus sky-c"></i>
-                                                                            <p class="mb-0 ms-3">1</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td>Service: Handyman</td>
-                                                                    <td>Description</td>
-                                                                    <td>1</td>
-                                                                    <td>0.00</td>
-                                                                    <td>0.00</td>
-                                                                    <td>0.00</td>
-                                                                    <td class="text-center"><a href="#" class="text-center inline-block trash-b p-2 rounded-3"><i class="fa-solid fa-trash text-dark"></i></a></td>
-                                                                </tr>
-                                                                <tr>
-                                                                    <td>
-                                                                        <div class="d-flex align-items-center">
-                                                                            <i class="fa-solid fa-circle-plus sky-c"></i>
-                                                                            <p class="mb-0 ms-3">1</p>
-                                                                        </div>
-                                                                    </td>
-                                                                    <td></td>
-                                                                    <td>Service: Handyman</td>
-                                                                    <td>Description</td>
-                                                                    <td>1</td>
-                                                                    <td>0.00</td>
-                                                                    <td>0.00</td>
-                                                                    <td>0.00</td>
-                                                                    <td class="text-center"><a href="#" class="text-center inline-block trash-b p-2 rounded-3"><i class="fa-solid fa-trash text-dark"></i></a></td>
-                                                                </tr>
-                                                            </tbody>
-                                                        </table>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="col-xl-4 mt-xl-0 mt-3">
-                                            <h6 class="gre font-12">Edit Default Setting</h6>
-                                            <div>
-                                                <label for="" class="fw-semibold">Customization</label>
-                                                <select name="" id="" class="form-select shadow-none light-s">
-                                                    <option value="">Customization</option>
+                                            <div class="d-flex ps-3 mx-sm-2 mt-sm-0 mt-2 align-items-center border bg-white border-1 rounded-2">
+                                               <label for="filter"> <i class="fas fa-filter grey"></i></label>
+                                                <select name="" id="filter" class="border-white filter-width me-1 pe-3 py-2 grey  focus-none font-md bg-transparent" >
+                                                    <option value="" selected disabled hidden>Filter</option>
+                                                    <option value="">Filter by Date</option>
+                                                    <option value="">Filter by Price</option>
                                                 </select>
                                             </div>
-                                            <div class="mt-3">
-                                                <h6>Payment</h6>
-                                                <div class="accordion" id="accordionExample">
-                                                    <div class="accordion-item">
-                                                        <h2 class="accordion-header">
-                                                            <button class="accordion-button p-2 light-s font-12 light-s shadow-none" type="button"
-                                                                data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
-                                                                aria-controls="collapseOne">
-                                                                Option
-                                                            </button>
-                                                        </h2>
-                                                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                                            <div class="accordion-body p-2">
-                                                                <h6 class="font-14 fw-semibold">Accepted Payment Methods</h6>
-                                                                <div class="border-bottom">
-                                                                    <div class="d-flex justify-content-between">
-                                                                        <div class="d-flex flex-column">
-                                                                            <label for="" class="gre font-12">Credit card (2.99 per transaction)</label>
-                                                                            <div>
-                                                                                <img src="../img/payment 1.png" alt="" class="pay-img">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="switch">
-                                                                                <input type="checkbox" class="switch-input" id="toggle">
-                                                                                <label class="switch-slider" for="toggle"></label>
-                                                                            </div>
-                                                                        </div>
+                                        </div>
+                                        <div class="d-flex align-items-center justify-content-end">
+                                            <div class="d-flex justify-content-end">
+                                                <a href="create-invoice.html">
+                                                    <button type="button"  class="mbl-100 btn-sv mt-3 mt-lg-0 rounded-2 px-4 text-nowrap py-2 bg-sky text-white border-0">Create Invoice</button>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bg-white px-3 py-2 rounded-3 mt-3 ">
+                                      <div class="tab-content" id="pills-tabContent">
+                                        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+                                            <div class="table-responsive reports-tbl mt-3">
+                                                <table class="table">
+                                                    <thead>
+                                                        <tr class="align-middle">
+                                                            <th class="font-semi">Customer</th>
+                                                            <th class="font-semi">Invoice Number</th>
+                                                            <th class="font-semi">Service Name</th>
+                                                            <th class="font-semi">Creation Date</th>
+                                                            <th class="font-semi">Aging</th>
+                                                            <th class="font-semi">Total Amount</th>
+                                                            <th class="font-semi">Invoice Status</th>
+                                                            <th class="font-semi">Download Invoice</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr class="align-middle">
+                                                            <td>
+                                                                <a href="quotationDetail.html" class="text-decoration-none">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                                                        <span class="lblue font-md">Alexia Haass</span>
                                                                     </div>
-                                                                    <div class="d-flex justify-content-between mt-2">
-                                                                        <div class="d-flex flex-column">
-                                                                            <label for="" class="gre font-12">Bank transfer (1% max $15 per transaction)</label>
-                                                                            <div>
-                                                                                <img src="../img/payment 1.png" alt="" class="pay-img">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="switch">
-                                                                                <input type="checkbox" class="switch-input" id="toggle1">
-                                                                                <label class="switch-slider" for="toggle1"></label>
-                                                                            </div>
-                                                                        </div>
+                                                                </a>
+                                                            </td>
+                                                            <td class="font-md"># 9091</td>
+                                                            <td class="font-md">
+                                                                <p class="sky-c mb-0">Assessment</p>
+                                                            </td>
+                                                            <td class="font-md">08/27/2024</td>
+                                                            <td class="font-md">30 Days</td>
+                                                            <td class="font-md">$250.00</td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-lgreen text-success font-md status-btn text-center px-3 py-2 rounded-pill border-0">
+                                                                    Complete
+                                                                </button>
+                                                            </td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-primary text-success font-md status-btn text-center px-3 py-2 rounded-2 text-white border-0">
+                                                                    <i class="fas fa-download me-1"></i>
+                                                                    <span>Download Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="align-middle">
+                                                            <td>
+                                                                <a href="quotationDetail.html" class="text-decoration-none">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                                                        <span class="lblue font-md">Alexia Haass</span>
                                                                     </div>
-                                                                    <div class="d-flex justify-content-between mt-2">
-                                                                        <div class="d-flex flex-column">
-                                                                            <label for="" class="gre font-12">Paypal card (2.99 per transaction)</label>
-                                                                            <div>
-                                                                                <img src="../img/payment 2.png" alt="" class="pay-img">
-                                                                            </div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="switch">
-                                                                                <input type="checkbox" class="switch-input" id="toggle2">
-                                                                                <label class="switch-slider" for="toggle2"></label>
-                                                                            </div>
-                                                                        </div>
+                                                                </a>
+                                                            </td>
+                                                            <td class="font-md"># 9091</td>
+                                                            <td class="font-md">
+                                                                <p class="sky-c mb-0">Assessment</p>
+                                                            </td>
+                                                            <td class="font-md">08/27/2024</td>
+                                                            <td class="font-md">30 Days</td>
+                                                            <td class="font-md">$250.00</td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-lgreen text-success font-md status-btn text-center px-3 py-2 rounded-pill border-0">
+                                                                    Complete
+                                                                </button>
+                                                            </td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-primary text-success font-md status-btn text-center px-3 py-2 rounded-2 text-white border-0">
+                                                                    <i class="fas fa-download me-1"></i>
+                                                                    <span>Download Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="align-middle">
+                                                            <td>
+                                                                <a href="quotationDetail.html" class="text-decoration-none">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                                                        <span class="lblue font-md">Alexia Haass</span>
                                                                     </div>
-                                                                    <div class="d-flex justify-content-between mt-2">
-                                                                        <div class="d-flex">
-                                                                            <div>
-                                                                                <span class="gre font-12">Tips:</span>
-                                                                            </div>
-                                                                            <div>
-                                                                                <a href="#" class="sky font-12 text-decoration-none">Manage Tips</a>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="switch">
-                                                                                <input type="checkbox" class="switch-input" id="toggle3">
-                                                                                <label class="switch-slider" for="toggle3"></label>
-                                                                            </div>
-                                                                        </div>
+                                                                </a>
+                                                            </td>
+                                                            <td class="font-md"># 9091</td>
+                                                            <td class="font-md">
+                                                                <p class="sky-c mb-0">Assessment</p>
+                                                            </td>
+                                                            <td class="font-md">08/27/2024</td>
+                                                            <td class="font-md">30 Days</td>
+                                                            <td class="font-md">$250.00</td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-lgreen text-success font-md status-btn text-center px-3 py-2 rounded-pill border-0">
+                                                                    Complete
+                                                                </button>
+                                                            </td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-primary text-success font-md status-btn text-center px-3 py-2 rounded-2 text-white border-0">
+                                                                    <i class="fas fa-download me-1"></i>
+                                                                    <span>Download Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="align-middle">
+                                                            <td>
+                                                                <a href="quotationDetail.html" class="text-decoration-none">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                                                        <span class="lblue font-md">Alexia Haass</span>
                                                                     </div>
-                                                                    <div class="d-flex justify-content-between mt-2">
-                                                                        <div>
-                                                                          <span class="gre font-12">Payment Detail</span>
-                                                                        </div>
-                                                                        <div>
-                                                                            <a href="#" class="sky font-12 text-decoration-none">Manage</a>
-                                                                        </div>
+                                                                </a>
+                                                            </td>
+                                                            <td class="font-md"># 9091</td>
+                                                            <td class="font-md">
+                                                                <p class="sky-c mb-0">Assessment</p>
+                                                            </td>
+                                                            <td class="font-md">08/27/2024</td>
+                                                            <td class="font-md">30 Days</td>
+                                                            <td class="font-md">$250.00</td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-lgreen text-success font-md status-btn text-center px-3 py-2 rounded-pill border-0">
+                                                                    Complete
+                                                                </button>
+                                                            </td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-primary text-success font-md status-btn text-center px-3 py-2 rounded-2 text-white border-0">
+                                                                    <i class="fas fa-download me-1"></i>
+                                                                    <span>Download Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="align-middle">
+                                                            <td>
+                                                                <a href="quotationDetail.html" class="text-decoration-none">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                                                        <span class="lblue font-md">Alexia Haass</span>
                                                                     </div>
-                                                                </div>
-                                                                <div class="py-2">
-                                                                    <h6 class="font-14">More Options</h6>
-                                                                    <div class="d-flex align-items-center justify-content-between">
-                                                                        <div>
-                                                                            <span class="gre font-12">Invoice Total</span>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="switch">
-                                                                                <input type="checkbox" class="switch-input" id="toggle4">
-                                                                                <label class="switch-slider" for="toggle4"></label>
-                                                                            </div>
-                                                                        </div>
+                                                                </a>
+                                                            </td>
+                                                            <td class="font-md"># 9091</td>
+                                                            <td class="font-md">
+                                                                <p class="sky-c mb-0">Assessment</p>
+                                                            </td>
+                                                            <td class="font-md">08/27/2024</td>
+                                                            <td class="font-md">30 Days</td>
+                                                            <td class="font-md">$250.00</td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-lgreen text-success font-md status-btn text-center px-3 py-2 rounded-pill border-0">
+                                                                    Complete
+                                                                </button>
+                                                            </td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-primary text-success font-md status-btn text-center px-3 py-2 rounded-2 text-white border-0">
+                                                                    <i class="fas fa-download me-1"></i>
+                                                                    <span>Download Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="align-middle">
+                                                            <td>
+                                                                <a href="quotationDetail.html" class="text-decoration-none">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                                                        <span class="lblue font-md">Alexia Haass</span>
                                                                     </div>
-                                                                    <div class="d-flex align-items-center justify-content-between mt-2">
-                                                                        <div>
-                                                                            <span class="gre font-12">Deposit</span>
-                                                                        </div>
-                                                                        <div>
-                                                                            <div class="switch">
-                                                                                <input type="checkbox" class="switch-input" id="toggle5">
-                                                                                <label class="switch-slider" for="toggle5"></label>
-                                                                            </div>
-                                                                        </div>
+                                                                </a>
+                                                            </td>
+                                                            <td class="font-md"># 9091</td>
+                                                            <td class="font-md">
+                                                                <p class="sky-c mb-0">Assessment</p>
+                                                            </td>
+                                                            <td class="font-md">08/27/2024</td>
+                                                            <td class="font-md">30 Days</td>
+                                                            <td class="font-md">$250.00</td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-lgreen text-success font-md status-btn text-center px-3 py-2 rounded-pill border-0">
+                                                                    Complete
+                                                                </button>
+                                                            </td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-primary text-success font-md status-btn text-center px-3 py-2 rounded-2 text-white border-0">
+                                                                    <i class="fas fa-download me-1"></i>
+                                                                    <span>Download Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+                                                        <tr class="align-middle">
+                                                            <td>
+                                                                <a href="quotationDetail.html" class="text-decoration-none">
+                                                                    <div class="d-flex align-items-center">
+                                                                        <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                                                        <span class="lblue font-md">Alexia Haass</span>
                                                                     </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                                </a>
+                                                            </td>
+                                                            <td class="font-md"># 9091</td>
+                                                            <td class="font-md">
+                                                                <p class="sky-c mb-0">Assessment</p>
+                                                            </td>
+                                                            <td class="font-md">08/27/2024</td>
+                                                            <td class="font-md">30 Days</td>
+                                                            <td class="font-md">$250.00</td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-lgreen text-success font-md status-btn text-center px-3 py-2 rounded-pill border-0">
+                                                                    Complete
+                                                                </button>
+                                                            </td>
+                                                            <td class="font-md">
+                                                                <button type="button" class="bg-primary text-success font-md status-btn text-center px-3 py-2 rounded-2 text-white border-0">
+                                                                    <i class="fas fa-download me-1"></i>
+                                                                    <span>Download Invoice</span>
+                                                                </button>
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                            <div class="d-flex justify-content-center">
+                                                <div
+                                                    class="mt-3 d-inline-flex pagination-box shadow align-items-center justify-content-center border border-1 rounded-3 py-2 px-3">
+                                                    <div class="border-end border-2 py-1 pe-3">
+                                                        <p class="mb-0">Showing 1 to 25 of 350 results</p>
+                                                    </div>
+                                                    <div class="border-end border-2 px-3">
+                                                        <select name="" id=""
+                                                            class="form-select focus-none shadow-none rounded-3">
+                                                            <option value="" selected disabled hidden>30 per page
+                                                            </option>
+                                                            <option value="">30 per page</option>
+                                                            <option value="">30 per page</option>
+                                                        </select>
+                                                    </div>
+                                                    <div class="border-end border-2 px-3">
+                                                        <button
+                                                            class="border rounded-3 px-4 py-2 bg-transparent text-black">Previous</button>
+                                                    </div>
+                                                    <div class="border-1 ps-3">
+                                                        <button
+                                                            class="rounded-3 border-0 px-4 py-2 bg-lblue text-black">Next</button>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                </form>
+                                      </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
-    <div class="modal modal-lg fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/main.js"></script>
+    <div class="modal modal-lg fade" id="invoiceModal" tabindex="-1" aria-labelledby="invoiceModalLabel"
     aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content rounded-5">
@@ -556,7 +537,7 @@
                 <div class="d-flex flex-wrap justify-content-end">
                     <div class="mb-3">
                         <form>
-                            <select class="rounded-2 bg-sky text-white border-0 focus-none p-3">
+                            <select class="rounded-2 clientmodal text-white border-0 focus-none p-3">
                                 <option value="" selected disabled hidden>Add Payment</option>
                                 <option value="">Payment 1</option>
                                 <option value="">Payment 2</option>
@@ -639,11 +620,5 @@
         </div>
     </div>
 </div>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="../js/main.js"></script>
-
 </body>
-
 </html>
