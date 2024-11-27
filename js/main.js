@@ -221,7 +221,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 <input type="text" class="w-100 input-bg border-0 py-2 px-2 rounded-2" placeholder="Designer">
                 <div class="position-x">
                     <button class="remove-btn border-0 bg-transparent">
-                        <i class="fa-solid fa-circle-xmark text-danger rounded-circle border border-white"></i>
+                        <i class="fa-solid fs-4 fa-circle-xmark text-danger rounded-circle border border-white"></i>
                     </button>
                 </div>
             </div>
