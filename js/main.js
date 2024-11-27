@@ -99,12 +99,11 @@ document.addEventListener('click', function (event) {
 
 // Sample customer data
 const customers1 = [
-    { title: 'Free Assessment', description: 'Our experts will come to assess your needs and discuss solutions.' },
-    { title: 'Free Assessment', description: 'Our experts will come to assess your needs and discuss solutions.' },
-    { title: 'Free Assessment', description: 'Our experts will come to assess your needs and discuss solutions.' },
-    { title: 'Free Assessment', description: 'Our experts will come to assess your needs and discuss solutions.' },
-    { title: 'Free Assessment', description: 'Our experts will come to assess your needs and discuss solutions.' },
-    { title: 'Free Assessment', description: 'Our experts will come to assess your needs and discuss solutions.' },
+    { title: 'Picture Hanging', description: 'Our experts will come to assess your needs and discuss solutions.' },
+    { title: 'Drywall Repair', description: 'Our experts will come to assess your needs and discuss solutions.' },
+    { title: 'Gutter Cleaning', description: 'Our experts will come to assess your needs and discuss solutions.' },
+    { title: 'Curtain Rod Install', description: 'Our experts will come to assess your needs and discuss solutions.' },
+    { title: 'Door Knob/ Handle Lock Install', description: 'Our experts will come to assess your needs and discuss solutions.' },
 ];
 
 const customerList1 = document.querySelector('.custom-customer-list');
@@ -142,39 +141,39 @@ function createLineItem() {
             <div class="w-100 ps-2">
                 <div class="row">
                     <div class="col-lg-4 col-sm-6 mb-3">
-                        <div class="border rounded-4 px-2 py-1 bg-white w-100">
+                        <div class="border rounded-3 px-2 py-1 bg-nblue w-100">
                             <label class="font-12 gre">Name</label>
-                            <input type="text" class="bg-white border-0 w-100 p-0" value="Supply and installation of air conditioning units">
+                            <input type="text" class="bg-nblue border-0 w-100 p-0" value="Supply and installation of air conditioning units">
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-4 col-sm-6 mb-3">
-                        <div class="border rounded-4 px-2 py-1 bg-white w-100">
+                        <div class="border rounded-3 px-2 py-1 bg-nblue w-100">
                             <label class="font-12 gre">Quantity</label>
-                            <input type="number" class="bg-white border-0 w-100 p-0" value="01">
+                            <input type="number" class="bg-nblue border-0 w-100 p-0" value="01">
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-4 col-sm-6 mb-3">
-                        <div class="border rounded-4 px-2 py-1 bg-white w-100">
+                        <div class="border rounded-3 px-2 py-1 bg-nblue w-100">
                             <label class="font-12 gre">Unit Cost</label>
-                            <input type="text" class="bg-white border-0 w-100 p-0" value="USD: 125">
+                            <input type="text" class="bg-nblue border-0 w-100 p-0" value="USD: 125">
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-4 col-sm-6 mb-3">
-                        <div class="border rounded-4 px-2 py-1 bg-white w-100">
+                        <div class="border rounded-3 px-2 py-1 bg-nblue w-100">
                             <label class="font-12 gre">Unit Price</label>
-                            <input type="text" class="bg-white border-0 w-100 p-0" value="USD: 60">
+                            <input type="text" class="bg-nblue border-0 w-100 p-0" value="USD: 60">
                         </div>
                     </div>
                     <div class="col-xl-2 col-lg-4 col-sm-6 mb-3">
-                        <div class="border rounded-4 px-2 py-1 bg-white w-100">
+                        <div class="border rounded-3 px-2 py-1 bg-nblue w-100">
                             <label class="font-12 gre">Total</label>
-                            <input type="text" class="bg-white border-0 w-100 p-0" value="USD: 450">
+                            <input type="text" class="bg-nblue border-0 w-100 p-0" value="USD: 450">
                         </div>
                     </div>
                     <div class="col-12">
-                        <div class="border rounded-4 px-2 py-1 bg-white w-100">
-                            <label class="font-12 gre">Description</label>
-                            <textarea class="bg-white border-0 w-100 p-0" rows="5"></textarea>
+                        <div class="border rounded-3 px-2 py-1 bg-nblue w-100">
+                            <label class="font-12 gre">Supply and installation of air conditioning units, including all essential electrical connections.</label>
+                            <textarea class="bg-nblue border-0 w-100 p-0" rows="5"></textarea>
                         </div>
                     </div>
                     <div class="d-flex align-items-baseline justify-content-between mt-3">
