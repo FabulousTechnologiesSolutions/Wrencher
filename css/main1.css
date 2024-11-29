@@ -661,6 +661,9 @@
 .border-dashed {
     border: 1px dashed #CECECE;
 }
+#raphael-group-ozAevNbU {
+    display: none !important;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
