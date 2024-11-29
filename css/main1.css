@@ -162,7 +162,7 @@
 }
 
 .loginmain {
-    height: 100dvh;
+    min-height: 100dvh;
     width: 100%;
     position: relative;
 }
@@ -182,7 +182,7 @@
 
 .loginbottom {
     position: absolute;
-    max-height: 85dvh;
+    height: 100dvh;
     width: 100%;
     display: flex;
     justify-content: center;
