@@ -658,7 +658,9 @@
     min-width: 700px;
     overflow-x: auto;
 }
-
+.border-dashed {
+    border: 1px dashed #CECECE;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
