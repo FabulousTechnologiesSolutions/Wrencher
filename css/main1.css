@@ -664,6 +664,20 @@
 #raphael-group-ozAevNbU {
     display: none !important;
 }
+#triangleCanvas,
+#triangleCanvas2 {
+    display: block;
+    height: auto;
+}
+.minus-box {
+    height: calc(100% - 35px);
+    min-height: 250px;
+}
+#myDiv,
+#myDiv2 {
+    width: 100%;
+    height: 100%;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
