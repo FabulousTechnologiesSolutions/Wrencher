@@ -1,26 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Load plotly.js into the DOM -->
-        <script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
-    </head>
-    
-    <body>
-        <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
-    </body>
-    <script>
-        var data = [
-	{
-		domain: { x: [0, 1], y: [0, 1] },
-		value: 270,
-		title: { text: "Speed" },
-		type: "indicator",
-		mode: "gauge+number"
-	}
-];
+<head>
+    <!-- Load plotly.js into the DOM -->
+    <script src='https://cdn.plot.ly/plotly-2.35.2.min.js'></script>
+    <style>
+        /* Ensure the div takes 100% width of the parent container */
+        #myDiv {
+            width: 100%;
+            height: 100vh; /* Set a fixed height for better visibility */
+        }
+    </style>
+</head>
+<body>
+    <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+</body>
+<script>
+    var data = [
+        {
+            domain: { x: [0, 1], y: [0, 1] },
+            value: 270, // The current value
+            title: { text: "Speed" },
+            type: "indicator",
+            mode: "gauge+number",
+            gauge: {
+                axis: { range: [0, 500] }, // Set the range of the gauge
+                bar: { color: "green" }, // Green for the filled portion
+                steps: [
+                    { range: [0, 270], color: "green" }, // Green for the value
+                    { range: [270, 500], color: "lightgrey" } // Grey for the remaining portion
+                ],
+                borderwidth: 0 // Remove the black border
+            }
+        }
+    ];
 
-var layout = { width: 600, height: 500, margin: { t: 0, b: 0 } };
-Plotly.newPlot('myDiv', data, layout);
+    var layout = {
+        autosize: true, // Enable auto-sizing
+        margin: { t: 20, b: 50, l: 50, r: 50 }, // Adjust margins to prevent clipping
+    };
 
-    </script>
+    Plotly.newPlot('myDiv', data, layout, { responsive: true }); // Responsive plot
+</script>
 </html>
