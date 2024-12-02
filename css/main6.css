@@ -1,0 +1,55 @@
+.text-custom-secondary {
+    color: rgba(102, 112, 133, 1);
+}
+
+.accordian-content {
+    display: none;
+}
+
+.accordian-icon-img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+}
+
+.max-w-300px {
+    max-width: 300px;
+}
+
+.accordian-shadow {
+    box-shadow: 0px 10px 34px 0px rgba(0, 0, 0, 0.06);
+}
+
+.bg-contact-info {
+    background-color: #222222;
+}
+
+.bg-contactus {
+    background-color: #F4F4F4;
+}
+
+.c-info-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+}
+.icon-60px{
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+}
+
+.crneinput {
+    padding: 8px 16px;
+    width: 100%;
+    border: 1px solid #D5D5D5;
+    border-radius: 10px;
+    font-size: 14px;
+}
+
+.btn-submit {
+    color: #fff;
+    background-color: rgba(6, 64, 216, 1);
+    padding: 8px 16px;
+    border: 1px solid rgba(6, 64, 216, 1);
+}

@@ -237,3 +237,16 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+$(document).ready(function () {
+    $(".accordian-btn").click(function () {
+        $(".accordian-content")
+            .not($(this).closest("div").siblings(".accordian-content"))
+            .slideUp();
+        $(".accordian-btn .accordian-icon img")
+            .not($(this).find(".accordian-icon img"))
+            .attr("src", "img/plus-circle-iocn.png");
+
+        $(this).closest("div").siblings(".accordian-content").slideToggle();
+        $(this).find(".accordian-icon img").attr("src", "img/minus-circle-Icon.png");
+    });
+});
