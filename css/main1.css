@@ -23,7 +23,7 @@
 }
 
 .logodiv img {
-    width: 38px;
+    max-width: 138px;
     object-fit: contain;
 }
 
