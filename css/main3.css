@@ -824,6 +824,34 @@ select:focus {
     height: 19px;
 }
 
+.ashley-img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.test-col{
+    width: calc(33.33% - 12px);
+    margin: 6px 6px;
+}
+
+.margin-nv{
+    margin-top: -50px !important
+}
+
+.footer-style{
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.col-footer{
+    width: calc(20% - 12px);
+    margin: 12px 6px;
+}
 /* ----------chat end ------------- */
 @media screen and (min-width: 1441px) {
     .right-c {
@@ -874,6 +902,15 @@ select:focus {
     }
 }
 
+@media screen and (max-width: 1200px){
+    .margin-nv{
+        margin-top: -82px !important;
+    }
+    .col-footer{
+        width: calc(25% - 12px);
+    }
+}
+
 @media screen and (min-width: 1025px) {
     .mid {
         display: flex !important;
@@ -906,6 +943,39 @@ select:focus {
     .pr-height {
         height: calc(100dvh - 265px);
     }
+
+    .test-col{
+        width: calc(50% - 12px);
+        margin: 6px 6px;
+    }
+
+    .margin-nv{
+        margin-top: 6px !important
+    }
+
+    .noah{
+        height: 100%;
+    }
+
+    .col-footer {
+        width: calc(33.33% - 12px);
+    }
+}
+
+@media screen and (max-width:768px){
+    .test-col{
+        width: calc(100% - 0px);
+        margin: 6px 0px;
+    }
+
+    .col-footer {
+        width: calc(50% - 12px);
+    }
+
+    .footer-style{
+        font-size: 14px;
+    }
+    
 }
 
 @media only screen and (max-width: 577px) {
@@ -963,6 +1033,12 @@ select:focus {
         width: 35px;
         height: 35px;
         border-radius: 50%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .col-footer {
+        width: calc(100% - 0px);
     }
 }
 
