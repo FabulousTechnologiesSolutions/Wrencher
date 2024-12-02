@@ -53,3 +53,8 @@
     padding: 8px 16px;
     border: 1px solid rgba(6, 64, 216, 1);
 }
+@media screen and (max-width: 768px){
+.max-w-300px {
+    max-width: 100%;
+}
+}
