@@ -682,6 +682,14 @@
     background: #CBCBCB;
     color: #949494;
 }
+
+/* ---------------Website---------- */
+.navbar-brand {
+    max-width: 180px;
+}
+.header-bg {
+    background: #F5F5F5
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
