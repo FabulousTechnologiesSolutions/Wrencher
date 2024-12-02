@@ -690,6 +690,12 @@
 .header-bg {
     background: #F5F5F5
 }
+.bg-ngrey1 {
+    background: #F5F5F5;
+}
+.text-lwhite {
+    color: #A1A1AA;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
