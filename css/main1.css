@@ -727,6 +727,12 @@
 .trial-bg {
     background: #8786A7;
 }
+.popular-neg {
+    margin-top: -38px;
+}
+.col-minus {
+    margin-top: -30px;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
