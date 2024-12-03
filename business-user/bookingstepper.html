@@ -322,9 +322,10 @@
             updateProgressBar();
         
             // Enable/Disable buttons
-            document.getElementById('prevBtn').disabled = currentStep === 0; // Disable "Back" button on the first step
-            document.getElementById('prevBtn').disabled = currentStep === 4; // Disable "Back" button on the first step
-            document.getElementById('nextBtn').disabled = currentStep === steps.length - 1; // Disable "Next" button on the last step
+            document.getElementById('prevBtn').disabled = currentStep === 0; 
+            document.getElementById('prevBtn').disabled = currentStep === 4; 
+            document.getElementById('prevBtn').disabled = currentStep === 0; 
+            document.getElementById('nextBtn').disabled = currentStep === steps.length - 1; 
             document.getElementById('nextBtn').textContent = currentStep === steps.length - 1 ? 'Submit' : 'Next';
         
             // If last step, submit the form
