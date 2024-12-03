@@ -44,6 +44,10 @@
     width: 26px;
 }
 
+.booking-n button img{
+    width: 14px;
+}
+
 .booking-btn button[disabled] {
     background-color: #cccccc;
 }
