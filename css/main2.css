@@ -246,6 +246,13 @@
     flex-wrap: wrap;
     align-items: center;
 }
+.dropdown-menu{
+    padding: 10px !important;
+    border-radius: 10px !important;
+}
+.dropdown-toggle::after{
+    display: none !important;
+}
 .tag {
     background-color: #003FDB;
     color: #ffffff;
