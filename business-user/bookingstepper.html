@@ -22,13 +22,16 @@
     <div class="mycontainer booking-btn">
         <form id="stepperForm" action="/submit-form" method="POST">
             <div class="d-flex align-items-center justify-content-center mt-4">
+                <div class="text-start mt-2">
+                    <button class="prevBtn" id="prevBtn" type="button" onclick="changeStep(-1)" disabled>Back</button>
+                </div>
                 <img class="stepperlogow" src="../img/logo-main.png" alt="">
             </div>
             <!-- Progress Bar -->
             <div class="progress-bar-container mt-3">
                 <div class="progress-bar" id="progressBar"></div>
             </div>
-    
+
             <!-- Step 1 -->
             <div class="step active">
                 <div class="mycontainer">
@@ -93,59 +96,63 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Step 2 -->
             <div class="step">
-                    <div>
-                        <h2 class="fw-bold">Date & Time</h2>
-                        <p class="text-muted">Pick a date and time for your appointment, and we'll be there.</p>
-                    </div>
-                    <div class="row justify-content-between align-items-start">
-                        <div class="col-lg-8">
-                            <!-- Date Selector -->
-                            <div class="d-flex flex-wrap justify-content-between align-items-center mt-2">
-                                <button class="arrowbutton" id="prevDateBtn" type="button"> <img src="../img/leftangle.png" alt=""> </button>
-                                <div class="d-flex flex-grow-1 justify-content-evenly" id="dateContainer"></div>
-                                <button class="arrowbutton" id="nextDateBtn" type="button"> <img src="../img/stepperangle.png" alt=""> </button>
-                            </div>
-    
-                            <!-- Time Slot Grid -->
-                            <div class="row mt-2 gx-2 me-2" id="timeContainer"></div>
-    
-                           
+                <div>
+                    <h2 class="fw-bold">Date & Time</h2>
+                    <p class="text-muted">Pick a date and time for your appointment, and we'll be there.</p>
+                </div>
+                <div class="row justify-content-between align-items-start">
+                    <div class="col-lg-8">
+                        <!-- Date Selector -->
+                        <div class="d-flex flex-wrap justify-content-between align-items-center mt-2">
+                            <button class="arrowbutton" id="prevDateBtn" type="button"> <img src="../img/leftangle.png"
+                                    alt=""> </button>
+                            <div class="d-flex flex-grow-1 justify-content-evenly" id="dateContainer"></div>
+                            <button class="arrowbutton" id="nextDateBtn" type="button"> <img
+                                    src="../img/stepperangle.png" alt=""> </button>
                         </div>
-                        <div class="col-lg-4 mt-2 mt-lg-0">
-                            <div class="side-bg mt-2">
-                                <p class="mb-0 font-bold topside">
-                                    Christmas Light Installation QUOTE REQUEST
-                                </p>
-                            </div>
+
+                        <!-- Time Slot Grid -->
+                        <div class="row mt-2 gx-2 me-2" id="timeContainer"></div>
+
+
+                    </div>
+                    <div class="col-lg-4 mt-2 mt-lg-0">
+                        <div class="side-bg mt-2">
+                            <p class="mb-0 font-bold topside">
+                                Christmas Light Installation QUOTE REQUEST
+                            </p>
                         </div>
                     </div>
-                     <!-- Continue Button -->
-                     <div class="text-start mt-2">
-                        <button class="nextbtn" id="continueBtn" type="button"
-                            onclick="changeStep(1)">Continue</button>
-                    </div>
+                </div>
+                <!-- Continue Button -->
+                <div class="text-start mt-2">
+                    <button class="nextbtn" id="continueBtn" type="button" onclick="changeStep(1)">Continue</button>
+                </div>
+
             </div>
-    
+
             <!-- Step 3 -->
             <div class="step">
                 <div class="mycontainer">
                     <div class="row justify-content-between align-items-start">
                         <div>
                             <h2 class="fw-bold">Service Address </h2>
-    
+
                         </div>
                         <div class="col-md-8">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <label for="Address" class="ms-2">Address</label>
-                                    <input type="text" id="Address" placeholder="Street Address" class="w-100 custominput max-100">
+                                    <input type="text" id="Address" placeholder="Street Address"
+                                        class="w-100 custominput max-100">
                                 </div>
-                                <div class="col-sm-6" >
+                                <div class="col-sm-6">
                                     <label for="Apt" class="ms-2">Apt, Unit, Floor</label>
-                                    <input type="text" id="Apt" placeholder="Optional" class="w-100 custominput max-100">
+                                    <input type="text" id="Apt" placeholder="Optional"
+                                        class="w-100 custominput max-100">
                                 </div>
                             </div>
                             <div class="text-start mt-4">
@@ -187,7 +194,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Step 4 -->
             <div class="step">
                 <div class="mycontainer">
@@ -208,20 +215,23 @@
                                 </div>
                                 <div class="col-sm-6 mt-3">
                                     <label for="Email" class="fw-medium">Email</label>
-                                    <input type="email" id="Email" placeholder="Enter email" class="custominput max-100">
+                                    <input type="email" id="Email" placeholder="Enter email"
+                                        class="custominput max-100">
                                 </div>
                                 <div class="col-12 d-flex align-items-center mt-3">
                                     <div class="checkbox-wrapper-23">
-                                        <input type="checkbox" id="check-23"/>
+                                        <input type="checkbox" id="check-23" />
                                         <label for="check-23" style="--size: 30px">
-                                          <svg viewBox="0,0,50,50">
-                                            <path d="M5 30 L 20 45 L 45 5"></path>
-                                          </svg>
+                                            <svg viewBox="0,0,50,50">
+                                                <path d="M5 30 L 20 45 L 45 5"></path>
+                                            </svg>
                                         </label>
                                     </div>
-                                    <label for="check-23" class="small ms-2 text-muted">Send me notifications about this appointment via text message</label>
+                                    <label for="check-23" class="small ms-2 text-muted">Send me notifications about this
+                                        appointment via text message</label>
                                 </div>
-                                <a href="#" class="text-blue d-inline-block mt-3 fw-bold text-decoration-none">Apply Coupen</a>
+                                <a href="#" class="text-blue d-inline-block mt-3 fw-bold text-decoration-none">Apply
+                                    Coupen</a>
                             </div>
                             <div class="text-start mt-4">
                                 <button class="nextbtn" id="continueBtn" type="button" onclick="changeStep(1)">Book
@@ -262,7 +272,7 @@
                     </div>
                 </div>
             </div>
-    
+
             <!-- Step 5 -->
             <div class="step">
                 <div class="container hght">
@@ -296,28 +306,31 @@
 
         function changeStep(direction) {
             const steps = document.querySelectorAll('.step');
-
+        
             // Hide current step
             steps[currentStep].classList.remove('active');
-
+        
             // Update step index
             currentStep += direction;
-
+        
             // Show new step
             steps[currentStep].classList.add('active');
-
+        
             // Update Progress Bar
             updateProgressBar();
-
+        
             // Enable/Disable buttons
-            document.getElementById('prevBtn').disabled = currentStep === 0;
+            document.getElementById('prevBtn').disabled = currentStep === 0; // Disable "Back" button on the first step
+            document.getElementById('prevBtn').disabled = currentStep === 4; // Disable "Back" button on the first step
+            document.getElementById('nextBtn').disabled = currentStep === steps.length - 1; // Disable "Next" button on the last step
             document.getElementById('nextBtn').textContent = currentStep === steps.length - 1 ? 'Submit' : 'Next';
-
+        
             // If last step, submit the form
             if (currentStep === steps.length - 1 && direction > 0) {
                 document.getElementById('stepperForm').submit();
             }
         }
+        
 
         // Initialize Progress Bar
         updateProgressBar();
