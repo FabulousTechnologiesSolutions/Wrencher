@@ -159,6 +159,9 @@
     border-radius: 100px;
     background-color:#003FDB ;
 }
+.prevBtn{
+    background-color: transparent !important;
+}
 
 .booking-btn .checkbox-wrapper-23 *,
 .booking-btn .checkbox-wrapper-23 *:after,

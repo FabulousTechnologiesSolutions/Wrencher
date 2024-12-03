@@ -298,6 +298,7 @@
 
     <script>
         let currentStep = 0;
+        document.getElementById('prevBtn').disabled = false;
 
         function updateProgressBar() {
             const progressBar = document.getElementById('progressBar');
@@ -305,39 +306,45 @@
             const progress = ((currentStep + 1) / totalSteps) * 100;
             progressBar.style.width = progress + '%';
         }
-
+    
         function changeStep(direction) {
             const steps = document.querySelectorAll('.step');
-        
+    
+            if (currentStep === 0 && direction === -1) {
+                window.location.href = 'bookingservice.html';
+                return;
+            }
+            
             // Hide current step
             steps[currentStep].classList.remove('active');
-        
+            
             // Update step index
             currentStep += direction;
-        
+    
             // Show new step
             steps[currentStep].classList.add('active');
-        
+            
             // Update Progress Bar
             updateProgressBar();
-        
-            // Enable/Disable buttons
-            document.getElementById('prevBtn').disabled = currentStep === 0; 
-            document.getElementById('prevBtn').disabled = currentStep === 4; 
-            document.getElementById('prevBtn').disabled = currentStep === 0; 
-            document.getElementById('nextBtn').disabled = currentStep === steps.length - 1; 
-            document.getElementById('nextBtn').textContent = currentStep === steps.length - 1 ? 'Submit' : 'Next';
-        
-            // If last step, submit the form
-            if (currentStep === steps.length - 1 && direction > 0) {
-                document.getElementById('stepperForm').submit();
+    
+            const laststep = document.getElementById('prevBtn');
+            laststep.disabled = currentStep === 4;  
+            if (currentStep === 4) {
+                laststep.style.display = 'none';  
+            } else {
+                laststep.style.display = '';  
             }
+            document.getElementById('prevBtn').disabled = false;
+            document.getElementById('nextBtn').disabled = currentStep === steps.length - 1;
+            document.getElementById('nextBtn').textContent = currentStep === steps.length - 1 ? 'Submit' : 'Next';
+    
+                  
         }
-        
-
+    
         // Initialize Progress Bar
         updateProgressBar();
     </script>
+    
     <script>
         const dateContainer = document.getElementById('dateContainer');
         const timeContainer = document.getElementById('timeContainer');
