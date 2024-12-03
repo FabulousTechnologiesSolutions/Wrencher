@@ -712,6 +712,21 @@
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border: 1px solid var(--sky);
 }
+.max-price {
+    max-width: 480px;
+}
+.pricing-grey {
+    background: #EEEEEE;
+}
+.bg-plans {
+    background: #EBF0FF;
+}
+.text-grey {
+    color: #848199;
+}
+.trial-bg {
+    background: #8786A7;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
