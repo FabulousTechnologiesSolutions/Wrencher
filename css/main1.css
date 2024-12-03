@@ -705,6 +705,13 @@
     height: 70px;
     object-fit: contain;
 }
+.ser-hover {
+    transition: all 0.3s;
+}
+.ser-hover:hover {
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border: 1px solid var(--sky);
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
