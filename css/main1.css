@@ -796,6 +796,15 @@
         max-width: 100%;
     }
 }
+@media screen and (max-width:767px){
+    .popular-neg {
+        margin-top: 8px;
+    }
+    .col-minus {
+        margin-top: 0px;
+    }
+}
+
 @media screen and (max-width:577px){
     .mbl-100 {
         width: 100%;
@@ -824,6 +833,9 @@
 
     .border-right{
         border-right: 0px solid rgba(93, 114, 133, 1);
+    }
+    .pricing-grey {
+        background: none;
     }
 }
 
