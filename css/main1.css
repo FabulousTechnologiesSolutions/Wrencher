@@ -733,6 +733,35 @@
 .col-minus {
     margin-top: -30px;
 }
+.book-box {
+    border: 1px solid #E6E6E6;
+}
+.book-icon {
+    background: #F5F5F5;
+    display: inline-block;
+    padding: 14px 14px;
+    color: #000;
+}
+.arrow-up {
+    border: 1px solid #E6E6E6;
+    display: inline-block;
+    padding: 14px 14px;
+}
+.book-box {
+    transition: all 0.3s;
+}
+.book-box:hover {
+    background: #E2E7F5;
+}
+.book-box:hover .arrow-up{
+    border: 1px solid #003FDB;
+    background: #003FDB;
+    color: #fff;
+}
+.book-box:hover .book-icon{
+    background: #003FDB;
+    color: #fff;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
