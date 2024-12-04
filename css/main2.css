@@ -282,7 +282,8 @@
 .brown{
     color: #973F00;
 }
-.rightarrow {
+.rightarrow,
+.rightarrow2 {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -298,7 +299,8 @@
     box-shadow: rgba(253, 99, 99, 0.2) 0px 0px 25px;
 }
 
-.leftarrow {
+.leftarrow,
+.leftarrow2 {
     position: absolute;
     width: 40px;
     height: 40px;
@@ -313,6 +315,18 @@
     border-radius: 10px;
     box-shadow: rgba(253, 99, 99, 0.2) 0px 0px 25px;
 }
+@media screen and (max-width: 1030px) {
+    .rightarrow,
+    .rightarrow2 {
+        display: none;
+    }
+    
+    .leftarrow,
+    .leftarrow2 {
+        display: none;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .stepperlogow{
         width: 100%;
