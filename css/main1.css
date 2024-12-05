@@ -762,6 +762,7 @@
     background: #003FDB;
     color: #fff;
 }
+
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
