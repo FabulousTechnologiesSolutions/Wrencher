@@ -763,6 +763,18 @@
     color: #fff;
 }
 
+.pr-icon {
+    width: 20px;
+}
+
+.pricing-tbl {
+    min-width: 600px;
+    padding: 0 20px;
+}
+
+.pr-main {
+    overflow-x: auto;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
