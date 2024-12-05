@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="../css/main1.css">
     <link rel="stylesheet" href="../css/main2.css">
     <link rel="stylesheet" href="../css/main3.css">
-    <title>Add Package Quote</title>
+    <title>Add new quote</title>
 </head>
 
 <body class="bg-white">
@@ -23,7 +23,7 @@
                     <div class="d-flex align-items-center justify-content-start">
                         <a href="quotation.html" class="text-dark me-2"><i
                                 class="fa-solid fa-arrow-left bg-white shadow p-2 rounded-circle"></i></a>
-                        <h5 class="mb-0 blu font-j">Add Package Quote</h5>
+                        <h5 class="mb-0 blu font-j">Add New Quote</h5>
                     </div>
                 </div>
                 <div class="">
@@ -36,7 +36,7 @@
                         <div bis_skin_checked="1">
                             <div class="dropdown d-flex justify-content-between w-100 align-items-center"
                                 bis_skin_checked="1">
-                                <a class="mb-0 text-decoration-none d-flex align-items-center">
+                                <a class="mb-0 text-decoration-none d-flex align-items-center justify-content-center">
                                     <div class="ms-2 d-none d-sm-block me-2 me-sm-0" bis_skin_checked="1">
                                         <h6 class="text-center mb-0 l-h font-md text-dark">John Smith</h6>
                                     </div>
@@ -73,12 +73,69 @@
             <div class="right-bottom1">
                 <div class="container-fluid h-100">
                     <form action="quotation.html" class="">
-                        <h4 class="mb-0 blu2">Add Package Quote Details</h4>
+                        <h4 class="mb-0 blu2">Add New Quote Details</h4>
                         <div class="row mt-3">
                             <div class="col-lg-8 col-sm-6">
                                 <div class="row">
+                                    <div class="col-lg-6 mb-3">
+                                        <div>
+                                            <label for="" class="ps-2 fw-semibold">Select Customer</label>
+                                            <div class="dropdown1">
+                                                <div class="dropdown-toggle1 d-flex bg-white">
+                                                    <div class="w-100">
+                                                        <button type="button"
+                                                            class="w-100 dropdown-toggle2 border-0 p-0 text-start bg-white">Select
+                                                            Here</button>
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa-solid fa-caret-down"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="dropdown-menu1 bg-white shadow rounded-3 p-2">
+                                                    <button type="button"
+                                                        class="create-new-btn text-start shadow-sm rounded-3"
+                                                        data-bs-toggle="modal" data-bs-target="#exampleModal"><i
+                                                            class="fa-solid fa-square-plus me-2"></i>Create a new
+                                                        customer</button>
+                                                    <div class="mt-2">
+                                                        <div
+                                                            class="search-input d-flex align-items-center shadow-sm px-3 py-2">
+                                                            <input type="text" placeholder="Search Customer"
+                                                                class="w-100 border-0">
+                                                            <button class="search-btn"><i
+                                                                    class="fa-solid fa-magnifying-glass"></i></button>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="customer-list mt-2">
+                                                        <!-- Customer items will be added here dynamically -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label for="" class="ps-2 fw-semibold">Invoice number</label>
+                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
+                                            placeholder="Type here">
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label for="" class=" ps-2 fw-semibold">Date</label>
+                                        <input type="date" class="w-100 bg-white border rounded-3 p-2">
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label for="" class="ps-2 fw-semibold">Terms</label>
+                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
+                                            placeholder="Type here">
+                                    </div>
+                                    <div class="col-lg-6 mb-3">
+                                        <label for="" class="ps-2 fw-semibold">Plan Name</label>
+                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
+                                            placeholder="Type here">
+                                    </div>
+                                </div>
+                                <div class="row">
                                     <div class="col-lg-6 my-3">
-                                        <label for="" class="fw-medium ps-2">Items Picture</label>
+                                        <label for="" class="fw-semibold ps-2">Items Picture</label>
                                         <input type="file" name="" id="" class="w-100 bg-white border rounded-3 p-2">
                                     </div>
                                 </div>
@@ -112,10 +169,7 @@
                                         <input type="number" class="w-100 bg-white border rounded-3 p-2"
                                             placeholder="Type Invoice Number">
                                     </div>
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class=" ps-2 fw-semibold">Date</label>
-                                        <input type="date" class="w-100 bg-white border rounded-3 p-2">
-                                    </div>
+                                   
                                     <div class="col-lg-6 mb-3">
                                         <label for="" class=" ps-2 fw-semibold">Price</label>
                                         <input type="number" class="w-100 bg-white border rounded-3 p-2"
@@ -145,11 +199,7 @@
                                             <option value=""></option>
                                         </select>
                                     </div>
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class="ps-2 fw-semibold">Terms</label>
-                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type here">
-                                    </div>
+                                   
                                     <div class="col-lg-6 mb-3">
                                         <label for="" class="ps-2 fw-semibold">Location</label>
                                         <input type="text" class="w-100 bg-white border rounded-3 p-2"
@@ -193,126 +243,275 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="row mt-5 mb-2">
+                        <div class="row mt-3 mb-2">
                             <div class="col-lg-2 col-md-3 col-sm-4 mb-2">
-                                <button class="border py-2 bg-sky text-white w-100 rounded-3">Save Quote</button>
+                                <button class="border py-2 bg-sky text-white w-100 rounded-3">Save</button>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 mb-2">
                                 <button class="border py-2 bg-dark text-white w-100 rounded-3">Review & Send</button>
                             </div>
                         </div>
                     </form>
+                    <div class="table-responsive reports-tbl mt-5">
+                        <table class="table">
+                            <thead>
+                                <tr class="align-middle">
+                                    <th class="font-semi text-center">Service category</th>
+                                    <th class="font-semi text-center">Service category photo</th>
+                                    <th class="font-semi text-center">Quantity</th>
+                                    <th class="font-semi text-center">Price</th>
+                                    <th class="font-semi text-center">Taxable? </th>
+                                    <th class="font-semi text-center">Line item pictures</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle">
+                                    <td class="text-center">
+                                        Category name
+                                    </td>
+                                    <td class="font-md text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                        </div>
+                                    </td>
+                                    <td class="font-md text-center">
+                                        <p class="sky-c mb-0 text-center">20</p>
+                                    </td>
+                                    <td class="font-md text-center">20 $</td>
+                                    <td class="font-md text-center">
+                                        <input type="checkbox" checked>
+                                    </td>
+                                    <td class="font-md text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td class="text-center">
+                                        Category name
+                                    </td>
+                                    <td class="font-md text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                        </div>
+                                    </td>
+                                    <td class="font-md text-center">
+                                        <p class="sky-c mb-0 text-center">20</p>
+                                    </td>
+                                    <td class="font-md text-center">20 $</td>
+                                    <td class="font-md text-center">
+                                        <input type="checkbox" checked>
+                                    </td>
+                                    <td class="font-md text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td class="text-center">
+                                        Category name
+                                    </td>
+                                    <td class="font-md text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                        </div>
+                                    </td>
+                                    <td class="font-md text-center">
+                                        <p class="sky-c mb-0 text-center">20</p>
+                                    </td>
+                                    <td class="font-md text-center">20 $</td>
+                                    <td class="font-md text-center">
+                                        <input type="checkbox" checked>
+                                    </td>
+                                    <td class="font-md text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td class="text-center">
+                                        Category name
+                                    </td>
+                                    <td class="font-md text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                        </div>
+                                    </td>
+                                    <td class="font-md text-center">
+                                        <p class="sky-c mb-0 text-center">20</p>
+                                    </td>
+                                    <td class="font-md text-center">20 $</td>
+                                    <td class="font-md text-center">
+                                        <input type="checkbox" checked>
+                                    </td>
+                                    <td class="font-md text-center">
+                                        <div class="d-flex align-items-center justify-content-center">
+                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <h2 class="fs-5 fw-semibold mt-4">Internal job cost </h2>
+                    <div class="table-responsive reports-tbl mt-3">
+                        <table class="table">
+                            <thead>
+                                <tr class="align-middle">
+                                    <th class="font-semi text-center">Vendor</th>
+                                    <th class="font-semi text-center">Description</th>
+                                    <th class="font-semi text-center">Link</th>
+                                    <th class="font-semi text-center">Quantity</th>
+                                    <th class="font-semi text-center">Amount </th>
+                                    <th class="font-semi text-center">Markup </th>
+                                    <th class="font-semi text-center">Total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="align-middle">
+                                    <td class="text-center">ABC Supplies</td>
+                                    <td class="text-center">Office Chair</td>
+                                    <td class="text-center"><a href="#">View</a></td>
+                                    <td class="text-center">10</td>
+                                    <td class="text-center">$100</td>
+                                    <td class="text-center">10%</td>
+                                    <td class="text-center">$1100</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td class="text-center">ABC Supplies</td>
+                                    <td class="text-center">Office Chair</td>
+                                    <td class="text-center"><a href="#">View</a></td>
+                                    <td class="text-center">10</td>
+                                    <td class="text-center">$100</td>
+                                    <td class="text-center">10%</td>
+                                    <td class="text-center">$1100</td>
+                                </tr>
+                                <tr class="align-middle">
+                                    <td class="text-center">ABC Supplies</td>
+                                    <td class="text-center">Office Chair</td>
+                                    <td class="text-center"><a href="#">View</a></td>
+                                    <td class="text-center">10</td>
+                                    <td class="text-center">$100</td>
+                                    <td class="text-center">10%</td>
+                                    <td class="text-center">$1100</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="mt-5 py-4">
+                        <div class="mycontainer ">
+                            <div class="row bg-plans px-sm-3 px-lg-4 rounded-3">
+                                <div class="col-sm-6 col-md-4 py-4 px-4">
+                                    <h6 class="fw-bold fw-semibold fs-4">Lite <span class="text-grey fw-medium fs-6">/month</span></h6>
+                                    <p class="text-grey">Scale your business with powerful
+                                        sales and marketing automation
+                                        tools.</p>
+                                    <p class="fs-2 fw-semibold mb-0">$0.00 <span class="text-grey fw-medium fs-6">Billed monthly</span></p>
+                                    <p class="text-grey fw-semibold mt-1">Key features on Lite:</p>
+                                    <ul class="mb-0 pb-0 list-unstyled">
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 sky"></i>
+                                            <span class="text-grey fw-medium">Quote add-ons and images</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 sky"></i>
+                                            <span class="text-grey fw-medium">Job costing</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 sky"></i>
+                                            <span class="text-grey fw-medium">Automated quote follow-ups</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 sky"></i>
+                                            <span class="text-grey fw-medium">Two-way text messaging</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 sky"></i>
+                                            <span class="text-grey fw-medium">1 User</span>
+                                        </li>
+                                    </ul>
+                                    <div class="mt-3">
+                                    <a href="#" class="text-decoration-none d-inline-block text-white rounded-pill px-4 py-2 trial-bg ">Start Free Trial</a>
+                                    </div>
+                                </div>
+                                <div class="col-sm-6 col-md-4 py-4 px-4">
+                                    <h6 class="fw-bold fw-semibold fs-4">Grow <span class="text-grey fw-medium fs-6">/month</span></h6>
+                                    <p class="text-grey">Build efficient processes that better
+                                        connect your team and impress
+                                        your customers.</p>
+                                    <p class="fs-2 fw-semibold mb-0">$27 <span class="text-grey fw-medium fs-6">Billed monthly</span></p>
+                                    <p class="text-grey fw-semibold mt-1">Key features on Grow::</p>
+                                    <ul class="mb-0 pb-0 list-unstyled">
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 sky"></i>
+                                            <span class="text-grey fw-medium">Automated reminders & payments</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 sky"></i>
+                                            <span class="text-grey fw-medium">1-on-1 Product coaching</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 sky"></i>
+                                            <span class="text-grey fw-medium">QuickBooks Online sync</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 sky"></i>
+                                            <span class="text-grey fw-medium">Online booking</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 sky"></i>
+                                            <span class="text-grey fw-medium">5 Users</span>
+                                        </li>
+                                    </ul>
+                                    <div class="mt-3">
+                                    <a href="#" class="text-decoration-none d-inline-block text-white rounded-pill px-4 py-2 trial-bg ">Start Free Trial</a>
+                                    </div>
+                                </div>
+                                <div class="bg-sky col-minus rounded-4 col-sm-6 col-md-4 py-4 px-4">
+                                    <div class="popular-neg d-flex justify-content-center">
+                                        <span class="bg-white rounded-pill px-4 py-2 fw-semibold d-inline-block text-uppercase">Most Popular</span>
+                                    </div>
+                                    <h6 class="fw-semibold text-white fw-semibold fs-4 mt-4">Professional <span class="text-white fw-medium fs-6">/month</span></h6>
+                                    <p class="text-white">Build efficient processes that better
+                                        connect your team and impress
+                                        your customers.</p>
+                                    <p class="fs-2 text-white fw-semibold mb-0">$27 <span class="text-white fw-medium fs-6">Billed monthly</span></p>
+                                    <p class="text-white fw-semibold mt-1">Key features on Grow::</p>
+                                    <ul class="mb-0 pb-0 list-unstyled">
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 text-white"></i>
+                                            <span class="text-white fw-medium">Automated reminders & payments</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 text-white"></i>
+                                            <span class="text-white fw-medium">1-on-1 Product coaching</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 text-white"></i>
+                                            <span class="text-white fw-medium">QuickBooks Online sync</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 text-white"></i>
+                                            <span class="text-white fw-medium">Online booking</span>
+                                        </li>
+                                        <li class="d-flex align-items-center">
+                                            <i class="fas fa-check me-2 text-white"></i>
+                                            <span class="text-white fw-medium">5 Users</span>
+                                        </li>
+                                    </ul>
+                                    <div class="mt-3">
+                                    <a href="#" class="text-decoration-none d-inline-block text-white rounded-pill px-4 py-2 trial-bg ">Start Free Trial</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-        <section class="bg-bluenew py-5">
-            <div class="mycontainer py-5">
-                <div class="row bg-plans px-sm-3 px-lg-4 rounded-3">
-                    <div class="col-sm-6 col-md-4 py-4 px-4">
-                        <h6 class="fw-bold fw-semibold fs-4">Lite <span class="text-grey fw-medium fs-6">/month</span></h6>
-                        <p class="text-grey">Scale your business with powerful
-                            sales and marketing automation
-                            tools.</p>
-                        <p class="fs-2 fw-semibold mb-0">$0.00 <span class="text-grey fw-medium fs-6">Billed monthly</span></p>
-                        <p class="text-grey fw-semibold mt-1">Key features on Lite:</p>
-                        <ul class="mb-0 pb-0 list-unstyled">
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 sky"></i>
-                                <span class="text-grey fw-medium">Quote add-ons and images</span>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 sky"></i>
-                                <span class="text-grey fw-medium">Job costing</span>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 sky"></i>
-                                <span class="text-grey fw-medium">Automated quote follow-ups</span>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 sky"></i>
-                                <span class="text-grey fw-medium">Two-way text messaging</span>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 sky"></i>
-                                <span class="text-grey fw-medium">1 User</span>
-                            </li>
-                        </ul>
-                        <div class="mt-3">
-                        <a href="#" class="text-decoration-none d-inline-block text-white rounded-pill px-4 py-2 trial-bg ">Start Free Trial</a>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-4 py-4 px-4">
-                        <h6 class="fw-bold fw-semibold fs-4">Grow <span class="text-grey fw-medium fs-6">/month</span></h6>
-                        <p class="text-grey">Build efficient processes that better
-                            connect your team and impress
-                            your customers.</p>
-                        <p class="fs-2 fw-semibold mb-0">$27 <span class="text-grey fw-medium fs-6">Billed monthly</span></p>
-                        <p class="text-grey fw-semibold mt-1">Key features on Grow::</p>
-                        <ul class="mb-0 pb-0 list-unstyled">
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 sky"></i>
-                                <span class="text-grey fw-medium">Automated reminders & payments</span>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 sky"></i>
-                                <span class="text-grey fw-medium">1-on-1 Product coaching</span>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 sky"></i>
-                                <span class="text-grey fw-medium">QuickBooks Online sync</span>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 sky"></i>
-                                <span class="text-grey fw-medium">Online booking</span>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 sky"></i>
-                                <span class="text-grey fw-medium">5 Users</span>
-                            </li>
-                        </ul>
-                        <div class="mt-3">
-                        <a href="#" class="text-decoration-none d-inline-block text-white rounded-pill px-4 py-2 trial-bg ">Start Free Trial</a>
-                        </div>
-                    </div>
-                    <div class="bg-sky col-minus rounded-4 col-sm-6 col-md-4 py-4 px-4">
-                        <div class="popular-neg d-flex justify-content-center">
-                            <span class="bg-white rounded-pill px-4 py-2 fw-semibold d-inline-block text-uppercase">Most Popular</span>
-                        </div>
-                        <h6 class="fw-semibold text-white fw-semibold fs-4 mt-4">Professional <span class="text-white fw-medium fs-6">/month</span></h6>
-                        <p class="text-white">Build efficient processes that better
-                            connect your team and impress
-                            your customers.</p>
-                        <p class="fs-2 text-white fw-semibold mb-0">$27 <span class="text-white fw-medium fs-6">Billed monthly</span></p>
-                        <p class="text-white fw-semibold mt-1">Key features on Grow::</p>
-                        <ul class="mb-0 pb-0 list-unstyled">
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 text-white"></i>
-                                <span class="text-white fw-medium">Automated reminders & payments</span>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 text-white"></i>
-                                <span class="text-white fw-medium">1-on-1 Product coaching</span>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 text-white"></i>
-                                <span class="text-white fw-medium">QuickBooks Online sync</span>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 text-white"></i>
-                                <span class="text-white fw-medium">Online booking</span>
-                            </li>
-                            <li class="d-flex align-items-center">
-                                <i class="fas fa-check me-2 text-white"></i>
-                                <span class="text-white fw-medium">5 Users</span>
-                            </li>
-                        </ul>
-                        <div class="mt-3">
-                        <a href="#" class="text-decoration-none d-inline-block text-white rounded-pill px-4 py-2 trial-bg ">Start Free Trial</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
     </section>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
