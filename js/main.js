@@ -2,25 +2,25 @@ $(document).ready(function () {
     $(".fa-bars").click(function () {
         $(".left").toggle();
     });
-    $("#toggleButton").click(function() {
+    $("#toggleButton").click(function () {
         $("#myBlock").show(); // Toggles display block/none
-        
+
     });
 
     // Close the details section and show the mid chat again
-    $(".close-detail").click(function() {
+    $(".close-detail").click(function () {
         $("#myBlock").hide(); // Hides the details panel
         $(".mid").show(); // Show the chat again
     });
 
     // Open chat when clicking on a person
-    $(".person-show").on('click', function() {
+    $(".person-show").on('click', function () {
         $(".mid").show(); // Show the chat section
         $(".left-c").hide(); // Hide the left section
     });
 
     // Close the chat section and show the left section again
-    $(".close-chat").on('click', function() {
+    $(".close-chat").on('click', function () {
         $(".mid").hide(); // Hide the chat
         $(".left-c").show(); // Show the left section again
     });
@@ -29,13 +29,13 @@ $(document).ready(function () {
         event.preventDefault(); // Prevent the link from being followed
         const target = $($(this).data('target'));
         const isTargetOpen = target.hasClass('show');
-        
+
         // Close all other dropdowns and reset icons
         $('.mydropdown').removeClass('show').each(function () {
             const otherIcon = $('.chevron-icon[data-target="#' + this.id + '"]');
             otherIcon.removeClass('rotate');
         });
-        
+
         // Toggle the current dropdown and icon
         if (!isTargetOpen) {
             target.addClass('show');
@@ -44,96 +44,96 @@ $(document).ready(function () {
     });
 
     // Initialize FullCalendar
-   
 
 
 
-document.querySelector('.dropdown-toggle1').addEventListener('click', function () {
-    const dropdownMenu = document.querySelector('.dropdown-menu1');
-    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-});
 
-document.addEventListener('click', function (event) {
-    const isClickInside = document.querySelector('.dropdown1').contains(event.target);
-    if (!isClickInside) {
-        document.querySelector('.dropdown-menu1').style.display = 'none';
-    }
-});
-
-// Sample customer data
-const customers = [
-    { name: 'Customer', img: '../img/user.png' },
-    { name: 'Customer name here', img: '../img/user.png' },
-    { name: 'Customer name here', img: '../img/user.png' },
-    { name: 'Customer name here', img: '../img/user.png' },
-    { name: 'Customer name here', img: '../img/user.png' },
-];
-
-const customerList = document.querySelector('.customer-list');
-const dropdownToggle = document.querySelector('.dropdown-toggle2');
-
-customers.forEach(customer => {
-    const li = document.createElement('li');
-    li.className = 'customer-list-item';
-    li.innerHTML = `<img src="${customer.img}" alt="Customer image">${customer.name}`;
-    li.addEventListener('click', function () {
-        dropdownToggle.textContent = customer.name; // Update the dropdown button text
-        document.querySelector('.dropdown-menu1').style.display = 'none'; // Close the dropdown menu
-    });
-    customerList.appendChild(li);
-});
-
-// ---------------
-
-document.querySelector('.custom-dropdown-toggle').addEventListener('click', function () {
-    const dropdownMenu = document.querySelector('.custom-dropdown-menu');
-    dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
-});
-
-document.addEventListener('click', function (event) {
-    const isClickInside = document.querySelector('.custom-dropdown').contains(event.target);
-    if (!isClickInside) {
-        document.querySelector('.custom-dropdown-menu').style.display = 'none';
-    }
-});
-
-// Sample customer data
-const customers1 = [
-    { title: 'Picture Hanging', description: 'Our experts will come to assess your needs and discuss solutions.' },
-    { title: 'Drywall Repair', description: 'Our experts will come to assess your needs and discuss solutions.' },
-    { title: 'Gutter Cleaning', description: 'Our experts will come to assess your needs and discuss solutions.' },
-    { title: 'Curtain Rod Install', description: 'Our experts will come to assess your needs and discuss solutions.' },
-    { title: 'Door Knob/ Handle Lock Install', description: 'Our experts will come to assess your needs and discuss solutions.' },
-];
-
-const customerList1 = document.querySelector('.custom-customer-list');
-const dropdownToggle1 = document.querySelector('.custom-toggle-button');
-
-customers1.forEach(customer => {
-    const li = document.createElement('li');
-    li.className = 'custom-customer-list-item d-flex flex-column align-items-start';
-
-    // Using h6 for the title and p for the description
-    li.innerHTML = `<h6 class="mb-0">${customer.title}</h6><p class="mb-0 font-12">${customer.description}</p>`;
-
-    li.addEventListener('click', function () {
-        dropdownToggle1.textContent = customer.title; // Update the dropdown button text with the customer title
-        document.querySelector('.custom-dropdown-menu').style.display = 'none'; // Close the dropdown menu
+    document.querySelector('.dropdown-toggle1').addEventListener('click', function () {
+        const dropdownMenu = document.querySelector('.dropdown-menu1');
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
     });
 
-    customerList1.appendChild(li);
-});
+    document.addEventListener('click', function (event) {
+        const isClickInside = document.querySelector('.dropdown1').contains(event.target);
+        if (!isClickInside) {
+            document.querySelector('.dropdown-menu1').style.display = 'none';
+        }
+    });
 
-// -------------
+    // Sample customer data
+    const customers = [
+        { name: 'Customer', img: '../img/user.png' },
+        { name: 'Customer name here', img: '../img/user.png' },
+        { name: 'Customer name here', img: '../img/user.png' },
+        { name: 'Customer name here', img: '../img/user.png' },
+        { name: 'Customer name here', img: '../img/user.png' },
+    ];
 
-const lineItemsContainer = document.getElementById('lineItemsContainer');
-const addLineItemButton = document.getElementById('addLineItem');
+    const customerList = document.querySelector('.customer-list');
+    const dropdownToggle = document.querySelector('.dropdown-toggle2');
 
-// Function to create a new line item element
-function createLineItem() {
-    const lineItem = document.createElement('div');
-    lineItem.className = 'line-item';
-    lineItem.innerHTML = `
+    customers.forEach(customer => {
+        const li = document.createElement('li');
+        li.className = 'customer-list-item';
+        li.innerHTML = `<img src="${customer.img}" alt="Customer image">${customer.name}`;
+        li.addEventListener('click', function () {
+            dropdownToggle.textContent = customer.name; // Update the dropdown button text
+            document.querySelector('.dropdown-menu1').style.display = 'none'; // Close the dropdown menu
+        });
+        customerList.appendChild(li);
+    });
+
+    // ---------------
+
+    document.querySelector('.custom-dropdown-toggle').addEventListener('click', function () {
+        const dropdownMenu = document.querySelector('.custom-dropdown-menu');
+        dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+    });
+
+    document.addEventListener('click', function (event) {
+        const isClickInside = document.querySelector('.custom-dropdown').contains(event.target);
+        if (!isClickInside) {
+            document.querySelector('.custom-dropdown-menu').style.display = 'none';
+        }
+    });
+
+    // Sample customer data
+    const customers1 = [
+        { title: 'Picture Hanging', description: 'Our experts will come to assess your needs and discuss solutions.' },
+        { title: 'Drywall Repair', description: 'Our experts will come to assess your needs and discuss solutions.' },
+        { title: 'Gutter Cleaning', description: 'Our experts will come to assess your needs and discuss solutions.' },
+        { title: 'Curtain Rod Install', description: 'Our experts will come to assess your needs and discuss solutions.' },
+        { title: 'Door Knob/ Handle Lock Install', description: 'Our experts will come to assess your needs and discuss solutions.' },
+    ];
+
+    const customerList1 = document.querySelector('.custom-customer-list');
+    const dropdownToggle1 = document.querySelector('.custom-toggle-button');
+
+    customers1.forEach(customer => {
+        const li = document.createElement('li');
+        li.className = 'custom-customer-list-item d-flex flex-column align-items-start';
+
+        // Using h6 for the title and p for the description
+        li.innerHTML = `<h6 class="mb-0">${customer.title}</h6><p class="mb-0 font-12">${customer.description}</p>`;
+
+        li.addEventListener('click', function () {
+            dropdownToggle1.textContent = customer.title; // Update the dropdown button text with the customer title
+            document.querySelector('.custom-dropdown-menu').style.display = 'none'; // Close the dropdown menu
+        });
+
+        customerList1.appendChild(li);
+    });
+
+    // -------------
+
+    const lineItemsContainer = document.getElementById('lineItemsContainer');
+    const addLineItemButton = document.getElementById('addLineItem');
+
+    // Function to create a new line item element
+    function createLineItem() {
+        const lineItem = document.createElement('div');
+        lineItem.className = 'line-item';
+        lineItem.innerHTML = `
         <div class="d-flex align-items-baseline mt-3">
             <div>
                 <img src="../img/three-line.png" alt="">
@@ -187,22 +187,22 @@ function createLineItem() {
             </div>
         </div>
     `;
-    lineItemsContainer.appendChild(lineItem);
+        lineItemsContainer.appendChild(lineItem);
 
-    // Attach event listener to the delete button of the new line item
-    lineItem.querySelector('.deleteLineItem').addEventListener('click', function() {
-        lineItemsContainer.removeChild(lineItem);
+        // Attach event listener to the delete button of the new line item
+        lineItem.querySelector('.deleteLineItem').addEventListener('click', function () {
+            lineItemsContainer.removeChild(lineItem);
+        });
+    }
+
+    // Event listener for the "Add Line Item" button
+    addLineItemButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        createLineItem();
     });
-}
 
-// Event listener for the "Add Line Item" button
-addLineItemButton.addEventListener('click', function(e) {
-    e.preventDefault();
+    // Initial line item (if you want to start with one)
     createLineItem();
-});
-
-// Initial line item (if you want to start with one)
-createLineItem();
 
 });
 
