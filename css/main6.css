@@ -12,12 +12,20 @@
     object-fit: contain;
 }
 
+.rounded-inherit {
+    border-radius: inherit;
+}
+
 .max-w-300px {
     max-width: 300px;
 }
 
 .accordian-shadow {
     box-shadow: 0px 10px 34px 0px rgba(0, 0, 0, 0.06);
+}
+
+.bg-search-btn {
+    background-color: var(--sky);
 }
 
 .bg-contact-info {
@@ -33,9 +41,16 @@
     color: #fff;
     font-size: 12px;
 }
-.icon-60px{
+
+.icon-60px {
     width: 60px;
     height: 60px;
+    object-fit: contain;
+}
+
+.icon-40px {
+    width: 40px;
+    height: 40px;
     object-fit: contain;
 }
 
@@ -53,8 +68,52 @@
     padding: 8px 16px;
     border: 1px solid rgba(6, 64, 216, 1);
 }
-@media screen and (max-width: 768px){
-.max-w-300px {
-    max-width: 100%;
+
+.search-topics {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 220px;
 }
+
+.topics-lists {
+    margin-top: 16px;
+}
+
+.topics-lists li {
+    padding: 4px 0;
+}
+
+.topics-lists .topics-link {
+    text-decoration: none;
+    color: rgba(93, 114, 133, 1);
+    font-size: 14px;
+}
+
+.topics-lists .topics-link.active {
+    color: rgba(0, 63, 219, 1);
+}
+
+.topics-lists li::marker {
+    font-size: 8px;
+}
+
+@media screen and (max-width: 768px) {
+    .max-w-300px {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .search-topics-left {
+        padding: 0;
+        display: none;
+        position: absolute;
+        z-index: 8;
+        width: fit-content;
+        box-shadow: var();
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+        border-radius: 16px;
+        overflow: hidden;
+    }
 }
