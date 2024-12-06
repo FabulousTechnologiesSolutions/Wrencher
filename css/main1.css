@@ -775,6 +775,32 @@
 .pr-main {
     overflow-x: auto;
 }
+
+.white-place::placeholder {
+    color: #757575;
+}
+
+.dropdown-menu.new-dropdown {
+    padding: 0px !important;
+}
+
+.new-dropdown li:last-child a{
+    border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+}
+
+.new-dropdown li:first-child a{
+    border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+}
+header .nav-link.active {
+    color: #009FF4 !important;
+    font-weight: 500;
+}
+.caret.active {
+    color: #009FF4;
+}
+
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;

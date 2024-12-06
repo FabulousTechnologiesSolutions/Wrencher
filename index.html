@@ -19,31 +19,47 @@
 
 <body>
   <header class="header-bg">
-    <nav class="navbar navbar-expand-lg shadow-sm navbar-w">
-      <div class="mycontainer py-1 d-flex flex-wrap justify-content-between">
-        <a href="index.html" class="navbar-brand me-xl-5 pe-xl-3" href="index.html">
+    <nav class="navbar navbar-expand-lg shadow-sm navbar-light bg-light">
+      <div class="container py-1 d-flex flex-wrap justify-content-between">
+        <a href="index.html" class="navbar-brand me-xl-5 pe-xl-3">
           <img src="img/logo-main.png" alt="logo" class="w-100">
         </a>
-        <button class="navbar-toggler text-white px-0 py-0 border-0 focus-none" type="button" data-bs-toggle="collapse"
-          data-bs-target="#mynavbar">
-          <i class="fa-solid fa-bars fs-3 text-black"></i>
+        <button class="navbar-toggler px-0 py-0 border-0 focus-none" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+          <i class="fa-solid fa-bars fs-3"></i>
         </button>
         <div class="collapse navbar-collapse align-items-center" id="mynavbar">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item px-xl-2">
-              <a class="nav-link text-grey active" href="#">Why Wrencher?</a>
+              <a class="nav-link text-grey " href="features.html#why-wrencher">Why Wrencher?</a>
             </li>
             <li class="nav-item px-xl-2">
-              <a class="nav-link text-grey " href="#">Features</a>
+              <a class="nav-link text-grey" href="features.html">Features</a>
             </li>
             <li class="nav-item px-xl-2">
-              <a class="nav-link text-grey" href="#">Industries</a>
+              <a class="nav-link text-grey" href="index.html#industries">Industries</a>
             </li>
             <li class="nav-item px-xl-2">
-              <a class="nav-link text-grey" href="#">Pricing</a>
+              <a class="nav-link text-grey" href="pricing.html">Pricing</a>
             </li>
-            <li class="nav-item px-xl-2">
-              <a class="nav-link text-grey" href="#">Resources</a>
+            <li class="nav-item dropdown d-flex align-items-center px-xl-2">
+              <a href="resources.html" class="text-decoration-none text-grey">Resources</a>
+              <button
+                class="nav-link  dropdown-toggle d-flex align-items-center text-grey"
+                href="#"
+                id="resourcesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa-solid fa-caret-down ms-0" id="dropdownIcon"></i>
+              </button>
+              <ul class="dropdown-menu new-dropdown shadow border-0 px-0 right-0" aria-labelledby="resourcesDropdown">
+                <li><a class="dropdown-item px-3 py-2 border-bottom border-1" href="trainings.html">Trainings</a></li>
+                <li><a class="dropdown-item px-3 py-2 border-bottom border-1" href="resources.html#calculators">Calculators</a></li>
+                <li><a class="dropdown-item px-3 py-2 border-bottom border-1" href="#">National Averages</a></li>
+                <li><a class="dropdown-item px-3 py-2 border-bottom border-1" href="#">Sample Contracts</a></li>
+                <li><a class="dropdown-item px-3 py-2 bg-primary text-white" href="resources.html">See All</a></li>
+              </ul>
             </li>
             <li class="nav-item px-xl-2">
               <a class="nav-link d-flex align-items-center text-grey" href="#">
@@ -55,11 +71,11 @@
               <a class="nav-link text-grey" href="business-user/login.html">Login</a>
             </li>
             <li class="nav-item d-flex align-items-center ps-xl-0">
-              <a class="text-decoration-none text-grey w-auto bg-sky text-white py-2 px-4 rounded-pill"
-                href="business-user/signup.html">Sign Up</a>
+              <a class="text-decoration-none text-grey w-auto bg-sky text-white py-2 px-4 rounded-pill" href="business-user/signup.html">Sign Up</a>
             </li>
           </ul>
         </div>
+      </div>
     </nav>
     <section class="bg-effect pt-5">
       <div class="mycontainer">
@@ -522,123 +538,101 @@
   </section>
 
   <section class="my-5">
-    <div class="mycontainer">
-      <h3 class="fw-semibold text-center">Frequently asked questions</h3>
-      <p class="small text-center fw-medium text-custom-secondary mb-0">
-        Everything you need to know about the product and billing.
-      </p>
-      <div class="mt-4">
-        <div class="bg-white border px-3 py-3 rounded-2 my-3 accordian-shadow">
-          <div class="accordian-btn d-flex align-items-center justify-content-between pointer text-main-blue">
-            <div>
-              <h2 class="mb-0 fs-6 fw-medium">Is there a free trial available?</h2>
-            </div>
-            <div class="ps-3 accordian-icon">
-              <img class="accordian-icon-img" src="img/minus-circle-Icon.png" alt="img">
-            </div>
+      <div class="container">
+        <div>
+          <div class="row justify-content-between">
+              <h2 class="fs-2 fw-bold text-center">Frequently Asked Questions</h2>
           </div>
-          <div class="accordian-content">
-            <div class="mt-3 small">
-              <p class="text-custom-secondary">
-                Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free,
-                personalized 30-minute onboarding call to get you up and running as soon as possible.
-              </p>
-            </div>
+          <div class="accordion" id="accordionExample">
+              <!-- Question 1 -->
+              <div class="accordion-item my-3 border-0 accordian-shadow py-2 rounded-4 px-md-2">
+                  <h2 class="accordion-header rounded-4 border-0 py-0" id="headingOne">
+                      <button class="accordion-button shadow-none bg-white rounded-4 fs-6 fw-bold" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Is there a free trial available?
+                      </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse pt-0 mt-0 collapse show" aria-labelledby="headingOne"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body pt-0 mt-0 text-secondary">
+                          Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free, personalized
+                          30-minute onboarding call to get you up and running as soon as possible.
+                      </div>
+                  </div>
+              </div>
+              <!-- Question 2 -->
+              <div class="accordion-item my-3 border-0 accordian-shadow py-2 rounded-4 px-md-2">
+                  <h2 class="accordion-header rounded-4 border-0 py-0" id="headingTwo">
+                      <button class="accordion-button shadow-none bg-white rounded-4 fs-6 fw-bold collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false"
+                          aria-controls="collapseTwo">
+                          Can I change my plan later?
+                      </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse pt-0 mt-0 collapse" aria-labelledby="headingTwo"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body pt-0 mt-0 text-secondary">
+                          Absolutely! You can switch plans at any time to accommodate your changing needs.
+                      </div>
+                  </div>
+              </div>
+              <!-- Question 3 -->
+              <div class="accordion-item my-3 border-0 accordian-shadow py-2 rounded-4 px-md-2">
+                  <h2 class="accordion-header rounded-4 border-0 py-0" id="headingThree">
+                      <button class="accordion-button shadow-none bg-white rounded-4 fs-6 fw-bold collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false"
+                          aria-controls="collapseThree">
+                          What is your cancellation policy?
+                      </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse pt-0 mt-0 collapse" aria-labelledby="headingThree"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body pt-0 mt-0 text-secondary">
+                          We offer a hassle-free cancellation policy. You can cancel your subscription anytime before the next
+                          billing cycle.
+                      </div>
+                  </div>
+              </div>
+              <!-- Question 4 -->
+              <div class="accordion-item my-3 border-0 accordian-shadow py-2 rounded-4 px-md-2">
+                  <h2 class="accordion-header rounded-4 border-0 py-0" id="headingFour">
+                      <button class="accordion-button shadow-none bg-white rounded-4 fs-6 fw-bold collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false"
+                          aria-controls="collapseFour">
+                          How does billing work?
+                      </button>
+                  </h2>
+                  <div id="collapseFour" class="accordion-collapse pt-0 mt-0 collapse" aria-labelledby="headingFour"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body pt-0 mt-0 text-secondary">
+                          Billing is monthly and occurs at the start of each billing period. You can find all billing details
+                          in your account settings.
+                      </div>
+                  </div>
+              </div>
+              <!-- Question 5 -->
+              <div class="accordion-item my-3 border-0 accordian-shadow py-2 rounded-4 px-md-2">
+                  <h2 class="accordion-header rounded-4 border-0 py-0" id="headingFive">
+                      <button class="accordion-button shadow-none bg-white rounded-4 fs-6 fw-bold collapsed" type="button"
+                          data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false"
+                          aria-controls="collapseFive">
+                          Are there any discounts available?
+                      </button>
+                  </h2>
+                  <div id="collapseFive" class="accordion-collapse pt-0 mt-0 collapse" aria-labelledby="headingFive"
+                      data-bs-parent="#accordionExample">
+                      <div class="accordion-body pt-0 mt-0 text-secondary">
+                          Yes, we offer discounts for annual subscriptions. Additionally, there are seasonal promotions, so
+                          keep an eye out!
+                      </div>
+                  </div>
+              </div>
           </div>
-        </div>
-        <div class="bg-white border px-3 py-3 rounded-2 my-3 accordian-shadow">
-          <div class="accordian-btn d-flex align-items-center justify-content-between pointer text-main-blue">
-            <div>
-              <h2 class="mb-0 fs-6 fw-medium">Can I change my plan later?</h2>
-            </div>
-            <div class="ps-3 accordian-icon">
-              <img class="accordian-icon-img" src="img/minus-circle-Icon.png" alt="img">
-            </div>
-          </div>
-          <div class="accordian-content">
-            <div class="mt-3 small">
-              <p class="text-custom-secondary">
-                Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free,
-                personalized 30-minute onboarding call to get you up and running as soon as possible.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white border px-3 py-3 rounded-2 my-3 accordian-shadow">
-          <div class="accordian-btn d-flex align-items-center justify-content-between pointer text-main-blue">
-            <div>
-              <h2 class="mb-0 fs-6 fw-medium">What is your cancellation policy?</h2>
-            </div>
-            <div class="ps-3 accordian-icon">
-              <img class="accordian-icon-img" src="img/minus-circle-Icon.png" alt="img">
-            </div>
-          </div>
-          <div class="accordian-content">
-            <div class="mt-3 small">
-              <p class="text-custom-secondary">
-                Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free,
-                personalized 30-minute onboarding call to get you up and running as soon as possible.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white border px-3 py-3 rounded-2 my-3 accordian-shadow">
-          <div class="accordian-btn d-flex align-items-center justify-content-between pointer text-main-blue">
-            <div>
-              <h2 class="mb-0 fs-6 fw-medium">Can other info be added to an invoice?</h2>
-            </div>
-            <div class="ps-3 accordian-icon">
-              <img class="accordian-icon-img" src="img/minus-circle-Icon.png" alt="img">
-            </div>
-          </div>
-          <div class="accordian-content">
-            <div class="mt-3 small">
-              <p class="text-custom-secondary">
-                Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free,
-                personalized 30-minute onboarding call to get you up and running as soon as possible.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white border px-3 py-3 rounded-2 my-3 accordian-shadow">
-          <div class="accordian-btn d-flex align-items-center justify-content-between pointer text-main-blue">
-            <div>
-              <h2 class="mb-0 fs-6 fw-medium">How does billing work?</h2>
-            </div>
-            <div class="ps-3 accordian-icon">
-              <img class="accordian-icon-img" src="img/minus-circle-Icon.png" alt="img">
-            </div>
-          </div>
-          <div class="accordian-content">
-            <div class="mt-3 small">
-              <p class="text-custom-secondary">
-                Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free,
-                personalized 30-minute onboarding call to get you up and running as soon as possible.
-              </p>
-            </div>
-          </div>
-        </div>
-        <div class="bg-white border px-3 py-3 rounded-2 my-3 accordian-shadow">
-          <div class="accordian-btn d-flex align-items-center justify-content-between pointer text-main-blue">
-            <div>
-              <h2 class="mb-0 fs-6 fw-medium">How do I change my account email?</h2>
-            </div>
-            <div class="ps-3 accordian-icon">
-              <img class="accordian-icon-img" src="img/minus-circle-Icon.png" alt="img">
-            </div>
-          </div>
-          <div class="accordian-content">
-            <div class="mt-3 small">
-              <p class="text-custom-secondary">
-                Yes, you can try us for free for 30 days. If you want, we’ll provide you with a free,
-                personalized 30-minute onboarding call to get you up and running as soon as possible.
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
+      
+      </div>
   </section>
+
   <section class="mt-5">
     <div class="mycontainer">
       <div class="bg-contactus px-3 py-4 p-sm-5 rounded-4">
@@ -703,7 +697,7 @@
       </div>
     </div>
   </section>
-  <footer class="bg-black p-md-5 py-5">
+  <footer class="bg-black px-md-5 pt-5">
     <div class="container-fluid">
       <div>
         <img src="img/logo.png" alt="" class="img-logo">
@@ -796,16 +790,32 @@
               <li><a href="#" class="footer-style mx-1"><img src="img/social-4.png" alt=""></a></li>
             </ul>
           </div>
-          <div class="mt-5">
+          <div class="mt-4">
             <img src="img/appstore-1.png" alt="" class="img-fluid">
           </div>
-          <div class="mt-5">
+          <div class="mt-3">
             <img src="img/googleplay.png" alt="" class="img-fluid">
+          </div>
+          <div class="mt-4">
+            <form action="">
+              <p class="mb-0 text-white">Sign up for our newsletter and join the Email Updates</p>
+              <div class="row">
+                <div class="col-xxl-6 my-2">
+                  <input type="text" class="w-100 form-control bg-dark text-white white-place" placeholder="First name" name="" id="" required>
+                </div>
+                <div class="col-xxl-6 my-2">
+                  <input type="email" class="w-100 form-control bg-dark text-white white-place" placeholder="Email" name="" id="" required>
+                </div>
+                <div class="col-12 mt-3">
+                <button type="submit" class="rounded-3 border-0 px-4 py-2">Subscribe</button>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
       <hr>
-      <div class="d-flex justify-content-center flex-wrap">
+      <div class="d-flex justify-content-center flex-wrap pb-3">
         <div>
           <a href="#" class="text-secondary text-decoration-none font-12 me-3">© 2024 Design and Develope by
             Fabulous</a>

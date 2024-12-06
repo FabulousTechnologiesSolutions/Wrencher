@@ -236,21 +236,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-
-$(document).ready(function () {
-    $(".accordian-btn").click(function () {
-        $(".accordian-content")
-            .not($(this).closest("div").siblings(".accordian-content"))
-            .slideUp();
-        $(".accordian-btn .accordian-icon img")
-            .not($(this).find(".accordian-icon img"))
-            .attr("src", "img/plus-circle-iocn.png");
-
-        $(this).closest("div").siblings(".accordian-content").slideToggle();
-        $(this).find(".accordian-icon img").attr("src", "img/minus-circle-Icon.png");
-    });
-
-    $(".search-topics-toggle-btn").click(function () {
-        $(".search-topics-left").toggle();
-    });
-});
+    const resourcesDropdown = document.getElementById('resourcesDropdown');
+      const dropdownIcon = document.getElementById('dropdownIcon');
+    
+      resourcesDropdown.addEventListener('click', () => {
+        const isExpanded = resourcesDropdown.getAttribute('aria-expanded') === 'true';
+        dropdownIcon.classList.toggle('fa-caret-up', isExpanded);
+        dropdownIcon.classList.toggle('fa-caret-down', !isExpanded);
+      });
