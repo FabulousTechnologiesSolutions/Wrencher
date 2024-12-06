@@ -103,6 +103,11 @@
     .max-w-300px {
         max-width: 100%;
     }
+    .icon-60px {
+        width: 40px;
+        height: 40px;
+        object-fit: contain;
+    }
 }
 
 @media screen and (max-width:576px) {
