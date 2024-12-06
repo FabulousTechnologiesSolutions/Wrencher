@@ -18,6 +18,7 @@
 
 .accordian-shadow {
     box-shadow: 0px 10px 34px 0px rgba(0, 0, 0, 0.06);
+    border: 1px solid #EAEAEA !important;
 }
 
 .bg-contact-info {
