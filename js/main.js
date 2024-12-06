@@ -244,3 +244,11 @@ document.addEventListener("DOMContentLoaded", function () {
         dropdownIcon.classList.toggle('fa-caret-up', isExpanded);
         dropdownIcon.classList.toggle('fa-caret-down', !isExpanded);
       });
+
+      $(".search-topics-toggle-btn").click(function () {
+        $(".search-topics-left").show();
+        
+    });
+    $(".close-filter").click(function () {
+        $(".search-topics-left").hide();
+    });
