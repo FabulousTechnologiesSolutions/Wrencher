@@ -970,6 +970,11 @@ header .nav-link.active {
     .filter-width {
         max-width: 100%;
     }
+
+    .new-dropdown {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
 @media screen and (max-width:767px){
     .popular-neg {
