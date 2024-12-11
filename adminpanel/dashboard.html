@@ -244,21 +244,25 @@
                                     </div>
                                 </div>
                                 <div class="shadow rev-main mb-3 border-grey bg-white px-3 py-3 rounded-3 mt-5 col-xl-9 col-xxl-9">
-                                    <select name="monthSelector" id="monthSelector">
-                                        <option value="">All Months</option>
-                                        <option value="January">January</option>
-                                        <option value="February">February</option>
-                                        <option value="March">March</option>
-                                        <option value="April">April</option>
-                                        <option value="May">May</option>
-                                        <option value="June">June</option>
-                                        <option value="July">July</option>
-                                        <option value="August">August</option>
-                                        <option value="September">September</option>
-                                        <option value="October">October</option>
-                                        <option value="November">November</option>
-                                        <option value="December">December</option>
-                                    </select>
+                                    <div class="d-flex mb-3 justify-content-end w-100">
+                                        <div>
+                                            <select name="monthSelector" class="form-select" id="monthSelector">
+                                                <option value="">All Months</option>
+                                                <option value="January">January</option>
+                                                <option value="February">February</option>
+                                                <option value="March">March</option>
+                                                <option value="April">April</option>
+                                                <option value="May">May</option>
+                                                <option value="June">June</option>
+                                                <option value="July">July</option>
+                                                <option value="August">August</option>
+                                                <option value="September">September</option>
+                                                <option value="October">October</option>
+                                                <option value="November">November</option>
+                                                <option value="December">December</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="rev-inner">
                                         <canvas id="revenueChart"></canvas>
                                     </div>
@@ -301,10 +305,23 @@
             options: {
                 responsive: true,
                 plugins: {
+                    datalabels: {
+                        anchor: 'end',
+                        align: 'top',
+                        formatter: (value) => `$ ${value}`, // Fixed template literal
+                        font: {
+                            weight: 'bold',
+                            size: 12,
+                        },
+                        color: '#fff',
+                        backgroundColor: '#3551B6', // Background for the labels
+                        borderRadius: 5, // Rounded corners for the label background
+                        padding: 4, // Add padding around the label
+                    },
                     tooltip: {
                         callbacks: {
                             label: function(context) {
-                                return `$ ${context.raw}`;
+                                return `$ ${context.raw}`; // Fixed template literal
                             }
                         }
                     }
@@ -314,8 +331,11 @@
                         beginAtZero: true,
                         ticks: {
                             callback: function(value) {
-                                return `$ ${value}`;
+                                return `$ ${value}`; // Fixed template literal
                             }
+                        },
+                        grid: {
+                            display: true, 
                         },
                         title: {
                             display: true,
@@ -326,6 +346,9 @@
                         }
                     },
                     x: {
+                        grid: {
+                            display: false, 
+                        },
                         title: {
                             display: true,
                             text: 'Months',
@@ -335,7 +358,8 @@
                         }
                     }
                 }
-            }
+            },
+            plugins: [ChartDataLabels], 
         });
     
         // Handle month selection
@@ -356,6 +380,7 @@
             revenueChart.update();
         });
     </script>
+    
 </body>
 
 </html>
