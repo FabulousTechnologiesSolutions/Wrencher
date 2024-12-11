@@ -266,6 +266,25 @@
                                     </div>
                                 </div>
                                 <div class="shadow rev-main mb-3 border-grey bg-white px-3 py-3 rounded-3 mt-5 col-xl-9 col-xxl-9">
+                                    <div class="d-flex mb-3 justify-content-end w-100">
+                                        <div>
+                                            <select name="monthSelector" class="form-select" id="monthSelector">
+                                                <option value="">All Months</option>
+                                                <option value="January">January</option>
+                                                <option value="February">February</option>
+                                                <option value="March">March</option>
+                                                <option value="April">April</option>
+                                                <option value="May">May</option>
+                                                <option value="June">June</option>
+                                                <option value="July">July</option>
+                                                <option value="August">August</option>
+                                                <option value="September">September</option>
+                                                <option value="October">October</option>
+                                                <option value="November">November</option>
+                                                <option value="December">December</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="rev-inner">
                                         <canvas id="revenueChart"></canvas>
                                     </div>
@@ -285,17 +304,24 @@
     <script src="../../js/main.js"></script>
     <script>
         const ctx = document.getElementById('revenueChart').getContext('2d');
+    
+        const allLabels = [
+            'January', 'February', 'March', 'April', 'May', 'June', 
+            'July', 'August', 'September', 'October', 'November', 'December'
+        ];
+        const allData = [2500, 5000, 7500, 8000, 2200, 7300, 3200, 5000, 2200, 1200, 8500, 5000];
+    
         const revenueChart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                labels: allLabels,
                 datasets: [{
                     label: 'Gross Revenue by Month',
-                    data: [2500, 5000, 7500, 8000, 2200, 7300, 3200, 5000, 2200, 1200, 8500, 5000],
+                    data: allData,
                     backgroundColor: '#3551B6',
-                    borderWidth: 0, // Remove bar borders
-                    borderRadius: 10, // Rounded corners for the bars
-                    barThickness: 20, // Adjust bar width
+                    borderWidth: 0,
+                    borderRadius: 10,
+                    barThickness: 20,
                 }]
             },
             options: {
@@ -304,7 +330,7 @@
                     datalabels: {
                         anchor: 'end',
                         align: 'top',
-                        formatter: (value) => `$ ${value}`,
+                        formatter: (value) => `$ ${value}`, // Fixed template literal
                         font: {
                             weight: 'bold',
                             size: 12,
@@ -317,7 +343,7 @@
                     tooltip: {
                         callbacks: {
                             label: function(context) {
-                                return `$ ${context.raw}`;
+                                return `$ ${context.raw}`; // Fixed template literal
                             }
                         }
                     }
@@ -327,7 +353,7 @@
                         beginAtZero: true,
                         ticks: {
                             callback: function(value) {
-                                return `$ ${value}`;
+                                return `$ ${value}`; // Fixed template literal
                             }
                         },
                         grid: {
@@ -357,7 +383,26 @@
             },
             plugins: [ChartDataLabels], 
         });
+    
+        // Handle month selection
+        document.getElementById('monthSelector').addEventListener('change', function() {
+            const selectedMonth = this.value;
+    
+            if (selectedMonth === "") {
+                // Reset to all months
+                revenueChart.data.labels = allLabels;
+                revenueChart.data.datasets[0].data = allData;
+            } else {
+                // Show only the selected month
+                const index = allLabels.indexOf(selectedMonth);
+                revenueChart.data.labels = [selectedMonth];
+                revenueChart.data.datasets[0].data = [allData[index]];
+            }
+    
+            revenueChart.update();
+        });
     </script>
+    
 </body>
 
 </html>
