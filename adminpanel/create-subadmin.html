@@ -13,6 +13,11 @@
     <link rel="stylesheet" href="../css/main2.css">
     <link rel="stylesheet" href="../css/main3.css">
     <title>Add Promotion</title>
+    <style>
+        #ferror {
+            display: none;
+        }
+    </style>
 </head>
 
 <body class="bg-white">
@@ -82,37 +87,33 @@
                     <div class="row mt-3">
                         <div class="col-sm-8">
                             <form id="dynamicForm" action="#" class="">
-                                <div class="row">
-                                    <div class="col-sm-6 mb-3" id="nameField">
-                                        <label for="name" class="ps-2 fw-medium">Name</label>
-                                        <input type="text" id="name" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
-                                    </div>
-                                    <div class="col-sm-6 mb-3" id="emailField">
-                                        <label for="email" class="ps-2 fw-medium">Email</label>
-                                        <input type="email" id="email" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
-                                    </div>
-                                    <div class="col-sm-6 mb-3" id="phoneField">
-                                        <label for="phone" class="fw-medium ps-2">Phone Number</label>
-                                        <input type="tel" id="phone" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
-                                    </div>
-                                    <div class="col-sm-6 mb-3" id="passwordField">
-                                        <label for="password" class="fw-medium ps-2">Password</label>
-                                        <input type="password" id="password" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
-                                    </div>
+                                <div class="row" id="formFieldsContainer">
+                                    <!-- Dynamic Fields will be added here -->
                                 </div>
                                 <div class="my-3">
-                                    <button type="submit" class="border py-2 px-5 bg-sky text-white rounded-3">Save</button>
+                                    <button type="submit" id="saveButton" class="border py-2 px-5 bg-sky text-white rounded-3" style="display: none;">Save</button>
+                                </div>
+                                <div id="fieldError" class="ferror text-danger" >
+                                    Please select a field.
                                 </div>
                             </form>
                         </div>
                         <div class="col-sm-4 d-flex justify-content-center">
-                            <div class="d-inline-flex flex-column" id="buttonContainer">
-                                <button type="button" class="bg-danger text-white border-0 mt-2 w-auto rounded-3 px-3 py-2 remove-btn" data-target="nameField">Remove Name</button>
-                                <button type="button" class="bg-danger text-white border-0 mt-2 w-auto rounded-3 px-3 py-2 remove-btn" data-target="emailField">Remove Email</button>
-                                <button type="button" class="bg-danger text-white border-0 mt-2 w-auto rounded-3 px-3 py-2 remove-btn" data-target="phoneField">Remove Phone</button>
-                                <button type="button" class="bg-danger text-white border-0 mt-2 w-auto rounded-3 px-3 py-2 remove-btn" data-target="passwordField">Remove Password</button>
+                            <div class="d-inline-flex flex-column w-100">
+                                <label for="fieldSelector" class="fw-medium ">Select Fields</label>
+                                <select id="fieldSelector" class="form-select focus-none shadow-none">
+                                    <option value="" selected disabled hidden>Select a field</option>
+                                    <option value="nameField">Name</option>
+                                    <option value="emailField">Email</option>
+                                    <option value="phoneField">Phone</option>
+                                    <option value="passwordField">Password</option>
+                                </select>
                             </div>
                         </div>
+                        
+                      
+                      
+                        
                     </div>
                     
                     
@@ -128,76 +129,90 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.js"></script>
     <script src="../js/main.js"></script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const buttonContainer = document.getElementById('buttonContainer');
-
-        buttonContainer.addEventListener('click', function (e) {
-            if (e.target.classList.contains('remove-btn')) {
-                const targetId = e.target.getAttribute('data-target');
-                const field = document.getElementById(targetId);
-                const buttonLabel = e.target.textContent;
-
-                if (field) {
-                    // Remove the field
-                    field.remove();
-
-                    // Replace the remove button with an add button
-                    e.target.classList.remove('remove-btn', 'bg-danger');
-                    e.target.classList.add('add-btn', 'bg-primary');
-                    e.target.textContent = buttonLabel.replace('Remove', 'Add');
-                }
-            } else if (e.target.classList.contains('add-btn')) {
-                const targetId = e.target.getAttribute('data-target');
-                const form = document.getElementById('dynamicForm');
-                const buttonLabel = e.target.textContent;
-
-                // Add the field back
-                let newField;
-                switch (targetId) {
-                    case 'nameField':
-                        newField = `
-                            <div class="col-sm-6 mb-3" id="nameField">
-                                <label for="name" class="ps-2 fw-medium">Name</label>
-                                <input type="text" id="name" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
-                            </div>`;
-                        break;
-                    case 'emailField':
-                        newField = `
-                            <div class="col-sm-6 mb-3" id="emailField">
-                                <label for="email" class="ps-2 fw-medium">Email</label>
-                                <input type="email" id="email" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
-                            </div>`;
-                        break;
-                    case 'phoneField':
-                        newField = `
-                            <div class="col-sm-6 mb-3" id="phoneField">
-                                <label for="phone" class="fw-medium ps-2">Phone Number</label>
-                                <input type="tel" id="phone" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
-                            </div>`;
-                        break;
-                    case 'passwordField':
-                        newField = `
-                            <div class="col-sm-6 mb-3" id="passwordField">
-                                <label for="password" class="fw-medium ps-2">Password</label>
-                                <input type="password" id="password" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
-                            </div>`;
-                        break;
-                }
-
-                if (newField) {
-                    form.querySelector('.row').insertAdjacentHTML('beforeend', newField);
-                }
-
-                // Replace the add button with a remove button
-                e.target.classList.remove('add-btn', 'bg-primary');
-                e.target.classList.add('remove-btn', 'bg-danger');
-                e.target.textContent = buttonLabel.replace('Add', 'Remove');
+     
+    <script>
+        // Predefined fields data
+        const fields = {
+            nameField: `
+                <div class="col-sm-6 mb-3" id="nameField">
+                    <label for="name" class="ps-2 fw-medium">Name</label>
+                    <input type="text" id="name" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
+                </div>`,
+            emailField: `
+                <div class="col-sm-6 mb-3" id="emailField">
+                    <label for="email" class="ps-2 fw-medium">Email</label>
+                    <input type="email" id="email" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
+                </div>`,
+            phoneField: `
+                <div class="col-sm-6 mb-3" id="phoneField">
+                    <label for="phone" class="fw-medium ps-2">Phone Number</label>
+                    <input type="tel" id="phone" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
+                </div>`,
+            passwordField: `
+                <div class="col-sm-6 mb-3" id="passwordField">
+                    <label for="password" class="fw-medium ps-2">Password</label>
+                    <input type="password" id="password" class="w-100 bg-nblue border rounded-3 p-2" placeholder="Type here">
+                </div>`
+        };
+    
+        const fieldSelector = document.getElementById("fieldSelector");
+        const formFieldsContainer = document.getElementById("formFieldsContainer");
+        const saveButton = document.getElementById("saveButton");
+        const fieldError = document.getElementById("fieldError");
+    
+        // Handle field selection and toggling
+        fieldSelector.addEventListener("change", function () {
+            const selectedValue = fieldSelector.value;
+    
+            // If no value is selected, return early
+            if (!selectedValue) return;
+    
+            const fieldElement = document.getElementById(selectedValue);
+            const selectedOption = fieldSelector.querySelector(`option[value="${selectedValue}"]`);
+    
+            if (fieldElement) {
+                // If field is already present, remove it
+                fieldElement.remove();
+                selectedOption.style.backgroundColor = ""; // Reset background
+                selectedOption.style.color = ""; // Reset text color
+            } else {
+                // Add the field
+                formFieldsContainer.insertAdjacentHTML("beforeend", fields[selectedValue]);
+                selectedOption.style.backgroundColor = "#007bff"; // Highlight
+                selectedOption.style.color = "#fff"; // White text
             }
+    
+            // Reset the dropdown to "Select a field" option after selection
+            fieldSelector.value = "";
+    
+            // Show or hide the Save button based on selected fields
+            toggleSaveButton();
+            // Hide the error message when a field is selected
+            fieldError.style.display = "none";
         });
-    });
-</script>
+    
+        // Function to show/hide the Save button and error message
+        function toggleSaveButton() {
+            const hasFields = formFieldsContainer.children.length > 0;
+            saveButton.style.display = hasFields ? "block" : "none";
+    
+            // If no field is selected, show the error message
+            if (!hasFields) {
+                fieldError.style.display = "block";
+            } else {
+                fieldError.style.display = "none"; // Hide the error when fields are selected
+            }
+        }
+    
+        // Optional: You can also trigger the error message when the user submits the form
+        const form = document.getElementById("dynamicForm");
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            toggleSaveButton(); // Check before submitting
+        });
+    </script>
+    
+    
 </body>
 
 </html>
