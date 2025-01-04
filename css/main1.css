@@ -937,6 +937,43 @@ header .nav-link.active {
     border-radius: 20px;
   }
 
+  .tabs {
+    border: solid 2px var(--blue);
+}
+
+.tbss {
+    background-color: #fff;
+
+}
+
+.nav-tabs {
+    background-color: transparent !important;
+    border: none !important;
+}
+
+.nav-link {
+    background-color: transparent !important;
+    color: #000 !important;
+    font-size: 18px;
+    border: none !important;
+}
+
+.nav-link.active {
+    background-color: transparent !important;
+    color: #003FDB !important;
+    font-weight: 600;
+    font-size: 18px;
+    border-bottom: solid 5px #003FDB !important;
+}
+.bg-greyn {
+    background: #F8F8F9;
+}
+.bg-sky2 {
+    background: #ECF2FF;
+}
+.min-vh {
+    min-height: 100dvh;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
