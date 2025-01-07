@@ -114,100 +114,127 @@
                                             </div>
                                         </div>
                                     </div>
+
                                     <div class="col-lg-6 mb-3">
-                                        <label for="" class="ps-2 fw-semibold">Invoice number</label>
-                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type here">
+                                        <label for="date" class="ps-2 fw-semibold">Date</label>
+                                        <input type="date" id="date" class="w-100 bg-white border rounded-3 p-2">
                                     </div>
+
+                                    <script>
+                                        const dateInput = document.getElementById('date');
+                                        const today = new Date();
+                                        const formattedDate = today.toISOString().split('T')[0]; // Format as YYYY-MM-DD
+                                        dateInput.value = formattedDate;
+                                    </script>
+
                                     <div class="col-lg-6 mb-3">
-                                        <label for="" class=" ps-2 fw-semibold">Date</label>
-                                        <input type="date" class="w-100 bg-white border rounded-3 p-2">
+                                        <label for="inv" class="ps-2 fw-semibold">Invoice Number</label>
+                                        <input type="text" id="inv" class="w-100 bg-white border rounded-3 p-2" placeholder="1234" readonly>
                                     </div>
+
                                     <div class="col-lg-6 mb-3">
                                         <label for="" class="ps-2 fw-semibold">Terms</label>
                                         <input type="text" class="w-100 bg-white border rounded-3 p-2"
                                             placeholder="Type here">
                                     </div>
+
                                     <div class="col-lg-6 mb-3">
-                                        <label for="" class="ps-2 fw-semibold">Plan Name</label>
+                                        <label for="" class="ps-2 fw-semibold">Bill To</label>
                                         <input type="text" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type here">
+                                            placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States">
                                     </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-lg-6 my-3">
-                                        <label for="" class="fw-semibold ps-2">Items Picture</label>
-                                        <input type="file" name="" id="" class="w-100 bg-white border rounded-3 p-2">
-                                    </div>
-                                </div>
-                                <div class="row mb-3">
+
                                     <div class="col-lg-6 mb-3">
-                                        <label for="" class="ps-2 fw-semibold">Select Service</label>
-                                        <select name="" id=""
-                                            class="border border-1 rounded-3 bg-white focus-none w-100 px-3 py-2">
-                                            <option value="" selected disabled hidden>Select here</option>
-                                            <option value="Picture Hanging ">Picture Hanging </option>
-                                            <option value="Drywall Repair">Drywall Repair</option>
-                                            <option value="Gutter Cleaning">Gutter Cleaning</option>
-                                            <option value="Curtain Rod Install">Curtain Rod Install</option>
-                                            <option value="Door Knob/ Handle Lock Install">Door Knob/ Handle Lock
-                                                Install</option>
-                                        </select>
+                                        <label for="" class="ps-2 fw-semibold">Ship To</label>
+                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
+                                            placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States">
                                     </div>
+
                                     <div class="col-lg-6 mb-3">
-                                        <label for="" class="ps-2 fw-semibold">Select Product</label>
-                                        <select name="" class="w-100 bg-white border rounded-3 p-2" id="">
-                                            <option value="">Select Type</option>
-                                        </select>
+                                        <label for="" class="ps-2 fw-semibold">Ship From</label>
+                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
+                                            placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States">
                                     </div>
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class="ps-2 fw-semibold">Quantity</label>
-                                        <input type="number" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type here">
-                                    </div>
-                                    <div class="col-lg-6 mb-3">
+
+                                    <!-- <div class="col-lg-6 mb-3">
                                         <label for="" class="ps-2 fw-semibold">Invoice Number</label>
                                         <input type="number" class="w-100 bg-white border rounded-3 p-2"
                                             placeholder="Type Invoice Number">
-                                    </div>
-                                   
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class=" ps-2 fw-semibold">Price</label>
-                                        <input type="number" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="$:">
-                                    </div>
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class=" ps-2 fw-semibold">Internal Job Cost</label>
-                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type here">
-                                    </div>
-                                    <div class="col-lg-6 mb-3">
-                                        <div class="d-flex justify-content-between">
-                                            <label for="" class=" ps-2 fw-semibold">Add on packages</label>
-                                            <span class="gre font-12">(Optional)</span>
-                                        </div>
-                                        <input type="number" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type Invoice Number">
-                                    </div>
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class=" ps-2 fw-semibold">Taxable</label>
-                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type here">
-                                    </div>
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class=" ps-2 fw-semibold">Internal Job Estimate Time</label>
-                                        <select class="w-100 bg-white border rounded-3 p-2">
-                                            <option value=""></option>
-                                        </select>
-                                    </div>
-                                   
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class="ps-2 fw-semibold">Location</label>
-                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type here">
-                                    </div>
+                                    </div> -->
+
+                                  
                                 </div>
                             </div>
+                        </div>
+                        <div class="table-responsive reports-tbl mt-5">
+                            <table class="table">
+                                <thead>
+                                    <tr class="align-middle">
+                                        <th class="font-semi text-center">Service Date</th>
+                                        <th class="font-semi text-center">Product/service</th>
+                                        <th class="font-semi text-center">Description</th>
+                                        <th class="font-semi text-center">Qty</th>
+                                        <th class="font-semi text-center">Rate </th>
+                                        <th class="font-semi text-center">Amount</th>
+                                        <th class="font-semi text-center">Tax</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="align-middle">
+                                        <td class="font-md text-center">
+                                            <input type="date" id="date2" class="form-control w-new py-2">
+                                        </td>
+                                        <td class="font-md text-center">
+                                            <div class="custom-dropdown py-0">
+                                                <div class="custom-dropdown-toggle py-2 border border-1 d-flex bg-nblue">
+                                                    <div class="w-100">
+                                                        <button type="button"
+                                                            class="w-100 custom-toggle-button border-0 p-0 text-start bg-nblue">Select
+                                                            Here</button>
+                                                    </div>
+                                                    <div class="d-flex align-items-center">
+                                                        <i class="fa-solid fa-caret-down"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="custom-dropdown-menu bg-white shadow rounded-3 p-2">
+                                                    <div class="mt-2">
+                                                        <div
+                                                            class="search-input d-flex align-items-center shadow-sm px-3 py-2">
+                                                            <input type="text" placeholder="Search Services"
+                                                                class="w-100 border-0">
+                                                            <button class="search-btn">
+                                                                <i class="fa-solid fa-magnifying-glass"></i>
+                                                            </button>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="custom-customer-list mt-2">
+                                                        <!-- Customer items will be added here dynamically -->
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="font-md text-center">
+                                            <input type="text" class="form-control focus-none w-new py-2" placeholder="">
+                                        </td>
+                                        <td class="font-md text-center">
+                                            <input type="number" class="form-control focus-none w-new py-2" value="1" min="1">
+                                        </td>
+                                        <td class="font-md text-center">
+                                            <input type="text" class="form-control focus-none w-new py-2" placeholder="0.00">
+                                        </td>
+                                        <td class="font-md text-center">
+                                            <input type="text" class="form-control focus-none w-new py-2" placeholder="$0.00">
+                                        </td>
+                                        <td class="font-md text-center">
+                                            <input type="checkbox" checked>
+                                        </td>
+                                    
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="row mt-4">
                             <div class="col-lg-4 col-sm-6">
                                 <div class="bg-white p-3 border rounded-3">
                                     <h6 class="gre font-14">Edit default settings</h6>
@@ -241,6 +268,71 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="my-3">
+                                        <label for="note" class="w-100 fw-semibold">Note to customer</label>
+                                        <textarea name="" id="note" rows="4" class="w-100 rounded-2"></textarea>
+                                    </div>
+                                    <div class="my-3">
+                                        <label for="statement" class="w-100 fw-semibold">Memo on statement(hidden)</label>
+                                        <textarea name="" id="statement" rows="4" class="w-100 rounded-2"></textarea>
+                                    </div>
+                                    <div class="my-3">
+                                        <label for="" class="w-100 fw-semibold">Attachments</label>
+                                        <label for="attachment" class="border-dashed border-1 py-4 px-3 w-100 rounded-2">
+                                            <p class="text-center mb-1 text-primary">Add attachment</p>
+                                            <p class="mt-2 text-center mb-0">Max file size: 20 MB</p>
+                                        </label>
+                                        <input type="file" id="attachment" class="d-none">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-sm-6 mt-4 mt-sm-0">
+                                <div class="d-flex align-items-center justify-content-between py-1">
+                                    <p class="mb-0">Subtotal</p>
+                                    <p class="mb-0">$249.00</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between ">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 me-2">Discount</p>
+                                        <input type="text" class="form-control" placeholder="0%">
+                                    </div>
+                                    <p class="mb-0">$0.00</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between py-1">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 me-2">Taxable subtotal</p>
+                                    </div>
+                                    <p class="mb-0">$0.00</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between py-1">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 me-2">Select tax rate</p>
+                                    </div>
+                                </div>
+                                <div class="border border-1 border-black rounded-2 px-3 py-2">
+                                    <p class="mb-0 me-2">Automatic Calculation</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between py-1">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 me-2">Sales tax</p>
+                                        <i class="fa-regular fa-circle-question"></i>
+                                    </div>
+                                    <p class="mb-0">$0.00</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between py-1">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 me-2 fw-semibold">Estimate total</p>
+                                    </div>
+                                    <p class="mb-0 fw-semibold">$224.10</p>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-between py-1">
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 me-2">Deposit</p>
+                                    </div>
+                                    <div class="d-flex align-items-center">
+                                        <p class="mb-0 me-2">$200.00</p>
+                                        <i class="fa-solid fa-trash text-primary"></i>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -249,159 +341,10 @@
                                 <button class="border py-2 bg-sky text-white w-100 rounded-3">Save</button>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 mb-2">
-                                <button class="border py-2 bg-dark text-white w-100 rounded-3">Review & Send</button>
+                                <a href="review-quote.html" class="border py-2 bg-dark text-white w-100 rounded-3 text-decoration-none text-black d-inline-block text-center px-2">Review & Send</a>
                             </div>
                         </div>
                     </form>
-                    <div class="table-responsive reports-tbl mt-5">
-                        <table class="table">
-                            <thead>
-                                <tr class="align-middle">
-                                    <th class="font-semi text-center">Service category</th>
-                                    <th class="font-semi text-center">Service category photo</th>
-                                    <th class="font-semi text-center">Quantity</th>
-                                    <th class="font-semi text-center">Price</th>
-                                    <th class="font-semi text-center">Taxable? </th>
-                                    <th class="font-semi text-center">Line item pictures</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td class="text-center">
-                                        Category name
-                                    </td>
-                                    <td class="font-md text-center">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
-                                        </div>
-                                    </td>
-                                    <td class="font-md text-center">
-                                        <p class="sky-c mb-0 text-center">20</p>
-                                    </td>
-                                    <td class="font-md text-center">20 $</td>
-                                    <td class="font-md text-center">
-                                        <input type="checkbox" checked>
-                                    </td>
-                                    <td class="font-md text-center">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td class="text-center">
-                                        Category name
-                                    </td>
-                                    <td class="font-md text-center">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
-                                        </div>
-                                    </td>
-                                    <td class="font-md text-center">
-                                        <p class="sky-c mb-0 text-center">20</p>
-                                    </td>
-                                    <td class="font-md text-center">20 $</td>
-                                    <td class="font-md text-center">
-                                        <input type="checkbox" checked>
-                                    </td>
-                                    <td class="font-md text-center">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td class="text-center">
-                                        Category name
-                                    </td>
-                                    <td class="font-md text-center">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
-                                        </div>
-                                    </td>
-                                    <td class="font-md text-center">
-                                        <p class="sky-c mb-0 text-center">20</p>
-                                    </td>
-                                    <td class="font-md text-center">20 $</td>
-                                    <td class="font-md text-center">
-                                        <input type="checkbox" checked>
-                                    </td>
-                                    <td class="font-md text-center">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
-                                        </div>
-                                    </td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td class="text-center">
-                                        Category name
-                                    </td>
-                                    <td class="font-md text-center">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
-                                        </div>
-                                    </td>
-                                    <td class="font-md text-center">
-                                        <p class="sky-c mb-0 text-center">20</p>
-                                    </td>
-                                    <td class="font-md text-center">20 $</td>
-                                    <td class="font-md text-center">
-                                        <input type="checkbox" checked>
-                                    </td>
-                                    <td class="font-md text-center">
-                                        <div class="d-flex align-items-center justify-content-center">
-                                            <img src="../img/customer1.png" alt="customer1" class="me-2 cus-img rounded-circle">
-                                        </div>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <h2 class="fs-5 fw-semibold mt-4">Internal job cost </h2>
-                    <div class="table-responsive reports-tbl mt-3">
-                        <table class="table">
-                            <thead>
-                                <tr class="align-middle">
-                                    <th class="font-semi text-center">Vendor</th>
-                                    <th class="font-semi text-center">Description</th>
-                                    <th class="font-semi text-center">Link</th>
-                                    <th class="font-semi text-center">Quantity</th>
-                                    <th class="font-semi text-center">Amount </th>
-                                    <th class="font-semi text-center">Markup </th>
-                                    <th class="font-semi text-center">Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td class="text-center">ABC Supplies</td>
-                                    <td class="text-center">Office Chair</td>
-                                    <td class="text-center"><a href="#">View</a></td>
-                                    <td class="text-center">10</td>
-                                    <td class="text-center">$100</td>
-                                    <td class="text-center">10%</td>
-                                    <td class="text-center">$1100</td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td class="text-center">ABC Supplies</td>
-                                    <td class="text-center">Office Chair</td>
-                                    <td class="text-center"><a href="#">View</a></td>
-                                    <td class="text-center">10</td>
-                                    <td class="text-center">$100</td>
-                                    <td class="text-center">10%</td>
-                                    <td class="text-center">$1100</td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td class="text-center">ABC Supplies</td>
-                                    <td class="text-center">Office Chair</td>
-                                    <td class="text-center"><a href="#">View</a></td>
-                                    <td class="text-center">10</td>
-                                    <td class="text-center">$100</td>
-                                    <td class="text-center">10%</td>
-                                    <td class="text-center">$1100</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
                     <div class="mt-5 py-4">
                         <div class="mycontainer ">
                             <div class="row bg-plans px-sm-3 px-lg-4 rounded-3">
