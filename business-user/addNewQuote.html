@@ -128,77 +128,40 @@
                                     </script>
 
                                     <div class="col-lg-6 mb-3">
+                                        <label for="inv" class="ps-2 fw-semibold">Invoice Number</label>
+                                        <input type="text" id="inv" class="w-100 bg-white border rounded-3 p-2" placeholder="1234" readonly>
+                                    </div>
+
+                                    <div class="col-lg-6 mb-3">
                                         <label for="" class="ps-2 fw-semibold">Terms</label>
                                         <input type="text" class="w-100 bg-white border rounded-3 p-2"
                                             placeholder="Type here">
                                     </div>
 
                                     <div class="col-lg-6 mb-3">
-                                        <label for="" class="ps-2 fw-semibold">Select Service</label>
-                                        <select name="" id=""
-                                            class="border border-1 rounded-3 bg-white focus-none w-100 px-2 py-2">
-                                            <option value="" selected disabled hidden>Select here</option>
-                                            <option value="Picture Hanging ">Picture Hanging </option>
-                                            <option value="Drywall Repair">Drywall Repair</option>
-                                            <option value="Gutter Cleaning">Gutter Cleaning</option>
-                                            <option value="Curtain Rod Install">Curtain Rod Install</option>
-                                            <option value="Door Knob/ Handle Lock Install">Door Knob/ Handle Lock
-                                                Install</option>
-                                        </select>
+                                        <label for="" class="ps-2 fw-semibold">Bill To</label>
+                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
+                                            placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States">
                                     </div>
+
                                     <div class="col-lg-6 mb-3">
-                                        <label for="" class="ps-2 fw-semibold">Select Product</label>
-                                        <select name="" class="w-100 bg-white border rounded-3 p-2" id="">
-                                            <option value="">Select Type</option>
-                                        </select>
+                                        <label for="" class="ps-2 fw-semibold">Ship To</label>
+                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
+                                            placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States">
                                     </div>
+
                                     <div class="col-lg-6 mb-3">
-                                        <label for="" class="ps-2 fw-semibold">Quantity</label>
-                                        <input type="number" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type here">
+                                        <label for="" class="ps-2 fw-semibold">Ship From</label>
+                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
+                                            placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States">
                                     </div>
+
                                     <!-- <div class="col-lg-6 mb-3">
                                         <label for="" class="ps-2 fw-semibold">Invoice Number</label>
                                         <input type="number" class="w-100 bg-white border rounded-3 p-2"
                                             placeholder="Type Invoice Number">
                                     </div> -->
 
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class=" ps-2 fw-semibold">Price</label>
-                                        <input type="number" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="$:">
-                                    </div>
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class=" ps-2 fw-semibold">Internal Job Cost</label>
-                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type here">
-                                    </div>
-                                    <div class="col-lg-6 mb-3">
-                                        <div class="d-flex justify-content-between">
-                                            <label for="" class=" ps-2 fw-semibold">Add on packages</label>
-                                            <span class="gre font-12">(Optional)</span>
-                                        </div>
-                                        <input type="number" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type Invoice Number">
-                                    </div>
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class=" ps-2 fw-semibold">Taxable</label>
-                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type here">
-                                    </div>
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class=" ps-2 fw-semibold">Internal Job Estimate Time</label>
-                                        <select class="w-100 bg-white border rounded-3 p-2">
-                                            <option value="1 day">1 day</option>
-                                            <option value="2 days">2 days</option>
-                                            <option value="3 days">3 days</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class="ps-2 fw-semibold">Location</label>
-                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type here">
-                                    </div>
                                   
                                 </div>
                             </div>
@@ -219,7 +182,7 @@
                                 <tbody>
                                     <tr class="align-middle">
                                         <td class="font-md text-center">
-                                            <input type="date" class="form-control w-new py-2">
+                                            <input type="date" id="date2" class="form-control w-new py-2">
                                         </td>
                                         <td class="font-md text-center">
                                             <div class="custom-dropdown py-0">
@@ -669,6 +632,12 @@
                 }
             });
         }
+    </script>
+    <script>
+        const dateInput2 = document.getElementById('date2');
+        const today2 = new Date();
+        const formattedDate2 = today2.toISOString().split('T')[0]; // Format as YYYY-MM-DD
+        dateInput2.value = formattedDate2;
     </script>
 </body>
 
