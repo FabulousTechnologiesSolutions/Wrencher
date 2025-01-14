@@ -134,8 +134,11 @@
 
                                     <div class="col-lg-6 mb-3">
                                         <label for="" class="ps-2 fw-semibold">Terms</label>
-                                        <input type="text" class="w-100 bg-white border rounded-3 p-2"
-                                            placeholder="Type here">
+                                        <select name="" id=""  class="w-100 bg-white border rounded-3 p-2">
+                                            <option value="A-5% Off"> "A" - 5% Off</option>
+                                            <option value="B-15% Off">"B" - 15% Off</option>
+                                            <option value="C-25% Off">"C" - 25% Off</option>
+                                        </select>
                                     </div>
 
                                     <div class="col-lg-6 mb-3">
@@ -176,7 +179,8 @@
                                         <th class="font-semi text-center">Qty</th>
                                         <th class="font-semi text-center">Rate </th>
                                         <th class="font-semi text-center">Amount</th>
-                                        <th class="font-semi text-center">Tax</th>
+                                        <th class="font-semi text-center">Taxable</th>
+                                        <th class="font-semi text-center">Packages</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -227,6 +231,14 @@
                                         </td>
                                         <td class="font-md text-center">
                                             <input type="checkbox" checked>
+                                        </td>
+                                        <td class="font-md text-center">
+                                            <select name="" id=""  class="form-control focus-none w-new py-2">
+                                                <option value="" selected disabled hidden>Choose Plan</option>
+                                                <option value="Lite">Lite</option>
+                                                <option value="Grow">Grow</option>
+                                                <option value="Professional">Professional</option>
+                                            </select>
                                         </td>
                                     
                                     </tr>
@@ -282,7 +294,8 @@
                                             <p class="text-center mb-1 text-primary">Add attachment</p>
                                             <p class="mt-2 text-center mb-0">Max file size: 20 MB</p>
                                         </label>
-                                        <input type="file" id="attachment" class="d-none">
+                                        <input type="file" id="attachment" class="d-none" accept="image/*,video/*,.pdf,.doc,.docx">
+                                        <div id="preview-container" class="mt-3"></div>
                                     </div>
                                 </div>
                             </div>
@@ -638,6 +651,51 @@
         const today2 = new Date();
         const formattedDate2 = today2.toISOString().split('T')[0]; // Format as YYYY-MM-DD
         dateInput2.value = formattedDate2;
+    </script>
+    <script>
+        document.getElementById('attachment').addEventListener('change', function (event) {
+            const previewContainer = document.getElementById('preview-container');
+            previewContainer.innerHTML = ''; // Clear previous preview
+            const file = event.target.files[0];
+            
+            if (file) {
+                const fileReader = new FileReader();
+        
+                fileReader.onload = function (e) {
+                    // Check file type and create appropriate preview
+                    const fileType = file.type;
+                    let previewElement;
+        
+                    if (fileType.startsWith('image/')) {
+                        previewElement = document.createElement('img');
+                        previewElement.src = e.target.result;
+                        previewElement.style.maxWidth = '100%';
+                        previewElement.style.maxHeight = '200px';
+                        previewElement.classList.add('rounded');
+                    } else if (fileType.startsWith('video/')) {
+                        previewElement = document.createElement('video');
+                        previewElement.src = e.target.result;
+                        previewElement.controls = true;
+                        previewElement.style.maxWidth = '100%';
+                        previewElement.style.maxHeight = '200px';
+                        previewElement.classList.add('rounded');
+                    } else if (fileType === 'application/pdf') {
+                        previewElement = document.createElement('embed');
+                        previewElement.src = e.target.result;
+                        previewElement.type = 'application/pdf';
+                        previewElement.style.width = '100%';
+                        previewElement.style.height = '200px';
+                    } else {
+                        previewElement = document.createElement('p');
+                        previewElement.textContent = `Selected file: ${file.name}`;
+                    }
+        
+                    previewContainer.appendChild(previewElement);
+                };
+        
+                fileReader.readAsDataURL(file);
+            }
+        });
     </script>
 </body>
 
