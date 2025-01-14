@@ -946,26 +946,26 @@ header .nav-link.active {
 
 }
 
-.nav-tabs {
+.review .nav-tabs {
     background-color: transparent !important;
     border: none !important;
 }
 
-.nav-link {
+.review .nav-link {
     background-color: transparent !important;
     color: #000 !important;
     font-size: 18px;
     border: none !important;
 }
 
-.nav-link.active {
+.review .nav-link.active {
     background-color: transparent !important;
     color: #003FDB !important;
     font-weight: 600;
     font-size: 18px;
     border-bottom: solid 5px #003FDB !important;
 }
-.bg-greyn {
+.review .bg-greyn {
     background: #F8F8F9;
 }
 .bg-sky2 {
@@ -973,6 +973,10 @@ header .nav-link.active {
 }
 .min-vh {
     min-height: 100dvh;
+}
+.low-stock {
+    background: #FCE0D3;
+    color: #DB7F5B;
 }
 @media screen and (max-width: 1440px){
     .table th {
