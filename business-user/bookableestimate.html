@@ -85,7 +85,7 @@
                                             <div class="accordion" id="accordionExample">
                                                 <!-- Question 1 -->
                                                 <div
-                                                    class="accordion-item my-3 border-0 accordian-shadow py-2 rounded-4 px-md-2">
+                                                    class="accordion-item my-3 border-0 shadow-sm py-2 rounded-4 px-md-2">
                                                     <h2 class="accordion-header rounded-4 border-0 py-0"
                                                         id="headingOne">
                                                         <button
@@ -100,9 +100,9 @@
                                                         class="accordion-collapse pt-0 mt-0 collapse show"
                                                         aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                                                         <div class="accordion-body pt-0 mt-0 text-secondary">
-                                                            <div class="col-lg-6 mb-3">
+                                                            <div class="mb-3">
                                                                 <div>
-                                                                    <label for="" class="ps-2 fw-semibold">Select
+                                                                    <label for="" class=" fw-semibold">Select
                                                                         Customer</label>
                                                                     <div class="dropdown1">
                                                                         <div class="dropdown-toggle1 d-flex bg-white">
@@ -146,7 +146,7 @@
                                                     </div>
                                                 </div>
                                                 <div
-                                                    class="accordion-item my-3 border-0 accordian-shadow py-2 rounded-4 px-md-2">
+                                                    class="accordion-item my-3 border-0 shadow-sm py-2 rounded-4 px-md-2">
                                                     <h2 class="accordion-header rounded-4 border-0 py-0"
                                                         id="headingTwo">
                                                         <button
@@ -160,15 +160,14 @@
                                                     <div id="collapseTwo" class="accordion-collapse pt-0 mt-0 collapse"
                                                         aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                         <div class="accordion-body pt-0 mt-0 text-secondary">
-
-                                                            <div>
+                                                            <div class="border-bottom border-1 pb-3">
                                                                 <label for="" class="form-label">Browse Services</label>
                                                                 <div class="custom-dropdown">
                                                                     <div
-                                                                        class="custom-dropdown-toggle1 p-3 rounded-3 d-flex bg-nblue">
+                                                                        class="custom-dropdown-toggle1 p-3 rounded-3 d-flex border border-1 bg-white">
                                                                         <div class="w-100">
                                                                             <button type="button"
-                                                                                class="w-100 custom-toggle-button border-0 p-0 text-start bg-nblue"
+                                                                                class="w-100 custom-toggle-button border-0 p-0 text-start border border-1 bg-white"
                                                                                 id="selectService">Select
                                                                                 Here</button>
                                                                         </div>
@@ -196,21 +195,50 @@
                                                                     </div>
                                                                 </div>
 
-                                                                <button type="button"
-                                                                    class="create-new-btn text-start px-0 rounded-3"
-                                                                    data-bs-toggle="modal"
-                                                                    data-bs-target="#serviceModal"><i
-                                                                        class="fa-solid fa-square-plus me-2"></i>Create
+                                                                <button type="button" class="create-new-btn text-start px-0 rounded-3" data-bs-toggle="modal"
+                                                                    data-bs-target="#serviceModal"><i class="fa-solid fa-square-plus me-2"></i>Create
                                                                     a new
                                                                     Service</button>
                                                             </div>
-
+                                                            <div class="d-flex border-bottom border-1 py-3 justify-content-between">
+                                                                <p class="mb-0 text-uppercase fw-semibold">Service</p>
+                                                                <p class="mb-0 text-uppercase fw-semibold">Price</p>
+                                                            </div>
+                                                            <div class="d-flex border-bottom border-1 py-3 justify-content-between">
+                                                                <p class="mb-0 text-uppercase">Plumbing Service Call</p>
+                                                               <div class="d-flex align-items-center">
+                                                                <input type="text" class="border-0 focus-none max-content" value="$75.00">
+                                                                <i class="fa-solid fa-trash text-danger ms-2"></i>
+                                                               </div>
+                                                            </div>
+                                                            <div class="py-3">
+                                                                <div class="d-flex py-1 justify-content-between">
+                                                                    <p class="mb-0">Subtotal</p>
+                                                                    <p class="mb-0 text-uppercase ">$75.00</p>
+                                                                </div>
+                                                                <div class="d-flex py-1 justify-content-between">
+                                                                    <p class="mb-0 create-new-btn px-0 py-0"  data-bs-toggle="modal"
+                                                                    data-bs-target="#discountModal">Add Discount</p>
+                                                                </div>
+                                                                <div class="d-flex py-1 justify-content-between">
+                                                                    <p class="mb-0 create-new-btn px-0 py-0" data-bs-toggle="modal"
+                                                                    data-bs-target="#feeModal">Add Fee</p>
+                                                                </div>
+                                                                <div class="d-flex py-1 justify-content-between">
+                                                                    <p class="mb-0">Taxes</p>
+                                                                    <p class="mb-0">$0.00</p>
+                                                                </div>
+                                                                <div class="d-flex py-1 justify-content-between">
+                                                                    <p class="mb-0">Total</p>
+                                                                    <p class="mb-0">$75.00</p>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <!-- Question 2 -->
                                                 <div
-                                                    class="accordion-item my-3 border-0 accordian-shadow py-2 rounded-4 px-md-2">
+                                                    class="accordion-item my-3 border-0 shadow-sm py-2 rounded-4 px-md-2">
                                                     <h2 class="accordion-header rounded-4 border-0 py-0"
                                                         id="headingFour">
                                                         <button
@@ -302,12 +330,14 @@
                                                                     <p class="mb-0">None</p>
                                                                 </div>
                                                            </div>
-                                                           <div class="">
-                                                                <h6 class="fw-medium mb-0">ASSIGNED</h6>
-                                                                <div class=" mt-4">
-                                                                    <h2>Assign Users</h2>
+                                                           <div class="mt-4">
+                                                                <h6 class="mb-0 fw-medium mb-0">ASSIGNED</h6>
+                                                                <div class=" mt-2">
                                                                     <div class="dropdown-container">
-                                                                        <button id="assign-btn" class="btn btn-primary">Assign</button>
+                                                                        <button id="assign-btn" class="btn btn-primary">
+                                                                            <i class="fa-solid fa-plus"></i>
+                                                                            <span>Assign</span>
+                                                                        </button>
                                                                         <div id="dropdown-content" class="dropdown-content">
                                                                             <select id="user-select" class="form-select" multiple>
                                                                                 <option value="1">John Doe</option>
@@ -322,13 +352,21 @@
                                                                     </div>
                                                                     <div id="preview-container" class="preview-container"></div>
                                                                 </div>
+                                                                <div class="d-flex ps-2 mt-3 px-3 py-3 border border-1 rounded-3">
+                                                                    <input type="checkbox" name="" class="me-2" id="collect">
+                                                                    <label for="collect" class="fw-semibold ">
+                                                                        <h6 class="fw-semibold mb-0">
+                                                                            Offer job to service providers
+                                                                        </h6>
+                                                                    </label>
+                                                                </div>
                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <!-- Question 3 -->
                                                 <div
-                                                    class="accordion-item my-3 border-0 accordian-shadow py-2 rounded-4 px-md-2">
+                                                    class="accordion-item my-3 border-0 shadow-sm py-2 rounded-4 px-md-2">
                                                     <h2 class="accordion-header rounded-4 border-0 py-0"
                                                         id="headingThree">
                                                         <button
@@ -401,7 +439,7 @@
                             </div>
                         </div>
                         <div class="col-4 py-3">
-                            <div class="bg-white px-3 py-3 border border-1 rounded-3">
+                            <div class="bg-white px-3 py-3 shadow-sm rounded-3">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h2 class="fs-5">Customer</h2>
                                     <a href="#" class="text-decoration-none">Change</a>
@@ -413,17 +451,18 @@
                                         <a href="#" class="text-decoration-none">Edit</a>
                                     </div>
                                 </div>
-                                <p class="fw-semibold text-capitalize">contact info</p>
-                                <div class="d-flex align-items-center">
+                                <p class="fw-semibold my-2 text-capitalize">contact info</p>
+                                <div class="d-flex align-items-center my-2">
                                     <p class="fw-semibold me-2 mb-0 text-capitalize">Notes</p>
-                                    <span class="bg-secondary px-2 small py-1 text-white rounded-circle">0</span>
+                                    <span class="round-box small rounded-circle">0</span>
                                 </div>
-                                <div class="d-flex align-items-center">
+                                <div class="d-flex align-items-center my-2">
                                     <p class="fw-semibold me-2 mb-0 text-capitalize">Notification preferences</p>
-                                    <span class="bg-secondary px-3 py-1 text-white rounded-pill">email</span>
+                                    <span class="round-box small rounded-pill">email</span>
                                 </div>
                             </div>
-                            <div class="bg-white mt-3 px-3 py-3 border border-1 rounded-3">
+                            <div class="bg-white mt-3 px-3 py-3 shadow-sm rounded-3">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13462.978630550959!2d74.49813781738284!3d32.479520816527135!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391eebf05050a257%3A0x65c6ed11df82a794!2sFabulous%20Technology%20Solutions!5e0!3m2!1sen!2s!4v1736932944604!5m2!1sen!2s" width="100%" class="w-100" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                 <div class="d-flex border-bottom pb-3 justify-content-between align-items-center">
                                     <div>
                                         <h2 class="fs-5 text-capitalize mb-0">Service address</h2>
@@ -432,7 +471,7 @@
                                     <a href="#" class="text-decoration-none">Edit</a>
                                 </div>
                                 <div class="d-flex border-bottom pb-3 justify-content-between align-items-center">
-                                    <div>
+                                    <div class="mt-3">
                                         <h2 class="fs-5 text-capitalize mb-0">Territory</h2>
                                         <p class="mb-0">Treasure Coast</p>
                                     </div>
@@ -448,7 +487,7 @@
                                 <p class="mb-0 mt-2">The customer will be able to book this estimate for any service
                                     address</p>
                             </div>
-                            <div class="bg-white mt-3 px-3 py-3 border border-1 rounded-3">
+                            <div class="bg-white mt-3 px-3 py-3 shadow-sm rounded-3">
                                 <h2 class="fs-5 text-capitalize mb-0">Internal notes</h2>
                                 <textarea name="" rows="5" class="border border-1 rounded-3 w-100" id=""></textarea>
                             </div>
@@ -575,6 +614,83 @@
                         </div>
                     </form>
                 </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="modal modal-lg fade" id="discountModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog max-400 modal-dialog-centered">
+            <div class="modal-content rounded-5">
+                <div class="modal-header">
+                    <h4 class="text-center w-100" id="exampleModalLabel">Add Discount</h4>
+                    <button type="button" class="border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fs-4 fa-circle-xmark text-danger"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="mx-auto">
+                                <div class="row">
+                                    <div class="col-12 mt-3 ">
+                                        <label for="" class="form-label fw-medium mb-0">Discount In</label>
+                                        <div class="d-flex">
+                                            <div class="d-flex me-4">
+                                                <input type="radio" class="me-2" id="dollar" name="discount"
+                                                    placeholder="123 Eve, Rookers Block Las Vegas">
+                                                <label for="dollar" class="form-label fw-medium mb-0">$</label>
+                                            </div>
+                                            <div class="d-flex">
+                                                <input type="radio" class="me-2" id="per" name="discount"
+                                                    placeholder="123 Eve, Rookers Block Las Vegas">
+                                                <label for="per" class="form-label fw-medium mb-0">%</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 col-12">
+                                        <label for="dis" class="form-label fw-medium mb-0">Enter Discount</label>
+                                        <input type="number" id="dis" class="modal-input" placeholder="">
+                                    </div>
+    
+                                </div>
+    
+                                <div class="">
+                                    <div class="row justify-content-between mt-5">
+                                        <div class="col-sm-4 col-6">
+                                            <button
+                                                class="red-bg py-2 px-2 w-100 text-white border-danger border-1 rounded-3">Cancel</button>
+                                        </div>
+                                        <div class="col-sm-4 col-6">
+                                            <button type="submit"
+                                                class="bg-sky py-2 px-2 w-100 text-white border-primary border-1 rounded-3">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+    
+    
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-lg fade" id="feeModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog max-400 modal-dialog-centered">
+            <div class="modal-content rounded-5">
+                <div class="modal-header">
+                    <h4 class="text-center w-100" id="exampleModalLabel">Add Fee</h4>
+                    <button type="button" class="border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fs-4 fa-circle-xmark text-danger"></i></button>
+                </div>
+                <div class="modal-body">
+                    <p class="mb-0 pb-5">You have not created any fee yet</p>
+                </div>
+    
+    
             </div>
         </div>
     </div>
@@ -585,7 +701,7 @@
                 <div class="modal-header">
                     <h4 class="text-center w-100" id="modalTitle">Add New Customer</h4>
                 </div>
-                <div class="modal-body" id="modalBody">
+                <div class="modal-body pb-4" id="modalBody">
                     ...
                 </div>
             </div>
@@ -658,10 +774,10 @@
         // Sample customer data
         const customers1 = [
             { title: 'Picture Hanging', description: 'Our experts will come to assess your needs and discuss solutions.', options: ['Option 1 for Picture Hanging', 'Option 2 for Picture Hanging'] },
-            { title: 'Drywall Repair', description: 'Our experts will come to assess your needs and discuss solutions.' },
-            { title: 'Gutter Cleaning', description: 'Our experts will come to assess your needs and discuss solutions.' },
-            { title: 'Curtain Rod Install', description: 'Our experts will come to assess your needs and discuss solutions.' },
-            { title: 'Door Knob/ Handle Lock Install', description: 'Our experts will come to assess your needs and discuss solutions.' },
+            { title: 'Drywall Repair', description: 'Our experts will come to assess your needs and discuss solutions.' , options: ['Option 1 for Drywall Repair', 'Option 2 for Drywall Repair'] },
+            { title: 'Gutter Cleaning', description: 'Our experts will come to assess your needs and discuss solutions.' , options: ['Option 1 for Gutter Cleaning', 'Option 2 for Gutter Cleaning']  },
+            { title: 'Curtain Rod Install', description: 'Our experts will come to assess your needs and discuss solutions.', options: ['Option 1 for Curtain Rod Install', 'Option 2 for Curtain Rod Install'] },
+            { title: 'Door Knob/ Handle Lock Install', description: 'Our experts will come to assess your needs and discuss solutions.', options: ['Option 1 for Door Knob', 'Option 2 for Door Knob'] },
         ];
 
         const customerList1 = document.querySelector('.custom-customer-list');
@@ -744,7 +860,7 @@
                 if (selectedOptions) {
                     selectedOptions.forEach(function (value) {
                         const text = $select.find(`option[value="${value}"]`).text();
-                        $previewContainer.append(`<div class="preview-item">${text}</div>`);
+                        $previewContainer.append(`<span ,class="preview-item">${text}</span>,`);
                     });
                 }
             });
