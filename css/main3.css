@@ -159,7 +159,8 @@ select:focus {
 }
 
 .dropdown-toggle1,
-.dropdown-trigger {
+.dropdown-trigger ,
+.drop-container{
     width: 100%;
     padding: 8px;
     border: 1px solid #dee2e6;
@@ -170,7 +171,8 @@ select:focus {
 }
 
 .dropdown-menu1,
-.dropdown-content {
+.dropdown-content,
+.menu {
     display: none;
     position: absolute;
     width: 100%;

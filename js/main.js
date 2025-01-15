@@ -47,41 +47,58 @@ $(document).ready(function () {
 
 
 
-
     document.querySelector('.dropdown-toggle1').addEventListener('click', function () {
         const dropdownMenu = document.querySelector('.dropdown-menu1');
         dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
     });
-
+    
     document.addEventListener('click', function (event) {
         const isClickInside = document.querySelector('.dropdown1').contains(event.target);
         if (!isClickInside) {
             document.querySelector('.dropdown-menu1').style.display = 'none';
         }
     });
-
+    
     // Sample customer data
     const customers = [
-        { name: 'Customer', img: '../img/user.png' },
-        { name: 'Customer name here', img: '../img/user.png' },
-        { name: 'Customer name here', img: '../img/user.png' },
-        { name: 'Customer name here', img: '../img/user.png' },
-        { name: 'Customer name here', img: '../img/user.png' },
+        { name: 'Customer 1', img: '../img/user.png' },
+        { name: 'Customer 2', img: '../img/user.png' },
+        { name: 'Customer 3', img: '../img/user.png' },
+        { name: 'Customer 4', img: '../img/user.png' },
+        { name: 'Customer 5', img: '../img/user.png' },
     ];
-
+    
     const customerList = document.querySelector('.customer-list');
     const dropdownToggle = document.querySelector('.dropdown-toggle2');
-
-    customers.forEach(customer => {
-        const li = document.createElement('li');
-        li.className = 'customer-list-item';
-        li.innerHTML = `<img src="${customer.img}" alt="Customer image">${customer.name}`;
-        li.addEventListener('click', function () {
-            dropdownToggle.textContent = customer.name; // Update the dropdown button text
-            document.querySelector('.dropdown-menu1').style.display = 'none'; // Close the dropdown menu
+    const searchInput = document.querySelector('.search-input input'); // The search input field
+    
+    // Function to display customers in the dropdown
+    function displayCustomers(filteredCustomers) {
+        customerList.innerHTML = ''; // Clear the current list
+        filteredCustomers.forEach(customer => {
+            const li = document.createElement('li');
+            li.className = 'customer-list-item';
+            li.innerHTML = `<img src="${customer.img}" alt="Customer image">${customer.name}`;
+            li.addEventListener('click', function () {
+                dropdownToggle.textContent = customer.name; // Update the dropdown button text
+                document.querySelector('.dropdown-menu1').style.display = 'none'; // Close the dropdown menu
+            });
+            customerList.appendChild(li);
         });
-        customerList.appendChild(li);
+    }
+    
+    // Display all customers initially
+    displayCustomers(customers);
+    
+    // Search functionality
+    searchInput.addEventListener('input', function () {
+        const searchQuery = searchInput.value.toLowerCase(); // Get the search query
+        const filteredCustomers = customers.filter(customer => 
+            customer.name.toLowerCase().includes(searchQuery) // Filter customers based on name
+        );
+        displayCustomers(filteredCustomers); // Display the filtered customers
     });
+    
 
     // ---------------
 
