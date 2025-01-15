@@ -78,8 +78,8 @@
 
                     <div class="row">
                         <div class="col-8">
-                            <div class="p-sm-4">
-                                <section class="my-5">
+                            <div class="px-sm-4">
+                                <section class="">
                                     <div class="mycontainer">
                                         <div>
                                             <div class="accordion" id="accordionExample">
@@ -160,9 +160,9 @@
                                                     <div id="collapseTwo" class="accordion-collapse pt-0 mt-0 collapse"
                                                         aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                                                         <div class="accordion-body pt-0 mt-0 text-secondary">
-                                                            
+
                                                             <div>
-                                                                <label for="" class="form-label">Select Service</label>
+                                                                <label for="" class="form-label">Browse Services</label>
                                                                 <div class="custom-dropdown">
                                                                     <div class="custom-dropdown-toggle d-flex bg-nblue">
                                                                         <div class="w-100">
@@ -193,9 +193,14 @@
                                                                         </ul>
                                                                     </div>
                                                                 </div>
-                                                                <span class="blu fw-medium mt-2 d-block"><i
-                                                                        class="fa-solid fa-square-plus me-2"></i>Add
-                                                                    Custom Service</span>
+
+                                                                <button type="button"
+                                                                    class="create-new-btn text-start px-0 rounded-3"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#serviceModal"><i
+                                                                        class="fa-solid fa-square-plus me-2"></i>Create
+                                                                    a new
+                                                                    Service</button>
                                                             </div>
 
                                                         </div>
@@ -218,8 +223,104 @@
                                                         aria-labelledby="headingFour"
                                                         data-bs-parent="#accordionExample">
                                                         <div class="accordion-body pt-0 mt-0 text-secondary">
-                                                            Absolutely! You can switch plans at any time to accommodate
-                                                            your changing needs.
+                                                           <div class="row">
+                                                                <div class="col-lg-6 col-xl-4 col-xxl-3 my-2">
+                                                                    <div class="d-flex align-items-center border border-1 rounded-3 px-2">
+                                                                        <i class="fa-solid fa-clock"></i>
+                                                                        <select class="custom-select border-0 form-select focus-none bg-transparent">
+                                                                            <option value="15-min">15 min</option>
+                                                                            <option value="30-min">30 min</option>
+                                                                            <option value="45-min">45 min</option>
+                                                                            <option value="1-hr">1 hr</option>
+                                                                            <option value="1-hr-15-min">1 hr 15 min</option>
+                                                                            <option value="1-hr-30-min">1 hr 30 min</option>
+                                                                            <option value="1-hr-45-min">1 hr 45 min</option>
+                                                                            <option value="2-hr">2 hr</option>
+                                                                            <option value="2-hr-15-min">2 hr 15 min</option>
+                                                                            <option value="2-hr-30-min">2 hr 30 min</option>
+                                                                            <option value="2-hr-45-min">2 hr 45 min</option>
+                                                                            <option value="3-hr">3 hr</option>
+                                                                            <option value="3-hr-15-min">3 hr 15 min</option>
+                                                                            <option value="3-hr-30-min">3 hr 30 min</option>
+                                                                            <option value="3-hr-45-min">3 hr 45 min</option>
+                                                                            <option value="4-hr">4 hr</option>
+                                                                            <option value="4-hr-15-min">4 hr 15 min</option>
+                                                                            <option value="4-hr-30-min">4 hr 30 min</option>
+                                                                            <option value="4-hr-45-min">4 hr 45 min</option>
+                                                                            <option value="5-hr">5 hr</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 col-xl-4 col-xxl-3 my-2">
+                                                                    <div class="d-flex align-items-center border border-1 rounded-3 px-2">
+                                                                        <i class="fa-solid fa-user"></i>
+                                                                        <select class="custom-select border-0 form-select focus-none bg-transparent">
+                                                                            <option value="1">1 Worker</option>
+                                                                            <option value="2">2 Workers</option>
+                                                                            <option value="3">3 Workers</option>
+                                                                            <option value="4">4 Workers</option>
+                                                                            <option value="5">5 Workers</option>
+                                                                            <option value="6">6 Workers</option>
+                                                                            <option value="7">7 Workers</option>
+                                                                            <option value="8">8 Workers</option>
+                                                                            <option value="9">9 Workers</option>
+                                                                            <option value="10">10 Workers</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="col-lg-6 col-xl-4 col-xxl-3 my-2">
+                                                                    <div class="d-flex align-items-center border border-1 rounded-3 px-2">
+                                                                        <i class="fa-solid fa-user"></i>
+                                                                        <select class="custom-select border-0 form-select focus-none bg-transparent">
+                                                                            <option value="0">0 Skill Required</option>
+                                                                            <option value="1">1 Skill Required</option>
+                                                                            <option value="2">2 Skills Required</option>
+                                                                            <option value="3">3 Skills Required</option>
+                                                                            <option value="4">4 Skills Required</option>
+                                                                            <option value="5">5 Skills Required</option>
+                                                                            <option value="6">6 Skills Required</option>
+                                                                            <option value="7">7 Skills Required</option>
+                                                                            <option value="8">8 Skills Required</option>
+                                                                            <option value="9">9 Skills Required</option>
+                                                                            <option value="10">10 Skills Required</option>
+                                                                        </select>
+                                                                    </div>
+                                                                </div>
+                                                           </div>
+                                                           <div class="border mt-3 border-1 rounded-3 py-3">
+                                                                <div class="d-flex border-bottom px-3 pb-3 align-items-center">
+                                                                    <i class="fa-solid fa-paperclip fs-5 px-2 py-2 me-2 border border-1 rounded-3"></i>
+                                                                    <div>
+                                                                        <h6 class="fs-6 mb-1 fw-semibold">Scheduling Link</h6>
+                                                                        <p class="mb-0">The scheduling link will be generated when you save this estimate</p>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="d-flex pt-3 px-3 algin-items-center justify-content-between">
+                                                                    <h6 class="fw-medium mb-0">TIMESLOT TEMPLATE</h6>
+                                                                    <p class="mb-0">None</p>
+                                                                </div>
+                                                           </div>
+                                                           <div class="">
+                                                                <h6 class="fw-medium mb-0">ASSIGNED</h6>
+                                                                <div class=" mt-4">
+                                                                    <h2>Assign Users</h2>
+                                                                    <div class="dropdown-container">
+                                                                        <button id="assign-btn" class="btn btn-primary">Assign</button>
+                                                                        <div id="dropdown-content" class="dropdown-content">
+                                                                            <select id="user-select" class="form-select" multiple>
+                                                                                <option value="1">John Doe</option>
+                                                                                <option value="2">Jane Smith</option>
+                                                                                <option value="3">Alice Johnson</option>
+                                                                                <option value="4">Robert Brown</option>
+                                                                                <option value="5">Emily Davis</option>
+                                                                                <option value="6">Michael Wilson</option>
+                                                                                <option value="7">Sarah Miller</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div id="preview-container" class="preview-container"></div>
+                                                                </div>
+                                                           </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -241,29 +342,51 @@
                                                         aria-labelledby="headingThree"
                                                         data-bs-parent="#accordionExample">
                                                         <div class="accordion-body pt-0 mt-0 text-secondary">
-                                                           <form action="">
-                                                            <div class="col-lg-12 mb-3">
-                                                                <label for="title" class="ps-2 fw-semibold">Title</label>
-                                                                <input type="text" id="title" class="w-100 bg-white border rounded-3 p-2" placeholder="Estimate for custom handyman" >
-                                                            </div>
-                                                            <div class="col-lg-12 mb-3">
-                                                                <label for="memo" class="ps-2 fw-semibold">Memo</label>
-                                                                <input type="text" id="memo" class="w-100 bg-white border rounded-3 p-2" placeholder="Enter a custom description for your estimate" >
-                                                            </div>
-                                                            <div class="col-lg-12 mb-3">
-                                                                <label for="expires" class="ps-2 fw-semibold">Expires</label>
-                                                                <input type="date" id="expires" class="w-100 bg-white border rounded-3 p-2" placeholder="January 22,2025" >
-                                                            </div>
-                        
-                                                            <div class="col-lg-12 mb-3">
-                                                                <label for="" class="ps-2 fw-semibold">Terms</label>
-                                                                <select name="" id=""  class="w-100 form-select focus-none bg-white border rounded-3 p-2">
-                                                                    <option value="T1"> T1</option>
-                                                                    <option value="T2"> T2</option>
-                                                                    <option value="T3"> T3</option>
-                                                                </select>
-                                                            </div>
-                                                           </form>
+                                                            <form action="">
+                                                                <div class="col-lg-12 mb-3">
+                                                                    <label for="title"
+                                                                        class="ps-2 fw-semibold">Title</label>
+                                                                    <input type="text" id="title"
+                                                                        class="w-100 bg-white border rounded-3 p-2"
+                                                                        placeholder="Estimate for custom handyman">
+                                                                </div>
+                                                                <div class="col-lg-12 mb-3">
+                                                                    <label for="memo"
+                                                                        class="ps-2 fw-semibold">Memo</label>
+                                                                    <input type="text" id="memo"
+                                                                        class="w-100 bg-white border rounded-3 p-2"
+                                                                        placeholder="Enter a custom description for your estimate">
+                                                                </div>
+                                                                <div class="col-lg-12 mb-3">
+                                                                    <label for="expires"
+                                                                        class="ps-2 fw-semibold">Expires</label>
+                                                                    <input type="date" id="expires"
+                                                                        class="w-100 bg-white border rounded-3 p-2"
+                                                                        placeholder="January 22,2025">
+                                                                </div>
+
+                                                                <div class="col-lg-12 mb-3">
+                                                                    <label for="" class="ps-2 fw-semibold">Terms</label>
+                                                                    <select name="" id=""
+                                                                        class="w-100 form-select focus-none bg-white border rounded-3 p-2">
+                                                                        <option value="T1"> T1</option>
+                                                                        <option value="T2"> T2</option>
+                                                                        <option value="T3"> T3</option>
+                                                                    </select>
+                                                                </div>
+                                                                <div class="col-lg-12 mb-3">
+                                                                    <label for="" class="ps-2 fw-semibold">Payment capture & collection</label>
+                                                                    <div class="d-flex ps-2 px-3 py-3 border border-1 rounded-3">
+                                                                        <input type="checkbox" name="" class="me-2" id="collect">
+                                                                        <label for="collect" class="fw-semibold ">
+                                                                            <h6 class="fw-semibold mb-1">
+                                                                               Collect Payment on Booking
+                                                                            </h6>
+                                                                            <p class="mb-0">Select this option if you want to collect payment details or require payment as part of the booking process.</p>
+                                                                        </label>
+                                                                    </div>
+                                                                </div>
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -275,7 +398,7 @@
                                 </section>
                             </div>
                         </div>
-                        <div class="col-4">
+                        <div class="col-4 py-3">
                             <div class="bg-white px-3 py-3 border border-1 rounded-3">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <h2 class="fs-5">Customer</h2>
@@ -320,7 +443,8 @@
                                     </div>
                                     <p class="mb-0">Enforce service area</p>
                                 </div>
-                                <p class="mb-0 mt-2">The customer will be able to book this estimate for any service address</p>
+                                <p class="mb-0 mt-2">The customer will be able to book this estimate for any service
+                                    address</p>
                             </div>
                             <div class="bg-white mt-3 px-3 py-3 border border-1 rounded-3">
                                 <h2 class="fs-5 text-capitalize mb-0">Internal notes</h2>
@@ -334,187 +458,124 @@
         </div>
     </section>
     <div class="modal modal-lg fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content rounded-5">
-            <div class="modal-header">
-                <h4 class="text-center w-100" id="exampleModalLabel">Add New Customer</h4>
-                <button type="button" class="border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close"><i
-                        class="fa-solid fs-4 fa-circle-xmark text-danger"></i></button>
-            </div>
-            <div class="modal-body">
-                <form action="">
-                    <div class="row">
-                        <div class="col-lg-7 mx-auto">
-                            <!-- <div>
-                                <div>
-                                    <div>
-                                        <img src="../img/user.png" alt="" class="user-file">
-                                    </div>
-                                    <div class="mt-2">
-                                        <label for="file-up" class="bg-sky py-2 px-3 rounded-2 text-white">
-                                            Add Image
-                                        </label>
-                                    </div>
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-5">
+                <div class="modal-header">
+                    <h4 class="text-center w-100" id="exampleModalLabel">Add New Customer</h4>
+                    <button type="button" class="border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fs-4 fa-circle-xmark text-danger"></i></button>
+                </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-lg-7 mx-auto">
+                                <div class="mt-3">
+                                    <label for="" class="form-label fw-medium mb-0">Full Name</label>
+                                    <input type="text" class="modal-input" placeholder="John Doe">
                                 </div>
-                                <input type="file" id="file-up" class="d-none">
-                            </div> -->
-                            <div class="mt-3">
-                                <label for="" class="form-label fw-medium mb-0">Full Name</label>
-                                <input type="text" class="modal-input" placeholder="John Doe">
-                            </div>
-                            <div class="mt-3">
-                                <label for="" class="form-label fw-medium mb-0">Phone</label>
-                                <input type="tel" class="modal-input" placeholder="12345678">
-                            </div>
-                            <div class="mt-3">
-                                <label for="" class="form-label fw-medium mb-0">Email</label>
-                                <input type="email" class="modal-input" placeholder="awesomaa1@domain.com">
-                            </div>
-                            <div class="mt-3">
-                                <label for="" class="form-label fw-medium mb-0">Address</label>
-                                <input type="text" class="modal-input"
-                                    placeholder="123 Eve, Rookers Block Las Vegas">
-                            </div>
-                            <div class="mt-3">
-                                <label for="" class="form-label fw-medium mb-0">Referal</label>
-                                <select name="" id="" class="modal-input">
-                                    <option value="">How did you hear about us?</option>
-                                </select>
-                            </div>
-                            <div class="row justify-content-between mt-5">
-                                <div class="col-sm-4 col-6">
-                                    <button
-                                        class="red-bg py-2 px-2 w-100 text-white border-danger border-1 rounded-3">Cancel</button>
+                                <div class="mt-3">
+                                    <label for="" class="form-label fw-medium mb-0">Phone</label>
+                                    <input type="tel" class="modal-input" placeholder="12345678">
                                 </div>
-                                <div class="col-sm-4 col-6">
-                                    <button type="submit"
-                                        class="bg-sky py-2 px-2 w-100 text-white border-primary border-1 rounded-3">Save</button>
+                                <div class="mt-3">
+                                    <label for="" class="form-label fw-medium mb-0">Email</label>
+                                    <input type="email" class="modal-input" placeholder="awesomaa1@domain.com">
+                                </div>
+                                <div class="mt-3">
+                                    <label for="" class="form-label fw-medium mb-0">Address</label>
+                                    <input type="text" class="modal-input"
+                                        placeholder="123 Eve, Rookers Block Las Vegas">
+                                </div>
+                                <div class="mt-3">
+                                    <label for="" class="form-label fw-medium mb-0">Referal</label>
+                                    <select name="" id="" class="modal-input">
+                                        <option value="">How did you hear about us?</option>
+                                    </select>
+                                </div>
+                                <div class="row justify-content-between mt-5">
+                                    <div class="col-sm-4 col-6">
+                                        <button
+                                            class="red-bg py-2 px-2 w-100 text-white border-danger border-1 rounded-3">Cancel</button>
+                                    </div>
+                                    <div class="col-sm-4 col-6">
+                                        <button type="submit"
+                                            class="bg-sky py-2 px-2 w-100 text-white border-primary border-1 rounded-3">Save</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="modal modal-lg fade" id="mapModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content rounded-5">
-            <div class="modal-header">
-                <h4 class="text-center w-100" id="exampleModalLabel">Where's your place located?</h4>
-                <button type="button" class="border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close"><i
-                        class="fa-solid fs-4 fa-circle-xmark text-danger"></i></button>
-            </div>
-            <div class="modal-body">
-                <form action="">
-                    <div class="row">
-                        <div class="col-10 mx-auto">
-                            <h5>Your address is only shared with Job Seekers.</h5>
-                            <div>
-                                <input id="autocomplete" type="text" class="form-control"
-                                    placeholder="Enter a location">
-                                <div id="map" class="mt-3"></div>
-                            </div>
-                            <div class="d-flex justify-content-between mt-4">
-                                <div>
-                                    <p class="blu fw-medium pointer" data-bs-target="#confirmModal"
-                                        data-bs-toggle="modal">Enter Manual Address</p>
-                                </div>
-                                <div>
-                                    <button class="bg-sky text-white py-2 px-5 rounded-2 border-blu">Save</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal modal-lg fade" id="confirmModal" tabindex="-1" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content rounded-5">
-            <div class="modal-header">
-                <h4 class="text-center w-100" id="exampleModalLabel">Confirm your address</h4>
-                <button type="button" class="border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close"><i
-                        class="fa-solid fs-4 fa-circle-xmark text-danger"></i></button>
-            </div>
-            <div class="modal-body">
-                <form action="">
-                    <p class="text-center fw-semibold">Your address is only shared with guests after they’ve made a
-                        reservation.</p>
-                    <div class="row">
-                        <div class="col-lg-7 mx-auto">
-                            <div class="mt-3">
-                                <label for="" class="form-label fw-medium mb-0">Street Address</label>
-                                <input type="text" class="modal-input" placeholder="Sialkot, 90 more">
-                            </div>
-                            <div class="mt-3">
-                                <label for="" class="form-label fw-medium mb-0">Apt, floor, bldg (if
-                                    applicable)</label>
-                                <input type="text" class="modal-input" placeholder="Second Floor">
-                            </div>
-                            <div class="mt-3">
-                                <label for="" class="form-label fw-medium mb-0">City / town / village</label>
-                                <input type="text" class="modal-input" placeholder="Main Chino ">
-                            </div>
-                            <div class="mt-3">
-                                <label for="" class="form-label fw-medium mb-0">Province / state / territory (if
-                                    applicaable)</label>
-                                <input type="text" class="modal-input" placeholder="Punjab">
-                            </div>
-                            <div class="mt-3">
-                                <label for="" class="form-label fw-medium mb-0">Postal code (if applicable)</label>
-                                <input type="text" class="modal-input" placeholder="57000">
-                            </div>
-                            <div class="row justify-content-between mt-5">
-                                <div class="col-sm-4 col-6">
-                                    <input type="reset" value="Clear"
-                                        class="text-decoration-underline border-0 bg-transparent" name="" id="">
-                                </div>
-                                <div class="col-sm-4 col-6">
-                                    <button type="button" data-bs-target="#AddressModal" data-bs-toggle="modal"
-                                        class="bg-sky py-2 px-2 w-100 text-white border-primary border-1 rounded-3">Save</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="modal fade" id="AddressModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content rounded-4">
-            <div class="modal-body">
-                <div class="d-flex align-items-center">
-                    <div>
-                        <img src="../img/claim.png" alt="">
-                    </div>
-                    <div class="ms-2">
-                        <h6 class="fw-bold mb-0">We don't recognize that address</h6>
-                        <p class="fw-medium gre mb-0">Are you sure that it's correct?</p>
-                    </div>
+    <div class="modal modal-lg fade" id="serviceModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content rounded-5">
+                <div class="modal-header">
+                    <h4 class="text-center w-100" id="exampleModalLabel">Add Custom Service?</h4>
+                    <button type="button" class="border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close"><i
+                            class="fa-solid fs-4 fa-circle-xmark text-danger"></i></button>
                 </div>
-                <div class="row mt-4 align-items-center">
-                    <div class="col-sm-6 text-center">
-                        <p class="pointer sky text-decoration-underline font-c py-2 mb-0"
-                            data-bs-target="#confirmModal" data-bs-toggle="modal">No, edit the address</p>
-                    </div>
-                    <div class="col-sm-6">
-                        <button type="submit" class="bg-sky text-white border-blu py-2 w-100 px-2 rounded-3 font-c"
-                            data-bs-dismiss="modal" aria-label="Close">Yes, my address is correct</button>
-                    </div>
+                <div class="modal-body">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-10 mx-auto">
+                                <div class="row">
+                                    <div class="mt-3 col-lg-8">
+                                        <label for="name" class="form-label fw-medium mb-0">Service Name</label>
+                                        <input type="text" id="name" class="modal-input"
+                                            placeholder="123 Eve, Rookers Block Las Vegas">
+                                    </div>
+                                    <div class="mt-3 col-lg-4">
+                                        <label for="price" class="form-label fw-medium mb-0">Price</label>
+                                        <input type="text" id="price" class="modal-input" placeholder="$0">
+                                    </div>
+                                    <div class="mt-3 col-lg-12">
+                                        <label for="des" class="form-label fw-medium mb-0">Service Description</label>
+                                        <textarea name="" rows="4" id="des" class="modal-input"
+                                        placeholder="Description here"></textarea>
+                                    </div>
+                                </div>
+                                <div class="row align-items-end">
+                                    <div class="mt-3 col-sm-3">
+                                        <label for="" class="form-label fw-medium mb-0">Duration</label>
+                                        <div class="d-flex align-items-center">
+                                            <input type="number" class="modal-input" placeholder="1">
+                                            <span class="ms-2">Hour</span>
+                                        </div>
+                                    </div>
+                                    <div class="mt-3 col-sm-3">
+                                        <div class="d-flex align-items-center">
+                                            <input type="number" class="modal-input" placeholder="0">
+                                            <span class="ms-2">Minutes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <p class="mb-0">Used to determine how much time to allocate on the schedule for this service</p>
+                                    <div class="row justify-content-between mt-5">
+                                        <div class="col-sm-4 col-6">
+                                            <button
+                                                class="red-bg py-2 px-2 w-100 text-white border-danger border-1 rounded-3">Cancel</button>
+                                        </div>
+                                        <div class="col-sm-4 col-6">
+                                            <button type="submit"
+                                                class="bg-sky py-2 px-2 w-100 text-white border-primary border-1 rounded-3">Save</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
-</div>
+
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
@@ -563,6 +624,44 @@
         });
 
 
+    </script>
+    <script>
+        $(document).ready(function () {
+            const $assignBtn = $('#assign-btn');
+            const $dropdownContent = $('#dropdown-content');
+            const $select = $('#user-select');
+            const $previewContainer = $('#preview-container');
+
+            // Toggle dropdown on button click
+            $assignBtn.on('click', function (e) {
+                e.stopPropagation(); // Prevent event bubbling
+                $dropdownContent.toggle();
+            });
+
+            // Hide dropdown when clicking outside
+            $(document).on('click', function () {
+                $dropdownContent.hide();
+            });
+
+            // Prevent dropdown from hiding when clicking inside
+            $dropdownContent.on('click', function (e) {
+                e.stopPropagation();
+            });
+
+            // Update preview on dropdown change
+            $select.on('change', function () {
+                $previewContainer.empty(); // Clear previous preview
+                const selectedOptions = $(this).val(); // Get selected options
+
+                // Generate preview for each selected option
+                if (selectedOptions) {
+                    selectedOptions.forEach(function (value) {
+                        const text = $select.find(`option[value="${value}"]`).text();
+                        $previewContainer.append(`<div class="preview-item">${text}</div>`);
+                    });
+                }
+            });
+        });
     </script>
 </body>
 
