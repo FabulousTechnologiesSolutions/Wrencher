@@ -989,6 +989,7 @@ header .nav-link.active {
 .option-item:hover {
     background-color: #e2e6ea;
 }
+
 .round-box {
     background: rgb(220, 227, 234);;
     padding: 2px 8px;
@@ -999,6 +1000,10 @@ header .nav-link.active {
 }
 .max-400 {
     max-width: 400px !important;
+}
+
+#divHide{
+    display: none;
 }
 @media screen and (max-width: 1440px){
     .table th {
