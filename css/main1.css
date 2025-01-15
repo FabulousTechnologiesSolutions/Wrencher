@@ -978,6 +978,19 @@ header .nav-link.active {
     background: #FCE0D3;
     color: #DB7F5B;
 }
+
+.option-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid #dee2e6;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.option-item:hover {
+    background-color: #e2e6ea;
+}
+
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;

@@ -164,10 +164,12 @@
                                                             <div>
                                                                 <label for="" class="form-label">Browse Services</label>
                                                                 <div class="custom-dropdown">
-                                                                    <div class="custom-dropdown-toggle d-flex bg-nblue">
+                                                                    <div
+                                                                        class="custom-dropdown-toggle1 p-3 rounded-3 d-flex bg-nblue">
                                                                         <div class="w-100">
                                                                             <button type="button"
-                                                                                class="w-100 custom-toggle-button border-0 p-0 text-start bg-nblue">Select
+                                                                                class="w-100 custom-toggle-button border-0 p-0 text-start bg-nblue"
+                                                                                id="selectService">Select
                                                                                 Here</button>
                                                                         </div>
                                                                         <div class="d-flex align-items-center">
@@ -511,6 +513,7 @@
         </div>
     </div>
 
+
     <div class="modal modal-lg fade" id="serviceModal" tabindex="-1" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -575,6 +578,19 @@
             </div>
         </div>
     </div>
+   
+    <div class="modal fade" id="exampleModalvalue" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content rounded-3">
+                <div class="modal-header">
+                    <h4 class="text-center w-100" id="modalTitle">Add New Customer</h4>
+                </div>
+                <div class="modal-body" id="modalBody">
+                    ...
+                </div>
+            </div>
+        </div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -626,6 +642,77 @@
 
     </script>
     <script>
+
+        document.querySelector('.custom-dropdown-toggle1').addEventListener('click', function () {
+            const dropdownMenu = document.querySelector('.custom-dropdown-menu');
+            dropdownMenu.style.display = dropdownMenu.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', function (event) {
+            const isClickInside = document.querySelector('.custom-dropdown').contains(event.target);
+            if (!isClickInside) {
+                document.querySelector('.custom-dropdown-menu').style.display = 'none';
+            }
+        });
+
+        // Sample customer data
+        const customers1 = [
+            { title: 'Picture Hanging', description: 'Our experts will come to assess your needs and discuss solutions.', options: ['Option 1 for Picture Hanging', 'Option 2 for Picture Hanging'] },
+            { title: 'Drywall Repair', description: 'Our experts will come to assess your needs and discuss solutions.' },
+            { title: 'Gutter Cleaning', description: 'Our experts will come to assess your needs and discuss solutions.' },
+            { title: 'Curtain Rod Install', description: 'Our experts will come to assess your needs and discuss solutions.' },
+            { title: 'Door Knob/ Handle Lock Install', description: 'Our experts will come to assess your needs and discuss solutions.' },
+        ];
+
+        const customerList1 = document.querySelector('.custom-customer-list');
+        const dropdownToggle1 = document.querySelector('.custom-toggle-button');
+        const modalTitle = document.querySelector('#modalTitle'); // Get the modal title element
+        const modalBody = document.querySelector('#modalBody');
+        const selectService = document.querySelector('#selectService'); // Assuming there's a select input or div to display the selected service
+
+        customers1.forEach(customer => {
+            const li = document.createElement('li');
+            li.className = 'custom-customer-list-item d-flex flex-column align-items-start';
+            li.setAttribute('data-bs-toggle', 'modal'); // Add data-bs-toggle attribute
+            li.setAttribute('data-bs-target', '#exampleModalvalue'); // Add data-bs-target attribute
+
+            // Using h6 for the title and p for the description
+            li.innerHTML = `<h6 class="mb-0">${customer.title}</h6><p class="mb-0 font-12">${customer.description}</p>`;
+
+            li.addEventListener('click', function () {
+                dropdownToggle1.textContent = customer.title; // Update the dropdown button text with the customer title
+                modalTitle.textContent = customer.title; // Update the modal title with the customer title
+                modalBody.innerHTML = '';
+
+                if (customer.options) {
+                    customer.options.forEach(option => {
+                        const optionElement = document.createElement('div');
+                        optionElement.textContent = option;
+                        optionElement.className = 'option-item';
+                        modalBody.appendChild(optionElement);
+
+                        // Add click event for selecting an option
+                        optionElement.addEventListener('click', function () {
+                            // Update the Select Service display with the selected option
+                            selectService.textContent = option; // Or use `selectService.value = option` if it's an actual select dropdown
+
+                            // Close the modal after selecting an option
+                            const modalElement = document.getElementById('exampleModalvalue');
+                            const modal = bootstrap.Modal.getInstance(modalElement); // Get the current modal instance
+                            modal.hide(); // Close the modal
+                        });
+                    });
+                } else {
+                    modalBody.innerHTML = '<p>No options available for this customer.</p>';
+                }
+
+                document.querySelector('.custom-dropdown-menu').style.display = 'none'; // Close the dropdown menu
+            });
+
+            customerList1.appendChild(li);
+        });
+    </script>
+<script>
         $(document).ready(function () {
             const $assignBtn = $('#assign-btn');
             const $dropdownContent = $('#dropdown-content');
