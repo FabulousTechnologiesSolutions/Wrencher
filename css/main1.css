@@ -991,6 +991,9 @@ header .nav-link.active {
     background-color: #e2e6ea;
 }
 
+#divHide{
+    display: none;
+}
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
