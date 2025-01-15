@@ -982,13 +982,24 @@ header .nav-link.active {
 .option-item {
     padding: 10px;
     margin-bottom: 5px;
-    border-bottom: 1px solid #dee2e6;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .option-item:hover {
     background-color: #e2e6ea;
+}
+
+.round-box {
+    background: rgb(220, 227, 234);;
+    padding: 2px 8px;
+    font-size: 10px;
+}
+.max-content {
+    width: 70px !important;
+}
+.max-400 {
+    max-width: 400px !important;
 }
 
 #divHide{
