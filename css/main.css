@@ -185,6 +185,12 @@ textarea {
 canvas {
     display: block;
 }
+
+.toggle-cell {
+    height: 40px;
+    width: 40px;
+    cursor: pointer;
+}
 @media screen and (max-width:768px) {
     .main {
         position: relative;
