@@ -188,7 +188,7 @@
                             </div>
                         </div>
                         <div class="table-responsive reports-tbl mt-5">
-                            <table class="table">
+                            <table class="table" id="dynamicTable">
                                 <thead>
                                     <tr class="align-middle">
                                         <!-- <th class="font-semi text-center">Service Date</th> -->
@@ -234,6 +234,7 @@
                                     
                                 </tbody>
                             </table>
+                            <button type="button" id="addRowBtn" class="ms-auto d-flex justify-content-center btn btn-primary mt-3">Add Line Item</button>
                         </div>
                         <div class="row mt-4">
                             <div class="col-lg-4 col-sm-6">
@@ -347,51 +348,7 @@
                             </div>
                         </div>
                     </form>
-                    <!-- <h2 class="fs-5 fw-semibold mt-4">Internal job cost </h2>
-                    <div class="table-responsive reports-tbl mt-3">
-                        <table class="table">
-                            <thead>
-                                <tr class="align-middle">
-                                    <th class="font-semi text-center">Vendor</th>
-                                    <th class="font-semi text-center">Description</th>
-                                    <th class="font-semi text-center">Link</th>
-                                    <th class="font-semi text-center">Quantity</th>
-                                    <th class="font-semi text-center">Amount </th>
-                                    <th class="font-semi text-center">Markup </th>
-                                    <th class="font-semi text-center">Total</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="align-middle">
-                                    <td class="text-center">ABC Supplies</td>
-                                    <td class="text-center">Office Chair</td>
-                                    <td class="text-center"><a href="#">View</a></td>
-                                    <td class="text-center">10</td>
-                                    <td class="text-center">$100</td>
-                                    <td class="text-center">10%</td>
-                                    <td class="text-center">$1100</td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td class="text-center">ABC Supplies</td>
-                                    <td class="text-center">Office Chair</td>
-                                    <td class="text-center"><a href="#">View</a></td>
-                                    <td class="text-center">10</td>
-                                    <td class="text-center">$100</td>
-                                    <td class="text-center">10%</td>
-                                    <td class="text-center">$1100</td>
-                                </tr>
-                                <tr class="align-middle">
-                                    <td class="text-center">ABC Supplies</td>
-                                    <td class="text-center">Office Chair</td>
-                                    <td class="text-center"><a href="#">View</a></td>
-                                    <td class="text-center">10</td>
-                                    <td class="text-center">$100</td>
-                                    <td class="text-center">10%</td>
-                                    <td class="text-center">$1100</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div> -->
+                  
                 </div>
             </div>
         </div>
@@ -685,6 +642,42 @@
                 fileReader.readAsDataURL(file);
             }
         });
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#addRowBtn').click(function () {
+                let newRow = `
+                    <tr class="align-middle">
+                        <td class="font-md text-center">
+                            <select name="" class="form-select focus-none w-new py-2">
+                                <option value="Picture Hanging">Select Service/Product</option>
+                                <option value="Picture Hanging">Picture Hanging</option>
+                                <option value="Drywall Repair">Drywall Repair</option>
+                                <option value="Gutter Cleaning">Gutter Cleaning</option>
+                                <option value="Curtain Rod Install">Curtain Rod Install</option>
+                            </select>
+                        </td>
+                        <td class="font-md text-center">
+                            <input type="text" class="form-control focus-none w-new py-2" placeholder="">
+                        </td>
+                        <td class="font-md text-center">
+                            <input type="number" class="form-control focus-none w-new py-2" value="1" min="1">
+                        </td>
+                        <td class="font-md text-center">
+                            <input type="text" class="form-control focus-none w-new py-2" placeholder="0.00">
+                        </td>
+                        <td class="font-md text-center">
+                            <input type="text" class="form-control focus-none w-new py-2" placeholder="$0.00">
+                        </td>
+                        <td class="font-md text-center">
+                            <input type="checkbox" checked>
+                        </td>
+                    </tr>
+                `;
+                $('#dynamicTable tbody').append(newRow);
+            });
+        });
+        
     </script>
 </body>
 

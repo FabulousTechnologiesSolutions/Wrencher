@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.10.2/fullcalendar.min.css" />
-  <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-  <link rel="stylesheet" href="../css/main.css">
+    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
+    <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/main1.css">
     <link rel="stylesheet" href="../css/main2.css">
     <link rel="stylesheet" href="../css/main3.css">
@@ -86,7 +86,8 @@
                                 <div class="col-4">
                                     <p class="mb-0">example@gmail.com</p>
                                     <p class="mb-0">+1 (772) 279-4277</p>
-                                    <a href="#" class="text-decoration-none text-dark">https://wrencher-fe.netlify.app</a>
+                                    <a href="#"
+                                        class="text-decoration-none text-dark">https://wrencher-fe.netlify.app</a>
                                 </div>
                                 <div class="col-4 d-flex justify-content-end">
                                     <img src="../img/logo-main.png" alt="">
@@ -147,7 +148,8 @@
 
                                     <div class="col-lg-6 mb-3">
                                         <label for="inv" class="ps-2 fw-semibold">Invoice Number</label>
-                                        <input type="text" id="inv" class="w-100 bg-white border rounded-3 p-2" placeholder="1234" readonly>
+                                        <input type="text" id="inv" class="w-100 bg-white border rounded-3 p-2"
+                                            placeholder="1234" readonly>
                                     </div>
 
                                     <div class="col-lg-6 mb-3">
@@ -161,12 +163,14 @@
 
                                     <div class="col-lg-6 mb-3">
                                         <label for="" class="ps-2 fw-semibold">Bill To</label>
-                                        <textarea name="" rows="5" id="" class="w-100 bg-white border rounded-3 p-2" placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States"></textarea>
+                                        <textarea name="" rows="5" id="" class="w-100 bg-white border rounded-3 p-2"
+                                            placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States"></textarea>
                                     </div>
 
                                     <div class="col-lg-6 mb-3">
                                         <label for="" class="ps-2 fw-semibold">Ship To</label>
-                                        <textarea name="" rows="5" id="" class="w-100 bg-white border rounded-3 p-2" placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States"></textarea>
+                                        <textarea name="" rows="5" id="" class="w-100 bg-white border rounded-3 p-2"
+                                            placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States"></textarea>
                                     </div>
 
                                     <!-- <div class="col-lg-4 mb-3">
@@ -180,40 +184,32 @@
                                             placeholder="Type Invoice Number">
                                     </div> -->
 
-                                  
+
                                 </div>
                             </div>
                         </div>
                         <div class="table-responsive reports-tbl mt-5">
-                            <table class="table">
+                            <table class="table" id="dynamicTable">
                                 <thead>
                                     <tr class="align-middle">
-                                        <!-- <th class="font-semi text-center">Service Date</th> -->
                                         <th class="font-semi text-center">A</th>
                                         <th class="font-semi text-center">B</th>
                                         <th class="font-semi text-center">C</th>
                                         <th class="font-semi text-center">Product/service</th>
                                         <th class="font-semi text-center">Description</th>
                                         <th class="font-semi text-center">Qty</th>
-                                        <th class="font-semi text-center">Rate </th>
+                                        <th class="font-semi text-center">Rate</th>
                                         <th class="font-semi text-center">Amount</th>
                                         <th class="font-semi text-center">Taxable</th>
-                                        <!-- <th class="font-semi text-center">Packages</th> -->
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr class="align-middle">
+                                        <td class="font-md text-center toggle-cell"></td>
+                                        <td class="font-md text-center toggle-cell"></td>
+                                        <td class="font-md text-center toggle-cell"></td>
                                         <td class="font-md text-center">
-                                            <p class="mb-0">X</p>
-                                        </td>
-                                        <td class="font-md text-center">
-                                            <p class="mb-0">X</p>
-                                        </td>
-                                        <td class="font-md text-center">
-                                            <p class="mb-0">X</p>
-                                        </td>
-                                        <td class="font-md text-center">
-                                            <select name="" id=""  class="form-select focus-none w-new py-2">
+                                            <select name="" class="form-select focus-none w-new py-2">
                                                 <option value="Picture Hanging">Select Service/Product</option>
                                                 <option value="Picture Hanging">Picture Hanging</option>
                                                 <option value="Drywall Repair">Drywall Repair</option>
@@ -221,34 +217,6 @@
                                                 <option value="Curtain Rod Install">Curtain Rod Install</option>
                                             </select>
                                         </td>
-                                        <!-- <td class="font-md text-center">
-                                            <div class="custom-dropdown py-0">
-                                                <div class="custom-dropdown-toggle py-2 border border-1 d-flex bg-nblue">
-                                                    <div class="w-100">
-                                                        <button type="button"
-                                                            class="w-100 custom-toggle-button border-0 p-0 text-start bg-nblue">Select
-                                                            Here</button>
-                                                    </div>
-                                                    <div class="d-flex align-items-center">
-                                                        <i class="fa-solid fa-caret-down"></i>
-                                                    </div>
-                                                </div>
-                                                <div class="custom-dropdown-menu bg-white shadow rounded-3 p-2">
-                                                    <div class="mt-2">
-                                                        <div
-                                                            class="search-input d-flex align-items-center shadow-sm px-3 py-2">
-                                                            <input type="text" placeholder="Search Services"
-                                                                class="w-100 border-0">
-                                                            <button class="search-btn">
-                                                                <i class="fa-solid fa-magnifying-glass"></i>
-                                                            </button>
-                                                        </div>
-                                                    </div>
-                                                    <ul class="custom-customer-list mt-2">
-                                                    </ul>
-                                                </div>
-                                            </div>
-                                        </td> -->
                                         <td class="font-md text-center">
                                             <input type="text" class="form-control focus-none w-new py-2" placeholder="">
                                         </td>
@@ -264,19 +232,106 @@
                                         <td class="font-md text-center">
                                             <input type="checkbox" checked>
                                         </td>
-                                        <!-- <td class="font-md text-center">
-                                            <select name="" id=""  class="form-select focus-none w-new py-2">
-                                                <option value="" selected disabled hidden>Choose Package</option>
-                                                <option value="A-5% Off"> "A" - 5% Off</option>
-                                                <option value="B-15% Off">"B" - 15% Off</option>
-                                                <option value="C-25% Off">"C" - 25% Off</option>
-                                            </select>
-                                        </td> -->
                                     </tr>
-                                    
-                                    
                                 </tbody>
                             </table>
+                            <button type="button" id="addRowBtn" class="ms-auto d-flex justify-content-center btn btn-primary mt-3">Add Line Item</button>
+                        </div>
+                        
+                        <div class="row mt-4">
+                            <div class="col-8">
+                                <div class="row gx-0 bg-white">
+                                    <div class="col-12">
+                                        <p class="bg-sky border border-1 border-black border-bottom-0 text-white px-2 py-2 mb-0 opacity-75">Service Packages</p>
+                                    </div>
+                                    <div class="col-4 border border-1 border-dark">
+                                        <p class="bg-danger2 fw-semibold mb-0 text-center fs-5 px-2 py-2">
+                                            "A" - 5% Off
+                                        </p>
+                                        <p class="py-4 text-center mb-0 border-top border-bottom border-1 border-dark fw-semibold fs-1 text-black mb-0">
+                                            $2,423
+                                        </p>
+                                        <div class="d-flex bg-danger2 px-3 justify-content-between py-2">
+                                            <p class="fs-5 fw-semibold mb-0">Save</p>
+                                            <p class="fs-5 fw-semibold mb-0">$128</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 border border-1 border-dark">
+                                        <p class="bg-warning2 fw-semibold mb-0 text-center fs-5 px-2 py-2">
+                                            "B" - 10% Off
+                                        </p>
+                                        <p class="py-4 text-center mb-0 border-top border-bottom border-1 border-dark fw-semibold fs-1 text-black mb-0">
+                                            $3,375
+                                        </p>
+                                        <div class="d-flex bg-warning2 px-3 justify-content-between py-2">
+                                            <p class="fs-5 fw-semibold mb-0">Save</p>
+                                            <p class="fs-5 fw-semibold mb-0">$563</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 border border-1 border-dark">
+                                        <p class="bg-success2 fw-semibold mb-0 text-center fs-5 px-2 py-2">
+                                            "C" - 20% Off
+                                        </p>
+                                        <p class="py-4 text-center mb-0 border-top border-bottom border-1 border-dark fw-semibold fs-1 text-black mb-0">
+                                            $3,600
+                                        </p>
+                                        <div class="d-flex bg-success2 px-3 justify-content-between py-2">
+                                            <p class="fs-5 fw-semibold mb-0">Save</p>
+                                            <p class="fs-5 fw-semibold mb-0">$1,125</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="table-responsive reports-tbl2">
+                                    <table class="table">
+                                        <thead>
+                                            <tr class="align-middle">
+                                                <th class="font-semi text-center">All Services</th>
+                                                <th class="font-semi text-center">$4,500,00</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="align-middle">
+                                                <td class="font-semi text-center">
+                                                   
+                                                </td>
+                                                <td class="font-md text-center">
+                                                    $
+                                                </td>
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td class="font-semi text-center">
+                                                   Discount
+                                                </td>
+                                                <td class="font-md text-center">
+                                                    -$
+                                                </td>
+                                            </tr>
+        
+                                            <tr class="align-middle">
+                                                <td class="font-semi text-center">
+                                                   Deposit
+                                                </td>
+                                                <td class="font-md text-center">
+                                                    50%
+                                                </td>
+                                            </tr>
+
+                                            <tr class="align-middle">
+                                                <td class="font-semi text-center">
+                                                   Total
+                                                </td>
+                                                <td class="font-md text-center">
+                                                    $
+                                                </td>
+                                            </tr>
+        
+        
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
                         </div>
                         <div class="row mt-4">
                             <div class="col-lg-4 col-sm-6">
@@ -317,16 +372,19 @@
                                         <textarea name="" id="note" rows="4" class="w-100 rounded-2"></textarea>
                                     </div>
                                     <div class="my-3">
-                                        <label for="statement" class="w-100 fw-semibold">Memo on statement(hidden)</label>
+                                        <label for="statement" class="w-100 fw-semibold">Memo on
+                                            statement(hidden)</label>
                                         <textarea name="" id="statement" rows="4" class="w-100 rounded-2"></textarea>
                                     </div>
                                     <div class="my-3">
                                         <label for="" class="w-100 fw-semibold">Attachments</label>
-                                        <label for="attachment" class="border-dashed border-1 py-4 px-3 w-100 rounded-2">
+                                        <label for="attachment"
+                                            class="border-dashed border-1 py-4 px-3 w-100 rounded-2">
                                             <p class="text-center mb-1 text-primary">Add attachment</p>
                                             <p class="mt-2 text-center mb-0">Max file size: 20 MB</p>
                                         </label>
-                                        <input type="file" id="attachment" class="d-none" accept="image/*,video/*,.pdf,.doc,.docx">
+                                        <input type="file" id="attachment" class="d-none"
+                                            accept="image/*,video/*,.pdf,.doc,.docx">
                                         <div id="preview-container" class="mt-3"></div>
                                     </div>
                                 </div>
@@ -386,7 +444,9 @@
                                 <button class="border py-2 bg-sky text-white w-100 rounded-3">Save</button>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 mb-2">
-                                <a href="review-quote.html" class="border py-2 bg-dark text-white w-100 rounded-3 text-decoration-none text-black d-inline-block text-center px-2">Review & Send</a>
+                                <a href="review-quote.html"
+                                    class="border py-2 bg-dark text-white w-100 rounded-3 text-decoration-none text-black d-inline-block text-center px-2">Review
+                                    & Send</a>
                             </div>
                         </div>
                     </form>
@@ -514,15 +574,15 @@
             const previewContainer = document.getElementById('preview-container');
             previewContainer.innerHTML = ''; // Clear previous preview
             const file = event.target.files[0];
-            
+
             if (file) {
                 const fileReader = new FileReader();
-        
+
                 fileReader.onload = function (e) {
                     // Check file type and create appropriate preview
                     const fileType = file.type;
                     let previewElement;
-        
+
                     if (fileType.startsWith('image/')) {
                         previewElement = document.createElement('img');
                         previewElement.src = e.target.result;
@@ -546,14 +606,65 @@
                         previewElement = document.createElement('p');
                         previewElement.textContent = `Selected file: ${file.name}`;
                     }
-        
+
                     previewContainer.appendChild(previewElement);
                 };
-        
+
                 fileReader.readAsDataURL(file);
             }
         });
     </script>
+  <script>
+    $(document).ready(function () {
+        // Toggle "X" functionality for existing and dynamically added rows
+        $(document).on('click', '.toggle-cell', function () {
+            if ($(this).html().trim() === '') {
+                $(this).html('<p class="mb-0">X</p>');
+            } else {
+                $(this).html('');
+            }
+        });
+    
+        // Add new row on button click
+        $('#addRowBtn').on('click', function () {
+            let newRow = `
+                <tr class="align-middle">
+                    <td class="font-md text-center toggle-cell"></td>
+                    <td class="font-md text-center toggle-cell"></td>
+                    <td class="font-md text-center toggle-cell"></td>
+                    <td class="font-md text-center">
+                        <select name="" class="form-select focus-none w-new py-2">
+                            <option value="Picture Hanging">Select Service/Product</option>
+                            <option value="Picture Hanging">Picture Hanging</option>
+                            <option value="Drywall Repair">Drywall Repair</option>
+                            <option value="Gutter Cleaning">Gutter Cleaning</option>
+                            <option value="Curtain Rod Install">Curtain Rod Install</option>
+                        </select>
+                    </td>
+                    <td class="font-md text-center">
+                        <input type="text" class="form-control focus-none w-new py-2" placeholder="">
+                    </td>
+                    <td class="font-md text-center">
+                        <input type="number" class="form-control focus-none w-new py-2" value="1" min="1">
+                    </td>
+                    <td class="font-md text-center">
+                        <input type="text" class="form-control focus-none w-new py-2" placeholder="0.00">
+                    </td>
+                    <td class="font-md text-center">
+                        <input type="text" class="form-control focus-none w-new py-2" placeholder="$0.00">
+                    </td>
+                    <td class="font-md text-center">
+                        <input type="checkbox" checked>
+                    </td>
+                </tr>
+            `;
+    
+            // Append the new row to the table body
+            $('#dynamicTable tbody').append(newRow);
+        });
+    });
+    
+  </script>
 </body>
 
 </html>
