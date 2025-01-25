@@ -153,25 +153,39 @@
                                     </div>
 
                                     <div class="col-lg-6 mb-3">
-                                        <!-- <label for="" class="ps-2 fw-semibold">Terms</label>
-                                        <select name="" id=""  class="w-100 form-select focus-none bg-white border rounded-3 p-2">
-                                            <option value="T1"> T1</option>
-                                            <option value="T2"> T2</option>
-                                            <option value="T3"> T3</option>
-                                        </select> -->
+                                        <label for="date" class="ps-2 fw-semibold">Expiration Date</label>
+                                        <input type="date" id="expdate" class="w-100 bg-white border rounded-3 p-2">
                                     </div>
+                                    
+                                    <script>
+                                        // Get the current date
+                                        const currentDate = new Date();
+                                        
+                                        // Add one month to the current date
+                                        const nextMonthDate = new Date(
+                                            currentDate.getFullYear(),
+                                            currentDate.getMonth() + 1,
+                                            currentDate.getDate()
+                                        );
+                                    
+                                        // Format the date as YYYY-MM-DD
+                                        const formattedDate4 = nextMonthDate.toISOString().split('T')[0];
+                                    
+                                        // Set the value of the input field
+                                        document.getElementById('expdate').value = formattedDate4;
+                                    </script>
 
-                                    <div class="col-lg-6 mb-3">
-                                        <label for="" class="ps-2 fw-semibold">Bill To</label>
+                                    <div class="col-lg-12 mb-3">
+                                        <label for="" class="ps-2 fw-semibold">Property Address</label>
                                         <textarea name="" rows="5" id="" class="w-100 bg-white border rounded-3 p-2"
                                             placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States"></textarea>
                                     </div>
 
-                                    <div class="col-lg-6 mb-3">
+                                    <!-- <div class="col-lg-6 mb-3">
                                         <label for="" class="ps-2 fw-semibold">Ship To</label>
                                         <textarea name="" rows="5" id="" class="w-100 bg-white border rounded-3 p-2"
                                             placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States"></textarea>
-                                    </div>
+                                    </div> -->
 
                                     <!-- <div class="col-lg-4 mb-3">
                                         <label for="" class="ps-2 fw-semibold">Ship From</label>
@@ -196,6 +210,7 @@
                                         <th class="font-semi text-center">B</th>
                                         <th class="font-semi text-center">C</th>
                                         <th class="font-semi text-center">Product/service</th>
+                                        <th class="font-semi text-center">Photo</th>
                                         <th class="font-semi text-center">Description</th>
                                         <th class="font-semi text-center">Qty</th>
                                         <th class="font-semi text-center">Rate</th>
@@ -218,11 +233,16 @@
                                             </select>
                                         </td>
                                         <td class="font-md text-center">
-                                            <input type="text" class="form-control focus-none w-new py-2" placeholder="">
+                                            <img src="../../img/service1.png" class="servicesmall">
                                         </td>
                                         <td class="font-md text-center">
-                                            <input type="number" class="form-control focus-none w-new py-2" value="1" min="1">
+                                            <input type="text" class="form-control focus-none w-new py-2" placeholder="">
                                         </td>
+                                       
+                                        <td class="font-md text-center">
+                                            <input type="number" class="form-control focus-none w-new py-2 qty" value="1" min="1" >
+                                        </td>
+                                      
                                         <td class="font-md text-center">
                                             <input type="text" class="form-control focus-none w-new py-2" placeholder="0.00">
                                         </td>
@@ -372,8 +392,7 @@
                                         <textarea name="" id="note" rows="4" class="w-100 rounded-2"></textarea>
                                     </div>
                                     <div class="my-3">
-                                        <label for="statement" class="w-100 fw-semibold">Memo on
-                                            statement(hidden)</label>
+                                        <label for="statement" class="w-100 fw-semibold">Job Notes</label>
                                         <textarea name="" id="statement" rows="4" class="w-100 rounded-2"></textarea>
                                     </div>
                                     <div class="my-3">
@@ -641,11 +660,14 @@
                             <option value="Curtain Rod Install">Curtain Rod Install</option>
                         </select>
                     </td>
+                      <td class="font-md text-center">
+                                            <img src="../../img/service1.png" class="servicesmall">
+                                        </td>
                     <td class="font-md text-center">
                         <input type="text" class="form-control focus-none w-new py-2" placeholder="">
                     </td>
                     <td class="font-md text-center">
-                        <input type="number" class="form-control focus-none w-new py-2" value="1" min="1">
+                        <input type="number" class="form-control focus-none w-new py-2 qty" value="1" min="1">
                     </td>
                     <td class="font-md text-center">
                         <input type="text" class="form-control focus-none w-new py-2" placeholder="0.00">
