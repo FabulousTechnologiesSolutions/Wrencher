@@ -1104,6 +1104,15 @@ input:checked+.slider:before {
 .slider.round:before {
     border-radius: 50%;
   }
+
+  .qty {
+    max-width: 70px;
+    margin: auto;
+  }
+  .servicesmall {
+    max-width: 50px;
+    border-radius: 50%;
+  }
 @media screen and (max-width: 1440px){
     .table th {
         padding: 15px 10px !important;
