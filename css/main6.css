@@ -20,12 +20,20 @@
     max-width: 300px;
 }
 
+.min-w-200px {
+    min-width: 200px;
+}
+
 .max-w-1200px {
     max-width: 1200px;
 }
 
 .max-h-500px {
     max-height: 500px;
+}
+
+.text-12px {
+    font-size: 12px;
 }
 
 .accordian-shadow {
@@ -107,14 +115,22 @@
     font-size: 8px;
 }
 
-.blue-btn{
+.blue-btn {
     background-color: #003FDB;
     color: #fff;
     text-decoration: none;
 }
 
-.h-input{
+.h-input {
     height: 36px;
+}
+
+.import-btn {
+    color: #000000;
+    text-decoration: none;
+    border: 1px solid black;
+    padding: 8px 16px;
+    border-radius: 8px;
 }
 
 @media screen and (max-width: 768px) {
