@@ -73,25 +73,25 @@
         <div class="p-2">
             <div class="right-bottom1">
                 <div class="container-fluid h-100">
-                   <div class="col-lg-8">
-                    <h4 class="mb-0 blu2 mt-3">Add New Invoice Details</h4>
-                    <div class="row mt-3 align-items-end">
-                        <div class="col-4">
-                            <p class="mb-0">
-                                <b>BlueWave Enterprises Services</b>
-                            </p>
-                            <p class="mb-0">4940 SW Lake Grove Cir<br> Palm City FL 34990</p>
-                        </div>
-                        <div class="col-4">
-                            <p class="mb-0">example@gmail.com</p>
-                            <p class="mb-0">+1 (772) 279-4277</p>
-                            <a href="#" class="text-decoration-none text-dark">https://wrencher-fe.netlify.app</a>
-                        </div>
-                        <div class="col-4 d-flex justify-content-end">
-                            <img src="../img/logo-main.png" alt="">
+                    <div class="col-lg-8">
+                        <h4 class="mb-0 blu2 mt-3">Add New Invoice Details</h4>
+                        <div class="row mt-3 align-items-end">
+                            <div class="col-4">
+                                <p class="mb-0">
+                                    <b>BlueWave Enterprises Services</b>
+                                </p>
+                                <p class="mb-0">4940 SW Lake Grove Cir<br> Palm City FL 34990</p>
+                            </div>
+                            <div class="col-4">
+                                <p class="mb-0">example@gmail.com</p>
+                                <p class="mb-0">+1 (772) 279-4277</p>
+                                <a href="#" class="text-decoration-none text-dark">https://wrencher-fe.netlify.app</a>
+                            </div>
+                            <div class="col-4 d-flex justify-content-end">
+                                <img src="../img/logo-main.png" alt="">
+                            </div>
                         </div>
                     </div>
-                   </div>
                     <form action="invoice.html" class="mt-5">
                         <div class="row mt-3">
                             <div class="col-lg-8 ">
@@ -147,32 +147,33 @@
 
                                     <div class="col-lg-6 mb-3">
                                         <label for="inv" class="ps-2 fw-semibold">Invoice Number</label>
-                                        <input type="text" id="inv" class="w-100 bg-white border rounded-3 p-2" placeholder="1234" readonly>
+                                        <input type="text" id="inv" class="w-100 bg-white border rounded-3 p-2"
+                                            placeholder="1234" readonly>
                                     </div>
 
                                     <div class="col-lg-6 mb-3">
                                         <label for="date" class="ps-2 fw-semibold">Expiration Date</label>
                                         <input type="date" id="expdate" class="w-100 bg-white border rounded-3 p-2">
                                     </div>
-                                    
+
                                     <script>
                                         // Get the current date
                                         const currentDate = new Date();
-                                        
+
                                         // Add one month to the current date
                                         const nextMonthDate = new Date(
                                             currentDate.getFullYear(),
                                             currentDate.getMonth() + 1,
                                             currentDate.getDate()
                                         );
-                                    
+
                                         // Format the date as YYYY-MM-DD
                                         const formattedDate4 = nextMonthDate.toISOString().split('T')[0];
-                                    
+
                                         // Set the value of the input field
                                         document.getElementById('expdate').value = formattedDate4;
                                     </script>
-                                    
+
 
                                     <div class="col-lg-12 mb-3">
                                         <label for="" class="ps-2 fw-semibold">Property Address</label>
@@ -198,7 +199,7 @@
                                             placeholder="Type Invoice Number">
                                     </div> -->
 
-                                  
+
                                 </div>
                             </div>
                         </div>
@@ -222,7 +223,7 @@
                                             <input type="date" id="date2" class="form-control w-new py-2">
                                         </td> -->
                                         <td class="font-md text-center">
-                                            <select name="" id=""  class="form-select focus-none w-new py-2">
+                                            <select name="" id="" class="form-select focus-none w-new py-2">
                                                 <option value="Picture Hanging">Select Service/Product</option>
                                                 <option value="Picture Hanging">Picture Hanging</option>
                                                 <option value="Drywall Repair">Drywall Repair</option>
@@ -234,26 +235,32 @@
                                             <img src="../../img/service1.png" class="servicesmall">
                                         </td>
                                         <td class="font-md text-center">
-                                            <input type="text" class="form-control focus-none w-new py-2" placeholder="">
+                                            <input type="text" class="form-control focus-none w-new py-2"
+                                                placeholder="">
                                         </td>
                                         <td class="font-md text-center">
-                                            <input type="number" class="form-control focus-none w-new py-2 qty" value="1" min="1">
+                                            <input type="number" class="form-control focus-none w-new py-2 qty"
+                                                value="1" min="1">
                                         </td>
                                         <td class="font-md text-center">
-                                            <input type="text" class="form-control focus-none w-new py-2" placeholder="0.00">
+                                            <input type="text" class="form-control focus-none w-new py-2"
+                                                placeholder="0.00">
                                         </td>
                                         <td class="font-md text-center">
-                                            <input type="text" class="form-control focus-none w-new py-2" placeholder="$0.00">
+                                            <input type="text" class="form-control focus-none w-new py-2"
+                                                placeholder="$0.00">
                                         </td>
                                         <td class="font-md text-center">
                                             <input type="checkbox" checked>
                                         </td>
-                                    
+
                                     </tr>
-                                    
+
                                 </tbody>
                             </table>
-                            <button type="button" id="addRowBtn" class="ms-auto d-flex justify-content-center btn btn-primary mt-3 mb-3">Add Line Item</button>
+                            <button type="button" id="addRowBtn"
+                                class="ms-auto d-flex justify-content-center btn btn-primary mt-3 mb-3">Add Line
+                                Item</button>
                         </div>
                         <div class="row mt-4">
                             <div class="col-lg-4 col-sm-6">
@@ -294,16 +301,18 @@
                                         <textarea name="" id="note" rows="4" class="w-100 rounded-2"></textarea>
                                     </div>
                                     <div class="my-3">
-                                        <label for="statement" class="w-100 fw-semibold">Job Notes</label>
+                                        <label for="statement" class="w-100 fw-semibold">Job Notes (hidden from customer)</label>
                                         <textarea name="" id="statement" rows="4" class="w-100 rounded-2"></textarea>
                                     </div>
                                     <div class="my-3">
                                         <label for="" class="w-100 fw-semibold">Attachments</label>
-                                        <label for="attachment" class="border-dashed border-1 py-4 px-3 w-100 rounded-2">
+                                        <label for="attachment"
+                                            class="border-dashed border-1 py-4 px-3 w-100 rounded-2">
                                             <p class="text-center mb-1 text-primary">Add attachment</p>
                                             <p class="mt-2 text-center mb-0">Max file size: 20 MB</p>
                                         </label>
-                                        <input type="file" id="attachment" class="d-none" accept="image/*,video/*,.pdf,.doc,.docx">
+                                        <input type="file" id="attachment" class="d-none"
+                                            accept="image/*,video/*,.pdf,.doc,.docx">
                                         <div id="preview-container" class="mt-3"></div>
                                     </div>
                                 </div>
@@ -363,11 +372,13 @@
                                 <button class="border py-2 bg-sky text-white w-100 rounded-3">Save</button>
                             </div>
                             <div class="col-lg-2 col-md-3 col-sm-4 mb-2">
-                                <a href="review-quote.html" class="border py-2 bg-dark text-white w-100 rounded-3 text-decoration-none text-black d-inline-block text-center px-2">Review & Send</a>
+                                <a href="review-quote.html"
+                                    class="border py-2 bg-dark text-white w-100 rounded-3 text-decoration-none text-black d-inline-block text-center px-2">Review
+                                    & Send</a>
                             </div>
                         </div>
                     </form>
-                  
+
                 </div>
             </div>
         </div>
@@ -622,15 +633,15 @@
             const previewContainer = document.getElementById('preview-container');
             previewContainer.innerHTML = ''; // Clear previous preview
             const file = event.target.files[0];
-            
+
             if (file) {
                 const fileReader = new FileReader();
-        
+
                 fileReader.onload = function (e) {
                     // Check file type and create appropriate preview
                     const fileType = file.type;
                     let previewElement;
-        
+
                     if (fileType.startsWith('image/')) {
                         previewElement = document.createElement('img');
                         previewElement.src = e.target.result;
@@ -654,10 +665,10 @@
                         previewElement = document.createElement('p');
                         previewElement.textContent = `Selected file: ${file.name}`;
                     }
-        
+
                     previewContainer.appendChild(previewElement);
                 };
-        
+
                 fileReader.readAsDataURL(file);
             }
         });
@@ -700,7 +711,7 @@
                 $('#dynamicTable tbody').append(newRow);
             });
         });
-        
+
     </script>
 </body>
 

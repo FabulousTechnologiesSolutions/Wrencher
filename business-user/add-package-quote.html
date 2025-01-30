@@ -156,21 +156,21 @@
                                         <label for="date" class="ps-2 fw-semibold">Expiration Date</label>
                                         <input type="date" id="expdate" class="w-100 bg-white border rounded-3 p-2">
                                     </div>
-                                    
+
                                     <script>
                                         // Get the current date
                                         const currentDate = new Date();
-                                        
+
                                         // Add one month to the current date
                                         const nextMonthDate = new Date(
                                             currentDate.getFullYear(),
                                             currentDate.getMonth() + 1,
                                             currentDate.getDate()
                                         );
-                                    
+
                                         // Format the date as YYYY-MM-DD
                                         const formattedDate4 = nextMonthDate.toISOString().split('T')[0];
-                                    
+
                                         // Set the value of the input field
                                         document.getElementById('expdate').value = formattedDate4;
                                     </script>
@@ -220,9 +220,15 @@
                                 </thead>
                                 <tbody>
                                     <tr class="align-middle">
-                                        <td class="font-md text-center "><div class="toggle-cell border border-1 border-black rounded-3 py-2"></div></td>
-                                        <td class="font-md text-center "><div class="toggle-cell border border-1 border-black rounded-3 py-2"></div></td>
-                                        <td class="font-md text-center "><div class="toggle-cell border border-1 border-black rounded-3 py-2"></div></td>
+                                        <td class="font-md text-center ">
+                                            <div class="toggle-cell border border-1 border-black rounded-3 py-2"></div>
+                                        </td>
+                                        <td class="font-md text-center ">
+                                            <div class="toggle-cell border border-1 border-black rounded-3 py-2"></div>
+                                        </td>
+                                        <td class="font-md text-center ">
+                                            <div class="toggle-cell border border-1 border-black rounded-3 py-2"></div>
+                                        </td>
                                         <td class="font-md text-center">
                                             <select name="" class="form-select focus-none w-new py-2">
                                                 <option value="Picture Hanging">Select Service/Product</option>
@@ -236,18 +242,22 @@
                                             <img src="../../img/service1.png" class="servicesmall">
                                         </td>
                                         <td class="font-md text-center">
-                                            <input type="text" class="form-control focus-none w-new py-2" placeholder="">
+                                            <input type="text" class="form-control focus-none w-new py-2"
+                                                placeholder="">
                                         </td>
-                                       
+
                                         <td class="font-md text-center">
-                                            <input type="number" class="form-control focus-none w-new py-2 qty" value="1" min="1" >
+                                            <input type="number" class="form-control focus-none w-new py-2 qty"
+                                                value="1" min="1">
                                         </td>
-                                      
+
                                         <td class="font-md text-center">
-                                            <input type="text" class="form-control focus-none w-new py-2" placeholder="0.00">
+                                            <input type="text" class="form-control focus-none w-new py-2"
+                                                placeholder="0.00">
                                         </td>
                                         <td class="font-md text-center">
-                                            <input type="text" class="form-control focus-none w-new py-2" placeholder="$0.00">
+                                            <input type="text" class="form-control focus-none w-new py-2"
+                                                placeholder="$0.00">
                                         </td>
                                         <td class="font-md text-center">
                                             <input type="checkbox" checked>
@@ -255,20 +265,25 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <button type="button" id="addRowBtn" class="ms-auto mb-3 d-flex justify-content-center btn btn-primary mt-3">Add Line Item</button>
+                            <button type="button" id="addRowBtn"
+                                class="ms-auto mb-3 d-flex justify-content-center btn btn-primary mt-3">Add Line
+                                Item</button>
                         </div>
-                        
+
                         <div class="row mt-4">
                             <div class="col-lg-8">
                                 <div class="row gx-0 bg-white">
                                     <div class="col-12">
-                                        <p class="bg-sky border border-2 border-black border-bottom-0 text-white px-2 py-2 mb-0 opacity-75">Service Packages</p>
+                                        <p
+                                            class="bg-sky border border-2 border-black border-bottom-0 text-white px-2 py-2 mb-0 opacity-75">
+                                            Service Packages</p>
                                     </div>
                                     <div class="col-sm-6 col-md-4 border border-2 border-black">
                                         <p class="bg-danger2 fw-semibold mb-0 text-center fs-5 px-2 py-2">
                                             "A" - 5% Off
                                         </p>
-                                        <p class="py-4 text-center mb-0 border-top border-bottom border-2 border-black fw-semibold fs-1 text-black mb-0">
+                                        <p
+                                            class="py-4 text-center mb-0 border-top border-bottom border-2 border-black fw-semibold fs-1 text-black mb-0">
                                             $2,423
                                         </p>
                                         <div class="d-flex bg-danger2 px-3 justify-content-between py-2">
@@ -276,11 +291,13 @@
                                             <p class="fs-5 fw-semibold mb-0">$128</p>
                                         </div>
                                     </div>
-                                    <div class="col-sm-6 col-md-4 border border-2 border-black border-end-0 border-start-0">
+                                    <div
+                                        class="col-sm-6 col-md-4 border border-2 border-black border-end-0 border-start-0">
                                         <p class="bg-warning2 fw-semibold mb-0 text-center fs-5 px-2 py-2">
                                             "B" - 10% Off
                                         </p>
-                                        <p class="py-4 text-center mb-0 border-top border-bottom border-end-0 border-start-0 border-2 border-black fw-semibold fs-1 text-black mb-0">
+                                        <p
+                                            class="py-4 text-center mb-0 border-top border-bottom border-end-0 border-start-0 border-2 border-black fw-semibold fs-1 text-black mb-0">
                                             $3,375
                                         </p>
                                         <div class="d-flex bg-warning2 px-3 justify-content-between py-2">
@@ -292,7 +309,8 @@
                                         <p class="bg-success2 fw-semibold mb-0 text-center fs-5 px-2 py-2">
                                             "C" - 20% Off
                                         </p>
-                                        <p class="py-4 text-center mb-0 border-top border-bottom border-2 border-black fw-semibold fs-1 text-black mb-0">
+                                        <p
+                                            class="py-4 text-center mb-0 border-top border-bottom border-2 border-black fw-semibold fs-1 text-black mb-0">
                                             $3,600
                                         </p>
                                         <div class="d-flex bg-success2 px-3 justify-content-between py-2">
@@ -314,7 +332,7 @@
                                         <tbody>
                                             <tr class="align-middle">
                                                 <td class="font-semi text-center">
-                                                   
+
                                                 </td>
                                                 <td class="font-md text-center">
                                                     $
@@ -322,16 +340,16 @@
                                             </tr>
                                             <tr class="align-middle">
                                                 <td class="font-semi text-center">
-                                                   Discount
+                                                    Discount
                                                 </td>
                                                 <td class="font-md text-center">
                                                     -$
                                                 </td>
                                             </tr>
-        
+
                                             <tr class="align-middle">
                                                 <td class="font-semi text-center">
-                                                   Deposit
+                                                    Deposit
                                                 </td>
                                                 <td class="font-md text-center">
                                                     50%
@@ -340,14 +358,14 @@
 
                                             <tr class="align-middle">
                                                 <td class="font-semi text-center">
-                                                   Total
+                                                    Total
                                                 </td>
                                                 <td class="font-md text-center">
                                                     $
                                                 </td>
                                             </tr>
-        
-        
+
+
                                         </tbody>
                                     </table>
                                 </div>
@@ -392,7 +410,7 @@
                                         <textarea name="" id="note" rows="4" class="w-100 rounded-2"></textarea>
                                     </div>
                                     <div class="my-3">
-                                        <label for="statement" class="w-100 fw-semibold">Job Notes</label>
+                                        <label for="statement" class="w-100 fw-semibold">Job Notes  (hidden from customer)</label>
                                         <textarea name="" id="statement" rows="4" class="w-100 rounded-2"></textarea>
                                     </div>
                                     <div class="my-3">
@@ -633,20 +651,20 @@
             }
         });
     </script>
-  <script>
-    $(document).ready(function () {
-        // Toggle "X" functionality for existing and dynamically added rows
-        $(document).on('click', '.toggle-cell', function () {
-            if ($(this).html().trim() === '') {
-                $(this).html('<p class="mb-0">X</p>');
-            } else {
-                $(this).html('');
-            }
-        });
-    
-        // Add new row on button click
-        $('#addRowBtn').on('click', function () {
-            let newRow = `
+    <script>
+        $(document).ready(function () {
+            // Toggle "X" functionality for existing and dynamically added rows
+            $(document).on('click', '.toggle-cell', function () {
+                if ($(this).html().trim() === '') {
+                    $(this).html('<p class="mb-0">X</p>');
+                } else {
+                    $(this).html('');
+                }
+            });
+
+            // Add new row on button click
+            $('#addRowBtn').on('click', function () {
+                let newRow = `
                 <tr class="align-middle">
                     <td class="font-md text-center"><div class="toggle-cell border border-1 border-black rounded-3 py-2"></div></td>
                     <td class="font-md text-center"><div class="toggle-cell border border-1 border-black rounded-3 py-2"></div></td>
@@ -680,13 +698,13 @@
                     </td>
                 </tr>
             `;
-    
-            // Append the new row to the table body
-            $('#dynamicTable tbody').append(newRow);
+
+                // Append the new row to the table body
+                $('#dynamicTable tbody').append(newRow);
+            });
         });
-    });
-    
-  </script>
+
+    </script>
 </body>
 
 </html>
