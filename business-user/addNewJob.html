@@ -197,8 +197,8 @@
                                                 customer to leave a review on your preferred platform.</label>
                                         </div>
                                     </div>
-                                    <!-- <span class="blu fw-medium mt-2 d-block"><i
-                                        class="fa-solid fa-square-plus me-2"></i>Add New</span> -->
+                                    <span data-bs-toggle="modal" data-bs-target="#checklistModal" class="blu pointer fw-medium mt-2 d-block"><i
+                                        class="fa-solid fa-square-plus me-2"></i>Select Checklists</span>
                                 </div>
                             </div>
                         </div>
@@ -696,6 +696,42 @@
             </div>
         </div>
     </div>
+
+    <div class="modal modal-md fade" id="checklistModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content rounded-5">
+            <div class="modal-header">
+                <h4 class="text-center w-100" id="exampleModalLabel">Select Checklists</h4>
+                <button type="button" class="border-0 bg-transparent" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="fa-solid fs-4 fa-circle-xmark text-danger"></i></button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="row">
+                        <div class="mx-auto px-4">
+                            <div class="mt-3">
+                                <input type="checkbox" id="general">
+                                <label for="general" class="form-label fw-medium mb-0">General Checklist</label>
+                            </div>
+                           
+                            <div class="row justify-content-between mt-5">
+                                <div class="col-sm-4 col-6">
+                                    <button
+                                        class="red-bg py-2 px-2 w-100 text-white border-danger border-1 rounded-3">Close</button>
+                                </div>
+                                <div class="col-sm-4 col-6">
+                                    <button type="submit"
+                                        class="bg-sky py-2 px-2 w-100 text-white border-primary border-1 rounded-3">Set Selected</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
     <script>
         let map;
         let autocomplete;
