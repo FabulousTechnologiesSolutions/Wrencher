@@ -208,8 +208,8 @@
                                 <thead>
                                     <tr class="align-middle">
                                         <!-- <th class="font-semi text-center">Service Date</th> -->
-                                        <th class="font-semi text-center">Product/service</th>
                                         <th class="font-semi text-center">Photo</th>
+                                        <th class="font-semi text-center">Product/service</th>
                                         <th class="font-semi text-center">Description</th>
                                         <th class="font-semi text-center">Qty</th>
                                         <th class="font-semi text-center">Rate </th>
@@ -223,6 +223,9 @@
                                             <input type="date" id="date2" class="form-control w-new py-2">
                                         </td> -->
                                         <td class="font-md text-center">
+                                            <img src="../../img/service1.png" class="servicesmall">
+                                        </td>
+                                        <td class="font-md text-center">
                                             <select name="" id="" class="form-select focus-none w-new py-2">
                                                 <option value="Picture Hanging">Select Service/Product</option>
                                                 <option value="Picture Hanging">Picture Hanging</option>
@@ -231,9 +234,7 @@
                                                 <option value="Curtain Rod Install">Curtain Rod Install</option>
                                             </select>
                                         </td>
-                                        <td class="font-md text-center">
-                                            <img src="../../img/service1.png" class="servicesmall">
-                                        </td>
+                                      
                                         <td class="font-md text-center">
                                             <input type="text" class="form-control focus-none w-new py-2"
                                                 placeholder="">
@@ -298,11 +299,29 @@
                                     </div>
                                     <div class="my-3">
                                         <label for="note" class="w-100 fw-semibold">Note to customer</label>
-                                        <textarea name="" id="note" rows="4" class="w-100 rounded-2"></textarea>
+                                        <textarea name="" id="note" rows="4" class="w-100 rounded-2 border border-1 px-2 py-2"></textarea>
                                     </div>
+                                   
+                                   
                                     <div class="my-3">
                                         <label for="statement" class="w-100 fw-semibold">Job Notes (hidden from customer)</label>
-                                        <textarea name="" id="statement" rows="4" class="w-100 rounded-2"></textarea>
+                                        <textarea name="" id="statement" rows="4" class="w-100 rounded-2 border border-1 px-2 py-2"></textarea>
+                                    </div>
+                                    <h2 class="fs-5">Add a material (hidden from customer)</h2>
+                                    <div class="my-3">
+                                        <label for="note" class="w-100 fw-semibold">Material Name (Cost Link)</label>
+                                        <input type="text" class="form-control focus-none w-new py-2"
+                                                placeholder="">
+                                    </div>
+                                    <div class="my-3">
+                                        <label for="note" class="w-100 fw-semibold">Estimated Job Duration</label>
+                                        <input type="text" class="form-control focus-none w-new py-2"
+                                                placeholder="">
+                                    </div>
+                                    <div class="my-3">
+                                        <label for="note" class="w-100 fw-semibold">Terms of Services</label>
+                                        <input type="text" class="form-control focus-none w-new py-2"
+                                                placeholder="">
                                     </div>
                                     <div class="my-3">
                                         <label for="" class="w-100 fw-semibold">Attachments</label>
@@ -678,6 +697,9 @@
             $('#addRowBtn').click(function () {
                 let newRow = `
                     <tr class="align-middle">
+                          <td class="font-md text-center">
+                                            <img src="../../img/service1.png" class="servicesmall">
+                                        </td>
                         <td class="font-md text-center">
                             <select name="" class="form-select focus-none w-new py-2">
                                 <option value="Picture Hanging">Select Service/Product</option>
@@ -687,9 +709,7 @@
                                 <option value="Curtain Rod Install">Curtain Rod Install</option>
                             </select>
                         </td>
-                              <td class="font-md text-center">
-                                            <img src="../../img/service1.png" class="servicesmall">
-                                        </td>
+                            
                         <td class="font-md text-center">
                             <input type="text" class="form-control focus-none w-new py-2" placeholder="">
                         </td>
