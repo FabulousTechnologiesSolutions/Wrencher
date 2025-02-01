@@ -14,6 +14,67 @@
     <link rel="stylesheet" href="../css/main2.css">
     <link rel="stylesheet" href="../css/main3.css">
     <title>Add new job</title>
+    <style>
+        .switch {
+            position: relative;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            -webkit-transition: .4s;
+            transition: .4s;
+        }
+
+        input:checked+.slider {
+            background-color: #2196F3;
+        }
+
+        input:focus+.slider {
+            box-shadow: 0 0 1px #2196F3;
+        }
+
+        input:checked+.slider:before {
+            -webkit-transform: translateX(26px);
+            -ms-transform: translateX(26px);
+            transform: translateX(26px);
+        }
+
+        /* Rounded sliders */
+        .slider.round {
+            border-radius: 34px;
+        }
+
+        .slider.round:before {
+            border-radius: 50%;
+        }
+    </style>
 </head>
 
 <body>
@@ -76,7 +137,7 @@
                     <form action="">
                         <h4 class="blu2">Customer</h4>
                         <div class="border p-3 rounded-3 mt-3">
-                            <h5>Find or Create a Customer</h5>
+                            <h5>Add or select customer</h5>
                             <div class="row">
                                 <div class="col-xl-6 col-md-8 col-sm-10">
                                     <p class="gre">Which customer would you like to create this job for? If they’ve
@@ -120,7 +181,7 @@
                             </div>
                         </div>
                         <div class="border p-3 rounded-3 mt-3">
-                            <h5>Select a Job Address</h5>
+                            <h5>Select address</h5>
                             <div class="row">
                                 <div class="col-xl-6 col-md-8 col-sm-10">
                                     <p class="gre">Which customer would you like to create this job for? If they’ve
@@ -140,8 +201,100 @@
                                 </div>
                             </div>
                         </div>
+                        
                         <div class="border p-3 rounded-3 mt-3">
-                            <h5>Checklist</h5>
+                            <h5>Link Job</h5>
+                            <div class="row">
+                                <div class="">
+                                    <div>
+                                        <label for="" class="form-label">Name the Job</label>
+                                        <div class="d-lg-flex">
+                                            <div class="d-sm-flex align-items-center mt-2 mt-lg-0">
+                                                <div class="d-flex align-items-center me-sm-4">
+                                                    <input id="custom" type="radio" name="job" class="me-1" checked>
+                                                    <label for="custom">Custom Job</label>
+                                                </div>
+                                                <div class="d-flex align-items-center ">
+                                                    <input id="quote" type="radio" name="job" class="me-1">
+                                                    <label for="quote">Link to a Quote or Invoice</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       
+                       
+                        <h2 class="fs-3 fw-semibold mb-3 mt-3">Line Items </h2>
+                        <div class="border p-2 mt-3 rounded-3">
+                            <div
+                                class="d-flex flex-sm-row flex-column-reverse align-items-sm-center justify-content-between">
+                                <div class="mt-sm-0 mt-3">
+                                    <h5 class="mb-0">Line Items</h5>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-end">
+                                    <a href="#" id="addLineItem"
+                                        class="btn-blue py-2 px-3 text-decoration-none d-inline-block text-white rounded-2">Add
+                                        Line Item</a>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-6 col-md-8 col-sm-10">
+                                    <p class="gre">Which customer would you like to create this job for? If they’ve
+                                        booked you can search them by name, email, or phone.</p>
+                                </div>
+                            </div>
+                            <div id="lineItemsContainer">
+                                <!-- Line items will be dynamically inserted here -->
+                            </div>
+                        </div>
+                        
+                        <div class="border p-3 rounded-3 mt-3">
+                            <div class="d-sm-flex align-items-center justify-content-between">
+                                <div>
+                                    <h6 class="mb-0">Job Notes</h6>
+                                    <p class="mb-0">Add an internal note just for teammates to see...</p>
+                                </div>
+                                <div class="mt-sm-0 mt-3 text-end">
+                                    <button class="btn-blue text-white border-blu px-3 py-2 rounded-2">Select a
+                                        File</button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-12">
+                                    <div class="border rounded-3 px-2 py-1 bg-nblue w-100">
+                                        <label for="" class="font-12 gre">Note Details</label>
+                                        <textarea name="" id="" class="bg-nblue border-0 w-100 p-0" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div class="border p-3 rounded-3 mt-3">
+                            <div class="">
+                                <div>
+                                    <h6 class="mb-0 fs-5 fw-semibold">Payment Method</h6>
+                                    <p class="mb-0">Attach a credit or debit card to charge at a later time when the job
+                                        is completed</p>
+                                </div>
+                                <span class="sky-c fw-medium  d-block">+Add Payment Method</span>
+                                <h6 class="mb-0 fs-5 mt-3 fw-semibold">Add Payment Method</h6>
+                                <div class="py-2">
+                                    <p class="mb-1">Credit card (2.99 per transaction)</p>
+                                    <img src="../img/credit.png" alt="credit" class="img-fluid">
+                                </div>
+                                <div class="py-2">
+                                    <p class="mb-1">Bank transfer (1% max $15 per transaction)</p>
+                                    <img src="../img/credit.png" alt="" class="img-fluid">
+                                </div>
+                                <div class="py-2">
+                                    <p class="mb-1">Paypal card (2.99 per transaction)</p>
+                                    <img src="../img/paypal.png" alt="paypal" class="img-fluid">
+                                </div>
+                            </div>
+                        </div> -->
+                        <div class="border p-3 rounded-3 mt-3">
+                            <h5>Add a Checklist</h5>
                             <div class="row">
                                 <div class="col-xl-6 col-md-8 col-sm-10">
                                     <p class="gre">You can set up a checklist for employees.</p>
@@ -202,83 +355,9 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="border p-3 rounded-3 mt-3">
-                            <h5>Select a Job</h5>
-                            <div class="row">
-                                <div class="">
-                                    <div>
-                                        <label for="" class="form-label">Name the Job</label>
-                                        <div class="d-lg-flex">
-                                            <div class="d-sm-flex align-items-center mt-2 mt-lg-0">
-                                                <div class="d-flex align-items-center me-sm-4">
-                                                    <input id="custom" type="radio" name="job" class="me-1" checked>
-                                                    <label for="custom">Custom Job</label>
-                                                </div>
-                                                <div class="d-flex align-items-center ">
-                                                    <input id="quote" type="radio" name="job" class="me-1">
-                                                    <label for="quote">Link to a Quote or Invoice</label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border p-3 rounded-3 mt-3">
-                            <div
-                                class="d-flex flex-sm-row flex-column-reverse align-items-sm-center justify-content-between">
-                                <div class="mt-sm-0 mt-3">
-                                    <h5 class="mb-0">Select or create a service</h5>
-                                </div>
-                                <div class="d-flex justify-content-end">
-                                    <a href="#"
-                                        class="btn-blue py-2 px-3 text-decoration-none d-inline-block text-white rounded-2">Estimate
-                                        Invoice</a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-6 col-md-8 col-sm-10">
-                                    <p class="gre mt-2">Which customer would you like to create this job for? If they’ve
-                                        booked you can
-                                        search them by name, email, or phone.</p>
-                                    <div>
-                                        <label for="" class="form-label">Select Service</label>
-                                        <div class="custom-dropdown">
-                                            <div class="custom-dropdown-toggle d-flex bg-nblue">
-                                                <div class="w-100">
-                                                    <button type="button"
-                                                        class="w-100 custom-toggle-button border-0 p-0 text-start bg-nblue">Select
-                                                        Here</button>
-                                                </div>
-                                                <div class="d-flex align-items-center">
-                                                    <i class="fa-solid fa-caret-down"></i>
-                                                </div>
-                                            </div>
-                                            <div class="custom-dropdown-menu bg-white shadow rounded-3 p-2">
-                                                <div class="mt-2">
-                                                    <div
-                                                        class="search-input d-flex align-items-center shadow-sm px-3 py-2">
-                                                        <input type="text" placeholder="Search Services"
-                                                            class="w-100 border-0">
-                                                        <button class="search-btn">
-                                                            <i class="fa-solid fa-magnifying-glass"></i>
-                                                        </button>
-                                                    </div>
-                                                </div>
-                                                <ul class="custom-customer-list mt-2">
-                                                    <!-- Customer items will be added here dynamically -->
-                                                </ul>
-                                            </div>
-                                        </div>
-                                        <span class="blu fw-medium mt-2 d-block"><i
-                                                class="fa-solid fa-square-plus me-2"></i>Add Custom Service</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                         <div class="row mt-3">
                             <div class="col-xl-5 col-lg-6">
-                                <h2 class="fs-3 fw-semibold mb-3">Schedule Appointment</h2>
+                                <h2 class="fs-3 fw-semibold mb-3">Schedule</h2>
                                 <div class="border p-2 rounded-3">
                                     <div class="d-sm-flex align-items-center justify-content-between">
                                         <div>
@@ -377,72 +456,6 @@
                                 </div>
                             </div>
                         </div>
-                        <h2 class="fs-3 fw-semibold mb-3">Review</h2>
-                        <div class="border p-2 mt-3 rounded-3">
-                            <div
-                                class="d-flex flex-sm-row flex-column-reverse align-items-sm-center justify-content-between">
-                                <div class="mt-sm-0 mt-3">
-                                    <h5 class="mb-0">Line Items</h5>
-                                </div>
-                                <div class="d-flex align-items-center justify-content-end">
-                                    <a href="#" id="addLineItem"
-                                        class="btn-blue py-2 px-3 text-decoration-none d-inline-block text-white rounded-2">Add
-                                        Line Item</a>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-6 col-md-8 col-sm-10">
-                                    <p class="gre">Which customer would you like to create this job for? If they’ve
-                                        booked you can search them by name, email, or phone.</p>
-                                </div>
-                            </div>
-                            <div id="lineItemsContainer">
-                                <!-- Line items will be dynamically inserted here -->
-                            </div>
-                        </div>
-                        <div class="border p-3 rounded-3 mt-3">
-                            <div class="d-sm-flex align-items-center justify-content-between">
-                                <div>
-                                    <h6 class="mb-0">Job Notes</h6>
-                                    <p class="mb-0">Add an internal note just for teammates to see...</p>
-                                </div>
-                                <div class="mt-sm-0 mt-3 text-end">
-                                    <button class="btn-blue text-white border-blu px-3 py-2 rounded-2">Select a
-                                        File</button>
-                                </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-12">
-                                    <div class="border rounded-3 px-2 py-1 bg-nblue w-100">
-                                        <label for="" class="font-12 gre">Note Details</label>
-                                        <textarea name="" id="" class="bg-nblue border-0 w-100 p-0" rows="5"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="border p-3 rounded-3 mt-3">
-                            <div class="">
-                                <div>
-                                    <h6 class="mb-0 fs-5 fw-semibold">Payment Method</h6>
-                                    <p class="mb-0">Attach a credit or debit card to charge at a later time when the job
-                                        is completed</p>
-                                </div>
-                                <span class="sky-c fw-medium  d-block">+Add Payment Method</span>
-                                <h6 class="mb-0 fs-5 mt-3 fw-semibold">Add Payment Method</h6>
-                                <div class="py-2">
-                                    <p class="mb-1">Credit card (2.99 per transaction)</p>
-                                    <img src="../img/credit.png" alt="credit" class="img-fluid">
-                                </div>
-                                <div class="py-2">
-                                    <p class="mb-1">Bank transfer (1% max $15 per transaction)</p>
-                                    <img src="../img/credit.png" alt="" class="img-fluid">
-                                </div>
-                                <div class="py-2">
-                                    <p class="mb-1">Paypal card (2.99 per transaction)</p>
-                                    <img src="../img/paypal.png" alt="paypal" class="img-fluid">
-                                </div>
-                            </div>
-                        </div>
                         <div class="row mt-3">
                             <h6 class="fw-semibold">Customer Notification</h6>
                             <div class="col-sm-6 ">
@@ -451,7 +464,7 @@
                                         <h6 class="mb-0">Emails</h6>
                                     </div>
                                     <div>
-                                        <div class="switch">
+                                        <div class="d-flex align-items-center">
                                             <label class="switch-label">Off</label>
                                             <input type="checkbox" class="switch-input" id="toggle">
                                             <label class="switch-slider" for="toggle"></label>
@@ -466,7 +479,7 @@
                                         <h6 class="mb-0">Text Messages</h6>
                                     </div>
                                     <div>
-                                        <div class="switch">
+                                        <div class="d-flex align-items-center">
                                             <label class="switch-label">Off</label>
                                             <input type="checkbox" class="switch-input" id="toggle1">
                                             <label class="switch-slider" for="toggle1"></label>
@@ -476,7 +489,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="border rounded-3 p-2 mt-3">
+                        <!-- <div class="border rounded-3 p-2 mt-3">
                             <h5>Subtotal</h5>
                             <div class="row">
                                 <div class="col-xl-5 col-sm-8">
@@ -499,7 +512,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="d-flex align-items-center mt-5">
                             <div>
                                 <button class="btn-sv py-2 border rounded-3">Cancel</button>

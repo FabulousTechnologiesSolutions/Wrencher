@@ -206,11 +206,11 @@
                             <table class="table" id="dynamicTable">
                                 <thead>
                                     <tr class="align-middle">
+                                        <th class="font-semi text-center">Photo</th>
                                         <th class="font-semi text-center">A</th>
                                         <th class="font-semi text-center">B</th>
                                         <th class="font-semi text-center">C</th>
                                         <th class="font-semi text-center">Product/service</th>
-                                        <th class="font-semi text-center">Photo</th>
                                         <th class="font-semi text-center">Description</th>
                                         <th class="font-semi text-center">Qty</th>
                                         <th class="font-semi text-center">Rate</th>
@@ -220,6 +220,9 @@
                                 </thead>
                                 <tbody>
                                     <tr class="align-middle">
+                                        <td class="font-md text-center">
+                                            <img src="../../img/service1.png" class="servicesmall">
+                                        </td>
                                         <td class="font-md text-center ">
                                             <div class="toggle-cell border border-1 border-black rounded-3 py-2"></div>
                                         </td>
@@ -238,9 +241,7 @@
                                                 <option value="Curtain Rod Install">Curtain Rod Install</option>
                                             </select>
                                         </td>
-                                        <td class="font-md text-center">
-                                            <img src="../../img/service1.png" class="servicesmall">
-                                        </td>
+                                     
                                         <td class="font-md text-center">
                                             <input type="text" class="form-control focus-none w-new py-2"
                                                 placeholder="">
@@ -407,11 +408,27 @@
                                     </div>
                                     <div class="my-3">
                                         <label for="note" class="w-100 fw-semibold">Note to customer</label>
-                                        <textarea name="" id="note" rows="4" class="w-100 rounded-2"></textarea>
+                                        <textarea name="" id="note" rows="4" class="w-100 rounded-2 border-1 border px-3 py-2"></textarea>
                                     </div>
                                     <div class="my-3">
                                         <label for="statement" class="w-100 fw-semibold">Job Notes  (hidden from customer)</label>
-                                        <textarea name="" id="statement" rows="4" class="w-100 rounded-2"></textarea>
+                                        <textarea name="" id="statement" rows="4" class="w-100 rounded-2 border-1 border px-3 py-2"></textarea>
+                                    </div>
+                                    <h2 class="fs-5">Add a material  (hidden from customer)</h2>
+                                    <div class="my-3">
+                                        <label for="note" class="w-100 fw-semibold">Material Name (Cost Link)</label>
+                                        <input type="text" class="form-control focus-none w-new py-2"
+                                                placeholder="">
+                                    </div>
+                                    <div class="my-3">
+                                        <label for="note" class="w-100 fw-semibold">Estimated Job Duration</label>
+                                        <input type="text" class="form-control focus-none w-new py-2"
+                                                placeholder="">
+                                    </div>
+                                    <div class="my-3">
+                                        <label for="note" class="w-100 fw-semibold">Terms of Services</label>
+                                        <input type="text" class="form-control focus-none w-new py-2"
+                                                placeholder="">
                                     </div>
                                     <div class="my-3">
                                         <label for="" class="w-100 fw-semibold">Attachments</label>
@@ -666,6 +683,9 @@
             $('#addRowBtn').on('click', function () {
                 let newRow = `
                 <tr class="align-middle">
+                             <td class="font-md text-center">
+                                            <img src="../../img/service1.png" class="servicesmall">
+                                        </td>
                     <td class="font-md text-center"><div class="toggle-cell border border-1 border-black rounded-3 py-2"></div></td>
                     <td class="font-md text-center"><div class="toggle-cell border border-1 border-black rounded-3 py-2"></div></td>
                     <td class="font-md text-center"><div class="toggle-cell border border-1 border-black rounded-3 py-2"></div></td>
@@ -678,9 +698,7 @@
                             <option value="Curtain Rod Install">Curtain Rod Install</option>
                         </select>
                     </td>
-                      <td class="font-md text-center">
-                                            <img src="../../img/service1.png" class="servicesmall">
-                                        </td>
+             
                     <td class="font-md text-center">
                         <input type="text" class="form-control focus-none w-new py-2" placeholder="">
                     </td>
