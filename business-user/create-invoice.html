@@ -302,27 +302,38 @@
                                         <textarea name="" id="note" rows="4" class="w-100 rounded-2 border border-1"></textarea>
                                     </div>
                                     <div class="my-3">
-                                        <label for="statement" class="w-100 fw-semibold">Job Notes (hidden from customer)</label>
-                                        <textarea name="" id="statement" rows="4" class="w-100 rounded-2 border border-1"></textarea>
+                                        <label for="job_notes" class="w-100 fw-semibold">Job Notes (hidden from customer)</label>
+                                        <textarea name="job_notes" id="job_notes" rows="4" class="w-100 rounded-2 border border-1 px-2 py-2" placeholder="Enter job notes here..."></textarea>
                                     </div>
-                                    <h2 class="fs-5">Add a material  (hidden from customer)</h2>
+                                    
+                                    <h2 class="fs-5">Add a material (hidden from customer)</h2>
+                                    
                                     <div class="my-3">
-                                        <label for="note" class="w-100 fw-semibold">Material Name</label>
-                                        <input type="text" class="form-control focus-none w-new py-2"
-                                                placeholder="">
+                                        <label for="material_name" class="w-100 fw-semibold">Material Name</label>
+                                        <input type="text" id="material_name" class="form-control focus-none w-new py-2" placeholder="Enter material name...">
                                     </div>
-                                   <div class="row">
-                                    <div class="my-2 col-sm-6">
-                                        <label for="note" class="w-100 fw-semibold">Cost</label>
-                                        <input type="text" class="form-control focus-none w-new py-2"
-                                                placeholder="">
+                                    
+                                    <div class="row">
+                                        <div class="my-2 col-sm-6">
+                                            <label for="material_cost" class="w-100 fw-semibold">Cost</label>
+                                            <input type="text" id="material_cost" class="form-control focus-none w-new py-2" placeholder="Enter material cost...">
+                                        </div>
+                                        <div class="my-2 col-sm-6">
+                                            <label for="material_link" class="w-100 fw-semibold">Link</label>
+                                            <input type="text" id="material_link" class="form-control focus-none w-new py-2" placeholder="Enter material link...">
+                                        </div>
                                     </div>
-                                    <div class="my-2 col-sm-6">
-                                        <label for="note" class="w-100 fw-semibold">Link</label>
-                                        <input type="text" class="form-control focus-none w-new py-2"
-                                                placeholder="">
+                                    
+                                    <div class="my-3">
+                                        <label for="job_duration" class="w-100 fw-semibold">Estimated Job Duration</label>
+                                        <input type="text" id="job_duration" class="form-control focus-none w-new py-2" placeholder="Enter estimated duration...">
                                     </div>
-                                   </div>
+                                    
+                                    <div class="my-3">
+                                        <label for="terms_of_service" class="w-100 fw-semibold">Terms of Services</label>
+                                        <input type="text" id="terms_of_service" class="form-control focus-none w-new py-2" placeholder="Enter terms of service...">
+                                    </div>
+                                    
                                     <div class="my-3">
                                         <label for="" class="w-100 fw-semibold">Attachments</label>
                                         <label for="attachment"
