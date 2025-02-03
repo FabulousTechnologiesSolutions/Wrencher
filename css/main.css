@@ -200,6 +200,10 @@ canvas {
 .img-logo {
     max-width: 190px;
 }
+
+.sidefont {
+    color: #5d7285;
+}
 @media screen and (max-width:768px) {
     .main {
         position: relative;
