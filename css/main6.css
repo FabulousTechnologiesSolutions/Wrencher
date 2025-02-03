@@ -152,11 +152,42 @@
 
 .opportunityModal .modal-dialog {
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px;
 }
 
 .opportunityModal .modal-content {
     margin: 12px;
+}
+
+.scroll-y-hidden::-webkit-scrollbar {
+    height: 0px;
+}
+
+.modal-row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.modal-sidebar {
+    width: 200px;
+    border-right: 1px solid #dee2e6;
+}
+
+.modal-tab-contant {
+    width: calc(100% - 216px);
+}
+
+.modal-row .nav li .nav-link {
+    width: 100%;
+    display: flex;
+    justify-content: start;
+    color: #5D7285;
+}
+
+.modal-row .nav li .nav-link.active {
+    background-color: #1a83f5;
+    color: #ffffff;
 }
 
 @media screen and (max-width: 768px) {
@@ -182,6 +213,16 @@
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
         border-radius: 16px;
         overflow: hidden;
+    }
+
+    .modal-sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #dee2e6;
+    }
+
+    .modal-tab-contant {
+        width: 100%;
     }
 }
 
