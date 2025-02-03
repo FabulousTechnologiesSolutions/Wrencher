@@ -12,6 +12,11 @@
     object-fit: contain;
 }
 
+.img-30px {
+    width: 30px;
+    height: 30px;
+}
+
 .rounded-inherit {
     border-radius: inherit;
 }
@@ -145,6 +150,15 @@
     max-width: 768px;
 }
 
+.opportunityModal .modal-dialog {
+    width: 100%;
+    max-width: 900px;
+}
+
+.opportunityModal .modal-content {
+    margin: 12px;
+}
+
 @media screen and (max-width: 768px) {
     .max-w-300px {
         max-width: 100%;
@@ -168,5 +182,11 @@
         box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
         border-radius: 16px;
         overflow: hidden;
+    }
+}
+
+@media screen and (min-width:576px) {
+    .w-sm-auto {
+        width: auto !important;
     }
 }
