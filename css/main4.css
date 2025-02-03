@@ -33,7 +33,7 @@
     padding: 6px 12px;
 }
 .dark-blue{
-    color: #003FDB;
+    color: #1a83f5;
 }
 .expense-color{
     color:#303C6C;
@@ -46,14 +46,14 @@
     border: none;
 }
 .btn-s{
-    background-color: #003FDB;
+    background-color: #1a83f5;
     color: white;
     padding: 10px 30px;
     border-radius: 7px;
     border: none;
 }
 .btn-f{
-    background-color: #003FDB;
+    background-color: #1a83f5;
     color: white;
     border-radius: 10px;
     border: none;
@@ -245,7 +245,7 @@
         font-size: 15px;
     }
     .btn-s{
-        background-color: #003FDB;
+        background-color: #1a83f5;
         color: white;
         padding: 8px 15px;
         border-radius: 7px;
@@ -259,7 +259,7 @@
         border: none;
     }
     .custom-file-upload {
-        background-color: #003FDB;
+        background-color: #1a83f5;
         color: white;
         border-radius: 20px;
         padding: 5px 10px;

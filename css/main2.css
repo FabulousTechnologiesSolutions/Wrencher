@@ -19,6 +19,8 @@
 .stepperlogow{
     width: 100%;
     max-width: 200px;
+    display:inline-flex;
+    justify-content: center;
 }
 .step {
     display: none;
@@ -64,7 +66,7 @@
 .progress-bar {
     width: 0%;
     height: 100%;
-    background-color: #003FDB;
+    background-color: #1a83f5;
     transition: width 0.3s ease;
 }
 #prevDateBtn{
@@ -165,7 +167,7 @@
     font-weight: 600;
     max-width: 220px;
     border-radius: 100px;
-    background-color:#003FDB ;
+    background-color:#1a83f5 ;
 }
 .prevBtn{
     background-color: transparent !important;
@@ -234,7 +236,7 @@
     align-items: center;
 }
 .uploadbtn2a{
-    background-color: #003FDB;
+    background-color: #1a83f5;
     color:#fff;
     text-decoration: none;
     padding: 3px 10px;
@@ -254,7 +256,7 @@
     display: none !important;
 }
 .tag {
-    background-color: #003FDB;
+    background-color: #1a83f5;
     color: #ffffff;
     padding: 5px 10px;
     border-radius: 15px;
