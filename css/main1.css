@@ -640,7 +640,7 @@
     padding: 6px 8px;
     color: var(--blue);
     border-radius: 50%;
-    color: #6366F1;
+    color: #1a83f5;
 }
 .profile-edit {
     padding: 8px 8px;
@@ -755,12 +755,12 @@
     background: #E2E7F5;
 }
 .book-box:hover .arrow-up{
-    border: 1px solid #003FDB;
-    background: #003FDB;
+    border: 1px solid #1a83f5;
+    background: #1a83f5;
     color: #fff;
 }
 .book-box:hover .book-icon{
-    background: #003FDB;
+    background: #1a83f5;
     color: #fff;
 }
 
@@ -961,10 +961,10 @@ header .nav-link.active {
 
 .review .nav-link.active {
     background-color: transparent !important;
-    color: #003FDB !important;
+    color: #1a83f5 !important;
     font-weight: 600;
     font-size: 18px;
-    border-bottom: solid 5px #003FDB !important;
+    border-bottom: solid 5px #1a83f5 !important;
 }
 .review .bg-greyn {
     background: #F8F8F9;
