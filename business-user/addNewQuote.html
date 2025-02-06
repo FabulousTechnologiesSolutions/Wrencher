@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../css/main1.css">
     <link rel="stylesheet" href="../css/main2.css">
     <link rel="stylesheet" href="../css/main3.css">
+    <link rel="stylesheet" href="../css/main6.css">
     <title>Add new quote</title>
 </head>
 
@@ -180,6 +181,13 @@
                                         <textarea name="" rows="5" id="" class="w-100 bg-white border rounded-3 p-2"
                                             placeholder=" 123 Elm Street, Springfield, Illinois, 62701, United States"></textarea>
                                     </div>
+                                   <div class="col-lg-6 mb-3">
+                                        <label for="terms_of_service" class="w-100 fw-semibold">Terms of
+                                            Services</label>
+                                        <input type="text" id="terms_of_service"
+                                            class="form-control focus-none w-new py-2"
+                                            placeholder="Enter terms of service...">
+                                    </div>
 
                                     <!-- <div class="col-lg-6 mb-3">
                                         <label for="" class="ps-2 fw-semibold">Ship To</label>
@@ -312,8 +320,38 @@
                                     </div>
 
                                     <h2 class="fs-5">Add a material (hidden from customer)</h2>
-
-                                    <div class="my-3">
+                                    <div class="table-responsive reports-tbl mt-3">
+                                        <table class="table" id="materialTable">
+                                            <thead>
+                                                <tr class="align-middle">
+                                                    <!-- <th class="font-semi text-center">Service Date</th> -->
+                                                    <th class="font-semi text-center">Material Name</th>
+                                                    <th class="font-semi text-center">Cost</th>
+                                                    <th class="font-semi text-center">Link</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr class="align-middle">
+                                                    <td class="font-md text-center">
+                                                        <input type="text" class="form-control focus-none w-new py-2 min-w-200px"
+                                                            placeholder="Enter material name...">
+                                                    </td>
+                                                    <td class="font-md text-center">
+                                                        <input type="text" class="form-control focus-none w-new py-2 min-w-200px"
+                                                            placeholder="Enter material cost...">
+                                                    </td>
+                                                    <td class="font-md text-center">
+                                                        <input type="text" class="form-control focus-none w-new py-2 min-w-200px"
+                                                            placeholder="Enter material link...">
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <button type="button" id="addNewMaterial"
+                                        class="ms-auto d-flex justify-content-center btn btn-primary mt-3 mb-3">Add
+                                        More</button>
+                                    <!-- <div class="my-3">
                                         <label for="material_name" class="w-100 fw-semibold">Material Name</label>
                                         <input type="text" id="material_name" class="form-control focus-none w-new py-2"
                                             placeholder="Enter material name...">
@@ -332,7 +370,7 @@
                                                 class="form-control focus-none w-new py-2"
                                                 placeholder="Enter material link...">
                                         </div>
-                                    </div>
+                                    </div> -->
 
                                     <div class="my-3">
                                         <label for="job_duration" class="w-100 fw-semibold">Estimated Job
@@ -341,13 +379,13 @@
                                             placeholder="Enter estimated duration...">
                                     </div>
 
-                                    <div class="my-3">
+                                    <!-- <div class="my-3">
                                         <label for="terms_of_service" class="w-100 fw-semibold">Terms of
                                             Services</label>
                                         <input type="text" id="terms_of_service"
                                             class="form-control focus-none w-new py-2"
                                             placeholder="Enter terms of service...">
-                                    </div>
+                                    </div> -->
 
                                     <div class="my-3">
                                         <label for="" class="w-100 fw-semibold">Attachments</label>
@@ -758,6 +796,29 @@
             });
         });
 
+    </script>
+    <script>
+        $(document).ready(function () {
+            $('#addNewMaterial').click(function () {
+                let newRow = `
+                    <tr class="align-middle">
+                       <td class="font-md text-center">
+                            <input type="text" class="form-control focus-none w-new py-2"
+                                placeholder="Enter material name...">
+                        </td>
+                        <td class="font-md text-center">
+                            <input type="text" class="form-control focus-none w-new py-2"
+                                placeholder="Enter material cost...">
+                        </td>
+                        <td class="font-md text-center">
+                            <input type="text" class="form-control focus-none w-new py-2"
+                                placeholder="Enter material link...">
+                        </td>
+                    </tr>
+                `;
+                $('#materialTable tbody').append(newRow);
+            });
+        });
     </script>
 </body>
 
